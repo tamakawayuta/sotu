@@ -17,10 +17,15 @@ namespace Neurasthenia
             Color.yellow, Color.yellow,
             Color.magenta, Color.magenta };
 
-        void Start()
+        private void Awake()
         {
             ColorShuffle();
             DrawColors();
+        }
+
+        void Start()
+        {
+            
         }
 
         void Update()
