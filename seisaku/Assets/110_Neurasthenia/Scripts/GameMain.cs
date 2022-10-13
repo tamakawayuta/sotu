@@ -11,6 +11,10 @@ namespace Neurasthenia
         private GameObject[] cards;
         [SerializeField]
         private GameObject clearPanel;
+        [SerializeField]
+        private GameObject hp;
+        [SerializeField]
+        private GameObject counter;
 
         private Color[] colors = {
             Color.red, Color.red,
@@ -30,11 +34,13 @@ namespace Neurasthenia
             DrawColors();
         }
 
-        private void Update()
+        private void LateUpdate()
         {
-            if (selectGameObjects.Count == 2)
+            if (counter.GetComponent<CounterMain>().GetAnswers() % 5 == 0 &&
+                counter.GetComponent<CounterMain>().GetAnswers() != 0)
             {
-                CheckAnswers();
+
+                Invoke("ReloadCards", 0.5f);
             }
         }
 
@@ -60,9 +66,25 @@ namespace Neurasthenia
             }
         }
 
+        private void ReloadCards()
+        {
+            ColorShuffle();
+            DrawColors();
+            foreach (var card in cards)
+            {
+                card.GetComponent<Image>().color = Color.white;
+                card.GetComponent<Button>().enabled = true;
+            }
+        }
+
         public void SetSelectGameObject(GameObject obj)
         {
             selectGameObjects.Add(obj);
+
+            if (selectGameObjects.Count == 2)
+            {
+                CheckAnswers();
+            }
         }
 
         private void CheckAnswers()
@@ -72,13 +94,14 @@ namespace Neurasthenia
             if (selectGameObjects[0].GetComponent<CardEvents>().GetCardColor() ==
                 selectGameObjects[1].GetComponent<CardEvents>().GetCardColor())
             {
-                Debug.Log("A");
+                hp.GetComponent<HpImages>().HealedHp();
+                counter.GetComponent<CounterMain>().AddAnswers();
                 selectGameObjects.Clear();
             }
             else
             {
-                Debug.Log("B");
                 Invoke("RemoveCards", 1.0f);
+                hp.GetComponent<HpImages>().DamagedHp();
             }
 
             clearPanel.SetActive(false);
