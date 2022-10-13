@@ -9,28 +9,33 @@ namespace Neurasthenia
     {
         [SerializeField]
         private GameObject[] cards;
+        [SerializeField]
+        private GameObject clearPanel;
 
         private Color[] colors = {
             Color.red, Color.red,
             Color.blue, Color.blue,
             Color.green, Color.green,
             Color.yellow, Color.yellow,
-            Color.magenta, Color.magenta };
+            Color.magenta, Color.magenta 
+        };
+
+        private List<GameObject> selectGameObjects = new List<GameObject>();
 
         private void Awake()
         {
+            clearPanel.SetActive(false);
+
             ColorShuffle();
             DrawColors();
         }
 
-        void Start()
+        private void Update()
         {
-            
-        }
-
-        void Update()
-        {
-
+            if (selectGameObjects.Count == 2)
+            {
+                CheckAnswers();
+            }
         }
 
         private void ColorShuffle()
@@ -50,9 +55,43 @@ namespace Neurasthenia
 
             foreach (var card in cards)
             {
-                card.GetComponent<CardEvents>().setCardColor(colors[i]);
+                card.GetComponent<CardEvents>().SetCardColor(colors[i]);
                 i++;
             }
+        }
+
+        public void SetSelectGameObject(GameObject obj)
+        {
+            selectGameObjects.Add(obj);
+        }
+
+        private void CheckAnswers()
+        {
+            clearPanel.SetActive(true);
+
+            if (selectGameObjects[0].GetComponent<CardEvents>().GetCardColor() ==
+                selectGameObjects[1].GetComponent<CardEvents>().GetCardColor())
+            {
+                Debug.Log("A");
+                selectGameObjects.Clear();
+            }
+            else
+            {
+                Debug.Log("B");
+                Invoke("RemoveCards", 1.0f);
+            }
+
+            clearPanel.SetActive(false);
+        }
+
+        private void RemoveCards()
+        {
+            foreach (var obj in selectGameObjects)
+            {
+                obj.GetComponent<Image>().color = Color.white;
+                obj.GetComponent<Button>().enabled = true;
+            }
+            selectGameObjects.Clear();
         }
     }
 }
