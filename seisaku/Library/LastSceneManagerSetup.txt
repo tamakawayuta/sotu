@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/110_Neurasthenia/Scene/Maingame.unity
+- path: Assets/t_Tama/Launching_business/Launching_business.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
