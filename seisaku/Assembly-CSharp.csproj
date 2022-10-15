@@ -48,6 +48,7 @@
   </PropertyGroup>
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
   <PropertyGroup>
@@ -63,6 +64,8 @@
 =======
 <<<<<<< HEAD
 >>>>>>> main
+>>>>>>> main
+=======
 >>>>>>> main
      <Compile Include="Assets\110_Neurasthenia\Scripts\HpImages.cs" />
      <Compile Include="Assets\t_Tama\Launching_business\Lbscript\Launching_businessGame.cs" />
@@ -736,10 +739,13 @@
  <HintPath>C:/Users/yuday/OneDrive/デスクトップ/卒業制作/seisaku/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
  </Reference>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> edc5890b35e54f1dc823772149fad57a04761d3a
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+>>>>>>> main
+=======
 >>>>>>> main
   </ItemGroup>
   <ItemGroup>
