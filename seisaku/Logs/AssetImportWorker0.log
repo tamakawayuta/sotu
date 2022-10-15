@@ -460,3 +460,75 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 5862.175361 seconds.
+  path: Assets/t_Tama/Launching_business
+  artifactKey: Guid(282360da7ee8e7240bf137fdbed52e14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/t_Tama/Launching_business using Guid(282360da7ee8e7240bf137fdbed52e14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0934f758808a210db2756d911fd7d232') in 0.011467 seconds 
+  Import took 0.016673 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.325225 seconds.
+  path: Assets/t_Tama/Launching_business/Lbimage
+  artifactKey: Guid(aedd9740293d64245a11650fb3ed61af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/t_Tama/Launching_business/Lbimage using Guid(aedd9740293d64245a11650fb3ed61af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f86b802bf521abb478a2c50625b794af') in 0.009173 seconds 
+  Import took 0.013564 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.088461 seconds.
+  path: Assets/t_Tama/Launching_business/Lbimage/Red_flag.png
+  artifactKey: Guid(94be48530c14cac40b4b60a1605b9810) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/t_Tama/Launching_business/Lbimage/Red_flag.png using Guid(94be48530c14cac40b4b60a1605b9810) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5529e31a054546b07aaf92e4e7baaf48') in 0.170886 seconds 
+  Import took 0.174290 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/t_Tama/Launching_business/Lbimage/森１.png
+  artifactKey: Guid(441806c342cf9b5478afda0004e30e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/t_Tama/Launching_business/Lbimage/森１.png using Guid(441806c342cf9b5478afda0004e30e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e689d69e5f9efda7858361b6dd8eb390') in 0.032646 seconds 
+  Import took 0.035794 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/t_Tama/Launching_business/Lbimage/テストイメージ画像.png
+  artifactKey: Guid(91006d3b660f68543a9761ee3049d2e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/t_Tama/Launching_business/Lbimage/テストイメージ画像.png using Guid(91006d3b660f68543a9761ee3049d2e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0adecdae1db8fb616d586a9db0b49f42') in 0.039829 seconds 
+  Import took 0.044192 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000285 seconds.
+  path: Assets/t_Tama/Launching_business/Lbimage/やばい画像.png
+  artifactKey: Guid(683a14159b2bc21459c19aec8ba479f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/t_Tama/Launching_business/Lbimage/やばい画像.png using Guid(683a14159b2bc21459c19aec8ba479f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9a51f7b6dba2959d02c7aed3e2c83ee') in 0.041735 seconds 
+  Import took 0.045188 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/t_Tama/Launching_business/Lbimage/White_flag.png
+  artifactKey: Guid(dde5b42b6dc76624ab1dfeb61ef38638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/t_Tama/Launching_business/Lbimage/White_flag.png using Guid(dde5b42b6dc76624ab1dfeb61ef38638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f21e0eeb31532d0e0b8292ea74b2b44') in 0.035876 seconds 
+  Import took 0.039029 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000268 seconds.
+  path: Assets/t_Tama/Launching_business/Lbimage/めっちゃいい画像.png
+  artifactKey: Guid(b69f13d421503a443aa992eb6b3b4557) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/t_Tama/Launching_business/Lbimage/めっちゃいい画像.png using Guid(b69f13d421503a443aa992eb6b3b4557) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49a97d37b441578e9e0b4b8978d84a7f') in 0.039288 seconds 
+  Import took 0.042981 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 101.562584 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(2b70259d4e2c77a4082fc755b6ae0dc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(2b70259d4e2c77a4082fc755b6ae0dc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81ecaaf161c27f180257b9b7ffb5c1b1') in 0.008504 seconds 
+  Import took 0.017181 seconds .
+
