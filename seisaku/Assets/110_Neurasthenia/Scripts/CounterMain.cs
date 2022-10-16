@@ -8,6 +8,7 @@ namespace Neurasthenia
     public class CounterMain : MonoBehaviour
     {
         private int answerAmount = 0;
+        private bool isClear = false;
 
         private void Awake()
         {
@@ -18,11 +19,27 @@ namespace Neurasthenia
         {
             answerAmount++;
             this.gameObject.GetComponent<Text>().text = answerAmount.ToString();
+
+            if (answerAmount % 5 == 0 &&
+                answerAmount != 0)
+            {
+                isClear = true;
+            }
         }
 
         public int GetAnswers()
         {
             return this.answerAmount;
+        }
+
+        public void ResetIsClear()
+        {
+            this.isClear = false;
+        }
+
+        public bool GetIsClear()
+        {
+            return this.isClear;
         }
     }
 }

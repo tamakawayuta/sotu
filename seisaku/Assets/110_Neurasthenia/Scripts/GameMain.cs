@@ -26,9 +26,10 @@ namespace Neurasthenia
 
         private List<GameObject> selectGameObjects = new List<GameObject>();
 
+
         private void Awake()
         {
-            clearPanel.SetActive(false);
+            SetActivePanel();
 
             ColorShuffle();
             DrawColors();
@@ -36,10 +37,8 @@ namespace Neurasthenia
 
         private void LateUpdate()
         {
-            if (counter.GetComponent<CounterMain>().GetAnswers() % 5 == 0 &&
-                counter.GetComponent<CounterMain>().GetAnswers() != 0)
+            if (counter.GetComponent<CounterMain>().GetIsClear())
             {
-
                 Invoke("ReloadCards", 0.5f);
             }
         }
@@ -68,6 +67,7 @@ namespace Neurasthenia
 
         private void ReloadCards()
         {
+            counter.GetComponent<CounterMain>().ResetIsClear();
             ColorShuffle();
             DrawColors();
             foreach (var card in cards)
@@ -83,14 +83,14 @@ namespace Neurasthenia
 
             if (selectGameObjects.Count == 2)
             {
+                SetActivePanel();
                 CheckAnswers();
+                Invoke("SetActivePanel", 1.0f);
             }
         }
 
         private void CheckAnswers()
         {
-            clearPanel.SetActive(true);
-
             if (selectGameObjects[0].GetComponent<CardEvents>().GetCardColor() ==
                 selectGameObjects[1].GetComponent<CardEvents>().GetCardColor())
             {
@@ -103,8 +103,6 @@ namespace Neurasthenia
                 Invoke("RemoveCards", 1.0f);
                 hp.GetComponent<HpImages>().DamagedHp();
             }
-
-            clearPanel.SetActive(false);
         }
 
         private void RemoveCards()
@@ -115,6 +113,11 @@ namespace Neurasthenia
                 obj.GetComponent<Button>().enabled = true;
             }
             selectGameObjects.Clear();
+        }
+
+        private void SetActivePanel()
+        {
+            clearPanel.SetActive(!clearPanel.activeSelf);
         }
     }
 }
