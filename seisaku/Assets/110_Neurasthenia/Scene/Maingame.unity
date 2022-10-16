@@ -1838,6 +1838,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: bb7b00888b9e245459cdd68258e60745, type: 3}
   hpGauge: {fileID: 881673779}
   counter: {fileID: 11712172}
+  panel: {fileID: 1552535103}
 --- !u!1 &1470726513
 GameObject:
   m_ObjectHideFlags: 0
@@ -1994,13 +1995,14 @@ GameObject:
   - component: {fileID: 1552535104}
   - component: {fileID: 1552535106}
   - component: {fileID: 1552535105}
+  - component: {fileID: 1552535107}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1552535104
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2058,6 +2060,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552535103}
   m_CullTransparentMesh: 1
+--- !u!114 &1552535107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552535103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fe176458a9e055459a7573ac4adee14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1651273465
 GameObject:
   m_ObjectHideFlags: 0

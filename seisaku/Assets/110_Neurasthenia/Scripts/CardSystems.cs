@@ -16,6 +16,8 @@ namespace Neurasthenia
         private GameObject hpGauge;
         [SerializeField]
         private GameObject counter;
+        [SerializeField]
+        private GameObject panel;
 
         private List<GameObject> cards = new List<GameObject>();
         private Sprite[] selectImages;
@@ -64,11 +66,14 @@ namespace Neurasthenia
 
         public void CheckAnswers()
         {
+            panel.GetComponent<PanelSystems>().switchPanelActive();
+
             if (this.clickCards[0].GetComponent<Image>().sprite == this.clickCards[1].GetComponent<Image>().sprite)
             {
                 this.clickCards.Clear();
                 counter.GetComponent<CounterSystems>().UpdateCount();
                 hpGauge.GetComponent<HpSystems>().HealedHp();
+                panel.GetComponent<PanelSystems>().switchPanelActive();
                 if (counter.GetComponent<CounterSystems>().CheckCount())
                 {
                     Invoke("ResetCards", 0.3f);
@@ -104,6 +109,7 @@ namespace Neurasthenia
                 card.GetComponent<Button>().enabled = true;
             }
             this.clickCards.Clear();
+            panel.GetComponent<PanelSystems>().switchPanelActive();
         }
 
         private void ResetCards()
