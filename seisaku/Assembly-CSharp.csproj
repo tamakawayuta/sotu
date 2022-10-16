@@ -58,9 +58,9 @@
   <ItemGroup>
     <Compile Include="Assets\t_Tama\Launching_business\Lbscript\Launching_businessGame.cs" />
     <Compile Include="Assets\110_Neurasthenia\Scripts\CardEvents.cs" />
-    <Compile Include="Assets\110_Neurasthenia\Scripts\CounterMain.cs" />
-    <Compile Include="Assets\110_Neurasthenia\Scripts\GameMain.cs" />
     <Compile Include="Assets\110_Neurasthenia\Scripts\HpSystems.cs" />
+    <Compile Include="Assets\110_Neurasthenia\Scripts\CardSystems.cs" />
+    <Compile Include="Assets\110_Neurasthenia\Scripts\CounterSystems.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/2020.3.26f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
