@@ -56,11 +56,11 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\110_Neurasthenia\Scripts\HpImages.cs" />
     <Compile Include="Assets\t_Tama\Launching_business\Lbscript\Launching_businessGame.cs" />
     <Compile Include="Assets\110_Neurasthenia\Scripts\CardEvents.cs" />
     <Compile Include="Assets\110_Neurasthenia\Scripts\CounterMain.cs" />
     <Compile Include="Assets\110_Neurasthenia\Scripts\GameMain.cs" />
+    <Compile Include="Assets\110_Neurasthenia\Scripts\HpSystems.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/2020.3.26f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

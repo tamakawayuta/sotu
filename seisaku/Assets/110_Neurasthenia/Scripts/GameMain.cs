@@ -12,7 +12,7 @@ namespace Neurasthenia
         [SerializeField]
         private GameObject clearPanel;
         [SerializeField]
-        private GameObject hp;
+        private GameObject hpGauge;
         [SerializeField]
         private GameObject counter;
 
@@ -94,14 +94,14 @@ namespace Neurasthenia
             if (selectGameObjects[0].GetComponent<CardEvents>().GetCardColor() ==
                 selectGameObjects[1].GetComponent<CardEvents>().GetCardColor())
             {
-                hp.GetComponent<HpImages>().HealedHp();
+                hpGauge.GetComponent<HpSystems>().HealedHp();
                 counter.GetComponent<CounterMain>().AddAnswers();
                 selectGameObjects.Clear();
             }
             else
             {
                 Invoke("RemoveCards", 1.0f);
-                hp.GetComponent<HpImages>().DamagedHp();
+                hpGauge.GetComponent<HpSystems>().DamagedHp();
             }
         }
 
