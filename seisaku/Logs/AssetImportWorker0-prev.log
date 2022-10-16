@@ -765,3 +765,36 @@ Start importing Assets/Scenes using Guid(2b70259d4e2c77a4082fc755b6ae0dc2) Impor
   Import took 0.017181 seconds .
 >>>>>>> main
 
+========================================================================
+Received Import Request.
+  Time since last request: 778.636630 seconds.
+  path: Assets/t_Tama/Launching_business/Lbimage/redhata.png
+  artifactKey: Guid(706e5b2f93e79304bb66ae50f797ea1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/t_Tama/Launching_business/Lbimage/redhata.png using Guid(706e5b2f93e79304bb66ae50f797ea1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19780b6447c03846fa2300bcc20b0630') in 0.080889 seconds 
+  Import took 0.089219 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 306.444798 seconds.
+  path: Assets/110_Neurasthenia
+  artifactKey: Guid(2583644c82692ab43bbda7a95a047a8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/110_Neurasthenia using Guid(2583644c82692ab43bbda7a95a047a8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b822e5664d3a7af1d4d137fd16d7654e') in 0.010548 seconds 
+  Import took 0.015934 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.358303 seconds.
+  path: Assets/110_Neurasthenia/Images
+  artifactKey: Guid(9e8c98fa7ff89734ab145221cc474696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/110_Neurasthenia/Images using Guid(9e8c98fa7ff89734ab145221cc474696) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '787bb30e6da8ee91c6f87675dd0b5e76') in 0.007714 seconds 
+  Import took 0.012003 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.048986 seconds.
+  path: Assets/110_Neurasthenia/Images/スクリーンショット (3).png
+  artifactKey: Guid(dd8dede88c2eb9c4d854ecf8a7ecf5cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/110_Neurasthenia/Images/スクリーンショット (3).png using Guid(dd8dede88c2eb9c4d854ecf8a7ecf5cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26478bbb0c14bfdc069905cea7330231') in 0.047884 seconds 
+  Import took 0.051469 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

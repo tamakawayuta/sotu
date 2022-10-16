@@ -7,26 +7,17 @@ namespace Neurasthenia
 {
     public class CardEvents : MonoBehaviour
     {
-        [SerializeField]
-        private GameObject director;
 
-        private Color cardColor;
-
-        public void OnClickCard()
+        public void OnClickCard(int cardNum)
         {
-            this.gameObject.GetComponent<Image>().color = this.cardColor;
-            director.GetComponent<GameMain>().SetSelectGameObject(this.gameObject);
             this.gameObject.GetComponent<Button>().enabled = false;
-        }
+            this.gameObject.GetComponent<Image>().sprite = transform.parent.gameObject.GetComponent<CardSystems>().GetCardImages(cardNum);
+            transform.parent.gameObject.GetComponent<CardSystems>().SetClickCards(this.gameObject);
 
-        public void SetCardColor(Color color)
-        {
-            this.cardColor = color;
-        }
-
-        public Color GetCardColor()
-        {
-            return this.cardColor;
+            if (transform.parent.gameObject.GetComponent<CardSystems>().GetClickCardsCount() == 2)
+            {
+                transform.parent.gameObject.GetComponent<CardSystems>().CheckAnswers();
+            }
         }
     }
 }
