@@ -62,6 +62,7 @@
     <Compile Include="Assets\110_Neurasthenia\Scripts\CardSystems.cs" />
     <Compile Include="Assets\110_Neurasthenia\Scripts\CounterSystems.cs" />
     <Compile Include="Assets\110_Neurasthenia\Scripts\HpSystems.cs" />
+    <Compile Include="Assets\PublicUI_Prefabs\Pause\Scripts\PauseSystems.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
