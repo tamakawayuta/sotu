@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PublicUI
 {
-    public class PauseSystems : MonoBehaviour
+    public class GameOverSystems : MonoBehaviour
     {
         [SerializeField]
         private GameObject fade;
@@ -16,24 +16,19 @@ namespace PublicUI
 
         private void Awake()
         {
-            this.gameObject.transform.GetChild(2).gameObject.SetActive(false);
+            this.gameObject.SetActive(false);
             loadSceneNow = SceneManager.GetActiveScene();
         }
 
-        public void OnClickFront()
+        public void AppearGameOverUI()
         {
-            this.gameObject.transform.GetChild(2).gameObject.SetActive(true);
             Time.timeScale = 0;
-        }
-
-        public void OnClickRestart()
-        {
-            Time.timeScale = 1;
-            this.gameObject.transform.GetChild(2).gameObject.SetActive(false);
+            this.gameObject.SetActive(true);
         }
 
         public void OnClickRetry()
         {
+            Time.timeScale = 1;
             SceneManager.LoadScene(loadSceneNow.name);
         }
 

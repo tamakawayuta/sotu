@@ -14,7 +14,6 @@ namespace Neurasthenia
         public void switchPanelActive()
         {
             this.gameObject.SetActive(!this.gameObject.activeSelf);
-            Debug.Log(this.gameObject.activeSelf);
         }
     }
 }

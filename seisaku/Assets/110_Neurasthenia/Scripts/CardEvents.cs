@@ -7,7 +7,6 @@ namespace Neurasthenia
 {
     public class CardEvents : MonoBehaviour
     {
-
         public void OnClickCard(int cardNum)
         {
             this.gameObject.GetComponent<Button>().enabled = false;
