@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Threading.Tasks;
 
 namespace Neurasthenia
 {
@@ -41,8 +42,6 @@ namespace Neurasthenia
             ShuffleCardImages(selectImages);
 
             this.clickCards.Clear();
-
-            Debug.Log(this.clickCards.Count == 0);
         }
 
         private void ShuffleCardImages(Sprite[] images)
@@ -79,12 +78,12 @@ namespace Neurasthenia
                 panel.GetComponent<PanelSystems>().switchPanelActive();
                 if (counter.GetComponent<CounterSystems>().CheckCount())
                 {
-                    Invoke("ResetCards", 0.3f);
+                    ResetCards();
                 }
             }
             else
             {
-                Invoke("RemoveCards", 0.7f);
+                RemoveCards();
                 hpGauge.GetComponent<HpSystems>().DamagedHp();
             }
         }
@@ -104,8 +103,9 @@ namespace Neurasthenia
             return this.clickCards.Count;
         }
 
-        private void RemoveCards()
+        private async void RemoveCards()
         {
+            await Task.Delay(1000);
             foreach (var card in clickCards)
             {
                 card.GetComponent<Image>().sprite = backImage;
@@ -115,8 +115,9 @@ namespace Neurasthenia
             panel.GetComponent<PanelSystems>().switchPanelActive();
         }
 
-        private void ResetCards()
+        private async void ResetCards()
         {
+            await Task.Delay(700);
             foreach (var card in cards)
             {
                 card.GetComponent<Image>().sprite = backImage;
