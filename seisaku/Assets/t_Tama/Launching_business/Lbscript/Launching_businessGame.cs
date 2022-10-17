@@ -48,6 +48,8 @@ public class Launching_businessGame : MonoBehaviour
     [SerializeField]
     private GameObject mainGame;
     [SerializeField]
+    private GameObject[] flag;
+    [SerializeField]
     private Button stratButton;
     [SerializeField]
     private Button whiteupButton;
@@ -105,35 +107,35 @@ public class Launching_businessGame : MonoBehaviour
         {  //スタートボタンが押されたあとの処理。ゲームスタート！
             if (red == 1)
             {  //赤旗を上げるボタンが押されたら
-                //赤旗を表示
+                flag[0].SetActive(true);//赤旗を表示
             }
             if (red == 0)
             {  //赤旗を下げるボタンが押されたら
-                //赤旗を消す
+                flag[0].SetActive(false);//赤旗を消す
             }
             if (white == 1)
             {//白旗を上げるボタンが押されたら
-                //白旗を表示
+                flag[1].SetActive(true);//白旗を表示
             }
             if (white == 0)
             {//白旗を下げるボタンが押されたら
-                //白旗を消す
+                flag[1].SetActive(false);//白旗を消す
             }
-            if (i % 120 == 59)
+            /*if (i % 120 == 59)
             {  //2秒ごとに実行する（余りが59なのはスタートボタンを押して1秒後にスタートさせるため
                 count = 1;          //押せるボタンの数を1回に戻す
                 order_text();       //order_text()へ
-            }
+            }*/
             //rect(0, 0, 300, 100);    //前回のポイント表示を消す
-            mainGame.SetActive(isActive);
+            mainGame.SetActive(true);
             //text("白旗");  //ボタンの間に「白旗」を表示
             //text("赤旗");  //ボタンの間に「赤旗を」表示
             i++;  //draw関数が呼ばれるごとに+1
             //put_button();          //put_button()へ\
-            if (i == 3659)
+            /*if (i == 3659)
             {    //iが3659になったら実行(3659は旗の上下の指示30回分)。ゲーム終了時を表す
                 finish();       //finish()へ
-            }
+            }*/
         }
     }
 
@@ -165,42 +167,42 @@ public class Launching_businessGame : MonoBehaviour
         white = 0;              //白旗の状況リセット
         i = 0;                  //drawに回数リセット
 
-        strat.SetActive(isActive);
+        strat.SetActive(true);
         score[0].text = " " + point;  //「スコア」の下にpointを表示
     }
 
-    void mousePressed()
-    {          
-        if (stratButton)
-        {//スタートボタンをクリックしたとき
-            strat.SetActive(false);          //スタートボタンを消す
-            scene = 1;                          //変数startに1を代入。ゲームをスタートさせる
-        }
-        //旗の上げ下げボタンを押したとき
-        if (whiteupButton)
-        {       //白旗を上げるボタン  
+    public void sButton()
+    {
+        strat.SetActive(false);          //スタートボタンを消す
+        scene = 1;                          //変数startに1を代入。ゲームをスタートさせる
+    }
+
+    public void whiteUpButton()
+    {   //白旗を上げるボタン  
             white = 1;
             check = 2;
             point_count();
-        }
-        else if (whitdownButton)
-        {  //白旗を下げるボタン
+    }
+
+    public void whitDownButton()
+    {   //白旗を下げるボタン
             white = 0;
             check = 3;
             point_count();
-        }
-        else if (redupButton)
-        {  //赤旗を上げるボタン
+    }
+
+    public void redUpButton()
+    {   //赤旗を上げるボタン
             red = 1;
             check = 0;
             point_count();
-        }
-        else if (reddownButton)
-        {  //赤旗を下げるボタン
+    }
+
+    public void redDownButton()
+    {//赤旗を下げるボタン
             red = 0;
             check = 1;
             point_count();
-        }
     }
 
     void point_count()
