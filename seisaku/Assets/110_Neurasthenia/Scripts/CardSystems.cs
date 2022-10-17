@@ -40,6 +40,9 @@ namespace Neurasthenia
             SelectCardImages();
             ShuffleCardImages(selectImages);
 
+            this.clickCards.Clear();
+
+            Debug.Log(this.clickCards.Count == 0);
         }
 
         private void ShuffleCardImages(Sprite[] images)
@@ -72,7 +75,7 @@ namespace Neurasthenia
             {
                 this.clickCards.Clear();
                 counter.GetComponent<CounterSystems>().UpdateCount();
-                hpGauge.GetComponent<HpSystems>().HealedHp();
+                //hpGauge.GetComponent<HpSystems>().HealedHp();
                 panel.GetComponent<PanelSystems>().switchPanelActive();
                 if (counter.GetComponent<CounterSystems>().CheckCount())
                 {
@@ -119,6 +122,9 @@ namespace Neurasthenia
                 card.GetComponent<Image>().sprite = backImage;
                 card.GetComponent<Button>().enabled = true;
             }
+
+            hpGauge.GetComponent<HpSystems>().HealedHp();
+            hpGauge.GetComponent<HpSystems>().HealedHp();
 
             ShuffleCardImages(frontImages);
             SelectCardImages();

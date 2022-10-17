@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using PublicUI;
 
 namespace Neurasthenia
 {
@@ -11,6 +12,8 @@ namespace Neurasthenia
         private Sprite damagedHpImage;
         [SerializeField]
         private Sprite normalHpImage;
+        [SerializeField]
+        private GameObject gameoverUI;
 
         private Stack<Transform> childHps = new Stack<Transform>();
         private Stack<Transform> damagedHps = new Stack<Transform>();
@@ -36,25 +39,33 @@ namespace Neurasthenia
 
         public void DamagedHp()
         {
-            if (childHps.Count == 0)
-            {
-                Debug.Log("GameOver");
-                return;
-            }
-
             var childHp = childHps.Pop();
             childHp.gameObject.GetComponent<Image>().sprite = damagedHpImage;
             childHp.gameObject.GetComponent<Image>().color = Color.black;
+
+            if (childHps.Count == 0)
+            {
+                gameoverUI.GetComponent<GameOverSystems>().AppearGameOverUI();
+                return;
+            }
 
             Transform[] children = childHps.ToArray();
             var hpColor = Color.clear;
             switch (childHps.Count)
             {
+                case 4:
+                    hpColor = Color.green;
+                    break;
+                case 3:
+                    hpColor = Color.yellow;
+                    break;
                 case 2:
                     hpColor = Color.yellow;
                     break;
                 case 1:
                     hpColor = Color.red;
+                    break;
+                default:
                     break;
             }
             foreach (var child in children)
@@ -80,11 +91,19 @@ namespace Neurasthenia
             var hpColor = Color.clear;
             switch (childHps.Count)
             {
-                case 3:
+                case 5:
                     hpColor = Color.green;
+                    break;
+                case 4:
+                    hpColor = Color.green;
+                    break;
+                case 3:
+                    hpColor = Color.yellow;
                     break;
                 case 2:
                     hpColor = Color.yellow;
+                    break;
+                default:
                     break;
             }
             foreach (var child in children)
