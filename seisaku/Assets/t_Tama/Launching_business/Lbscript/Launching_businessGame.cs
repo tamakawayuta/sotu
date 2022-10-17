@@ -21,6 +21,10 @@ public class Launching_businessGame : MonoBehaviour
     int point;//ポイント
     int scene;//シーンを代入。ゲーム画面は1,スタート・結果画面は0。1になるとゲームスタート！
     int count;//ボタンを押した回数(1回の指示で1回までボタンを押せる
+
+    float limit;
+    float timrLimit;
+
     [SerializeField]
     string[] order = {"赤あげて","赤下げて","白あげて","白下げて",  //日本語
                   "赤下げない","赤あげない","白下げない","白あげない",
@@ -50,15 +54,9 @@ public class Launching_businessGame : MonoBehaviour
     [SerializeField]
     private GameObject[] flag;
     [SerializeField]
-    private Button stratButton;
+    private GameObject orderText;
     [SerializeField]
-    private Button whiteupButton;
-    [SerializeField]
-    private Button redupButton;
-    [SerializeField]
-    private Button whitdownButton;
-    [SerializeField]
-    private Button reddownButton;
+    private Text ordText;
 
     [SerializeField]
     public Text[] score;
@@ -66,35 +64,6 @@ public class Launching_businessGame : MonoBehaviour
 
     bool isActive = true;
 
-
-    /*  void setup()
-      {
-          image_setup();//void image_setupへ
-          text_setup();//void text_setupへ
-          point = 0;
-      }
-
-      void image_setup()
-      {  //画像を読み込むプログラムをまとめてある
-          frag_red = loadImage("Frag_red.jpg");        //赤旗
-          frag_white = loadImage("Frag_white.jpg");    //白旗
-          red_up = loadImage("red_up.jpg");            //赤旗を上げるボタン
-          red_down = loadImage("red_down.jpg");        //赤旗を下げるボタン
-          white_up = loadImage("white_up.jpg");        //白旗を上げるボタン  
-          white_down = loadImage("white_down.jpg");    //白旗を下げるボタン
-          start_button = loadImage("start_button.jpg");//スタートボタン
-      }
-
-      void text_setup()
-      {  //旗揚げの命令テキストの設定用プログラムをまとめてある
-          font = createFont("MS Gothic", 60);                //ゴシック体
-          font_chinese = createFont("Microsoft YaHei", 60);  //中国語のフォント
-          font_arabia = createFont("Arial", 60);             //アラビア語のフォント
-          font_korea = createFont("Malgun Gothic", 60);      //韓国語のフォント
-          textFont(font);        //基本のフォントを変数fontに
-          textAlign(CENTER);     //テキストの位置中央に寄せる
-          textSize(60);          //フォントサイズを60に
-      }*/
 
     void draw()
     {
@@ -105,6 +74,13 @@ public class Launching_businessGame : MonoBehaviour
         }
         if (scene == 1)
         {  //スタートボタンが押されたあとの処理。ゲームスタート！
+            limit -= Time.deltaTime;
+            if(limit < 0)
+            {
+                seconds();
+                limit = 2;
+            }
+            //Invoke("seconds",0);
             if (red == 1)
             {  //赤旗を上げるボタンが押されたら
                 flag[0].SetActive(true);//赤旗を表示
@@ -121,39 +97,29 @@ public class Launching_businessGame : MonoBehaviour
             {//白旗を下げるボタンが押されたら
                 flag[1].SetActive(false);//白旗を消す
             }
-            /*if (i % 120 == 59)
-            {  //2秒ごとに実行する（余りが59なのはスタートボタンを押して1秒後にスタートさせるため
-                count = 1;          //押せるボタンの数を1回に戻す
-                order_text();       //order_text()へ
-            }*/
-            //rect(0, 0, 300, 100);    //前回のポイント表示を消す
+            score[1].text = "" + point;
+
             mainGame.SetActive(true);
-            //text("白旗");  //ボタンの間に「白旗」を表示
-            //text("赤旗");  //ボタンの間に「赤旗を」表示
-            i++;  //draw関数が呼ばれるごとに+1
-            //put_button();          //put_button()へ\
-            /*if (i == 3659)
+            timrLimit -= Time.deltaTime;
+            Debug.Log(timrLimit);
+            if (timrLimit < 0)
             {    //iが3659になったら実行(3659は旗の上下の指示30回分)。ゲーム終了時を表す
                 finish();       //finish()へ
-            }*/
+            }
         }
+    }
+
+    void seconds()
+    {//2秒ごとに実行する
+                count = 1;          //押せるボタンの数を1回に戻す
+                order_text();       //order_text()へ
     }
 
     void order_text()
     {        //旗の上下の指示するテキストを表示させる
-        //rect(0, 0, 1100, 220);   //前回の指示テキストを消す
         rand = Random.Range(0, 80);     //randに乱数を代入
-        //textFont(font);     //font表示
-        //text(order[rand], 550, 200);
+        ordText.text = "" + order[rand];
     }
-
-    /*void put_button()
-    {
-        image(white_up, 320, 300, 200, 200);  //白旗を上げるボタンの配置
-        image(white_down, 320, 580, 200, 200);//白旗を下げるボタンの配置
-        image(red_up, 580, 300, 200, 200);    //赤旗を上げるボタンの配置
-        image(red_down, 580, 580, 200, 200);  //赤旗を下げるボタンの配置
-    }*/
 
     void Active()
     {
@@ -166,9 +132,11 @@ public class Launching_businessGame : MonoBehaviour
         red = 0;                //赤旗の状況リセット
         white = 0;              //白旗の状況リセット
         i = 0;                  //drawに回数リセット
+        timrLimit = 20;
 
+        mainGame.SetActive(false);
         strat.SetActive(true);
-        score[0].text = " " + point;  //「スコア」の下にpointを表示
+        score[0].text = "" + point;  //「スコア」の下にpointを表示
     }
 
     public void sButton()
@@ -199,7 +167,7 @@ public class Launching_businessGame : MonoBehaviour
     }
 
     public void redDownButton()
-    {//赤旗を下げるボタン
+    {   //赤旗を下げるボタン
             red = 0;
             check = 1;
             point_count();
@@ -221,8 +189,10 @@ public class Launching_businessGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        score[1].text = " " + point;
+        score[0].text = "" + point;
         point = 0;
+        limit = 2;
+        red = 0;
     }
 
     // Update is called once per frame
