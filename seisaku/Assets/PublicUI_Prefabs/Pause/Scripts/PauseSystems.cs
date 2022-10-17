@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Threading.Tasks;
 
-namespace Pause
+namespace PublicUI
 {
     public class PauseSystems : MonoBehaviour
     {
+        [SerializeField]
+        private GameObject fade;
+
         private Scene loadSceneNow;
 
         private void Awake()
@@ -33,8 +37,10 @@ namespace Pause
             SceneManager.LoadScene(loadSceneNow.name);
         }
 
-        public void OnClickRetire()
+        public async void OnClickRetire()
         {
+            fade.GetComponent<FadeSystems>().FadeOut();
+            await Task.Delay(4000);
             SceneManager.LoadScene("HomeScene");
         }
     }
