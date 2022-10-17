@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/50_Title/Scenes/TitleScene.unity
+    guid: 88b1a6eb7b41f924c8edafd04784cfef
+  - enabled: 1
+    path: Assets/60_Home/Scenes/HomeScene.unity
+    guid: c0c38f70124fee343aad200ca63948cd
+  - enabled: 1
+    path: Assets/70_Description/Scenes/DescriptionScene.unity
+    guid: 20a23d0e9d009f14085e766d158db207
+  - enabled: 1
+    path: Assets/110_Neurasthenia/Scene/Maingame.unity
+    guid: 48af69177151e7d43a05889d447b337b
   m_configObjects: {}
