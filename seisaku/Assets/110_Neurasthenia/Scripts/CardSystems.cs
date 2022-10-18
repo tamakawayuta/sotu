@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Threading.Tasks;
+using SoundManager;
 
 namespace Neurasthenia
 {
@@ -19,6 +20,8 @@ namespace Neurasthenia
         private GameObject counter;
         [SerializeField]
         private GameObject panel;
+        [SerializeField]
+        private GameObject soundManager;
 
         private List<GameObject> cards = new List<GameObject>();
         private Sprite[] selectImages;
@@ -68,14 +71,12 @@ namespace Neurasthenia
 
         public void CheckAnswers()
         {
-            panel.GetComponent<PanelSystems>().switchPanelActive();
-
             if (this.clickCards[0].GetComponent<Image>().sprite == this.clickCards[1].GetComponent<Image>().sprite)
             {
                 this.clickCards.Clear();
+                soundManager.GetComponent<SoundSystems>().PlaySE(2);
                 counter.GetComponent<CounterSystems>().UpdateCount();
                 //hpGauge.GetComponent<HpSystems>().HealedHp();
-                panel.GetComponent<PanelSystems>().switchPanelActive();
                 if (counter.GetComponent<CounterSystems>().CheckCount())
                 {
                     ResetCards();
@@ -84,6 +85,8 @@ namespace Neurasthenia
             else
             {
                 RemoveCards();
+                panel.GetComponent<PanelSystems>().switchPanelActive();
+                soundManager.GetComponent<SoundSystems>().PlaySE(3);
                 hpGauge.GetComponent<HpSystems>().DamagedHp();
             }
         }
@@ -95,6 +98,7 @@ namespace Neurasthenia
 
         public void SetClickCards(GameObject clicked)
         {
+            soundManager.GetComponent<SoundSystems>().PlaySE(0);
             clickCards.Add(clicked);
         }
 
@@ -106,6 +110,16 @@ namespace Neurasthenia
         private async void RemoveCards()
         {
             await Task.Delay(1000);
+
+            while (true)
+            {
+                if (Time.timeScale == 1)
+                {
+                    break;
+                }
+                await Task.Delay(2000);
+            }
+
             foreach (var card in clickCards)
             {
                 card.GetComponent<Image>().sprite = backImage;
@@ -118,6 +132,7 @@ namespace Neurasthenia
         private async void ResetCards()
         {
             await Task.Delay(700);
+            soundManager.GetComponent<SoundSystems>().PlaySE(1);
             foreach (var card in cards)
             {
                 card.GetComponent<Image>().sprite = backImage;
