@@ -526,3 +526,4 @@ Received Import Request.
 Start importing Assets/PublicUI_Prefabs/Pause/PauseUI.prefab using Guid(65e283e9074a95d409da6974f4e167fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51db14f3ffccbaf3ed4e861b3a5c2477') in 0.007574 seconds 
   Import took 0.011640 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
