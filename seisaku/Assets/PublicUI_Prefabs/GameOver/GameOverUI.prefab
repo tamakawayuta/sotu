@@ -232,7 +232,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Retry
+  m_Text: "\u3082\u3046\u3044\u3061\u3069"
 --- !u!1 &5002541100589970110
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,7 +311,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Retire
+  m_Text: "\u3084\u3081\u308B"
 --- !u!1 &5002541100807854888
 GameObject:
   m_ObjectHideFlags: 0
