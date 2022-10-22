@@ -431,7 +431,6 @@ RectTransform:
   - {fileID: 838831989}
   - {fileID: 2000968217}
   - {fileID: 1059073860}
-  - {fileID: 556727897}
   - {fileID: 1882795137}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -649,7 +648,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 359448886}
+    m_TransformParent: {fileID: 2000968217}
     m_Modifications:
     - target: {fileID: 711819226850020546, guid: 65e283e9074a95d409da6974f4e167fe, type: 3}
       propertyPath: fade
@@ -669,7 +668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6942279279460739241, guid: 65e283e9074a95d409da6974f4e167fe, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6942279279460739241, guid: 65e283e9074a95d409da6974f4e167fe, type: 3}
       propertyPath: m_AnchorMax.x
@@ -696,6 +695,14 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6942279279460739241, guid: 65e283e9074a95d409da6974f4e167fe, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9090909
+      objectReference: {fileID: 0}
+    - target: {fileID: 6942279279460739241, guid: 65e283e9074a95d409da6974f4e167fe, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9090909
+      objectReference: {fileID: 0}
+    - target: {fileID: 6942279279460739241, guid: 65e283e9074a95d409da6974f4e167fe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -713,15 +720,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6942279279460739241, guid: 65e283e9074a95d409da6974f4e167fe, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6942279279460739241, guid: 65e283e9074a95d409da6974f4e167fe, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6942279279460739241, guid: 65e283e9074a95d409da6974f4e167fe, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6942279279460739241, guid: 65e283e9074a95d409da6974f4e167fe, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -749,7 +756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6942279279460739242, guid: 65e283e9074a95d409da6974f4e167fe, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65e283e9074a95d409da6974f4e167fe, type: 3}
@@ -1627,82 +1634,42 @@ MonoBehaviour:
   - "\u8D64\u4E0B\u3052\u3066"
   - "\u767D\u3042\u3052\u3066"
   - "\u767D\u4E0B\u3052\u3066"
-  - "\u8D64\u4E0B\u3052\u306A\u3044"
-  - "\u8D64\u3042\u3052\u306A\u3044"
-  - "\u767D\u4E0B\u3052\u306A\u3044"
-  - "\u767D\u3042\u3052\u306A\u3044"
   - Raise red
   - Lower white
   - Raise white
   - Lower white
-  - Don't lower red
-  - Don't raise red
-  - Don't lower white
-  - Don't raise red
   - Lever le drapeau rouge
   - Abaisser le drapeau rouge
   - Lever le drapeau blanc
   - Abaisser le drapeau blanc
-  - Ne baissez pas le drapeau rouge
-  - Ne levez pas le drapeau rouge
-  - Ne baissez pas le drapeau blanc
-  - Ne levez pas le drapeau rouge
   - "\u8209\u8D77\u7D05\u65D7"
   - "\u964D\u4E0B\u7D05\u65D7"
   - "\u9AD8\u8209\u767D\u65D7"
   - "\u964D\u4E0B\u767D\u65D7"
-  - "\u4E0D\u8981\u964D\u4F4E\u7D05\u65D7"
-  - "\u4E0D\u8981\u8209\u8D77\u7D05\u65D7"
-  - "\u4E0D\u8981\u964D\u767D\u65D7"
-  - "\u4E0D\u8981\u8209\u767D\u65D7"
   - "\u0627\u0631\u0641\u0639\u0648\u0627 \u0627\u0644\u0639\u0644\u0645 \u0627\u0644\u0623\u062D\u0645\u0631"
   - "\u0627\u062E\u0641\u0636 \u0627\u0644\u0639\u0644\u0645 \u0627\u0644\u0623\u062D\u0645\u0631"
   - "\u0627\u0631\u0641\u0639 \u0627\u0644\u0631\u0627\u064A\u0629 \u0627\u0644\u0628\u064A\u0636\u0627\u0621"
   - "\u0627\u062E\u0641\u0636 \u0627\u0644\u0639\u0644\u0645 \u0627\u0644\u0623\u0628\u064A\u0636"
-  - "\u0644\u0627 \u062A\u0646\u0632\u0644 \u0627\u0644\u0639\u0644\u0645 \u0627\u0644\u0623\u062D\u0645\u0631"
-  - "\u0644\u0627 \u062A\u0631\u0641\u0639 \u0627\u0644\u0639\u0644\u0645 \u0627\u0644\u0623\u062D\u0645\u0631"
-  - "\u0644\u0627 \u062A\u0646\u0632\u0644 \u0627\u0644\u0639\u0644\u0645 \u0627\u0644\u0623\u062D\u0645\u0631"
-  - "\u0644\u0627 \u062A\u0631\u0641\u0639 \u0627\u0644\u0639\u0644\u0645 \u0627\u0644\u0623\u062D\u0645\u0631"
   - Levanta la bandera roja
   - Baja la bandera roja
   - Levanta la bandera blanca
   - Baja la bandera blanca
-  - No bajes la bandera roja
-  - No levantes la bandera roja
-  - No bajes la bandera blanca
-  - No levantes la bandera blanca
   - Hys die rooi vlag
   - Laat sak die rooi vlag
   - Hys die wit vlag
   - Laat sak die wit vlag
-  - Moenie die rooi vlag laat sak nie
-  - Moenie die rooi vlag hys nie
-  - Moenie die wit vlag laat sak nie
-  - Moenie die wit vlag opsteek nie
   - Inua bendera nyekundu
   - Usishushe bendera nyekundu
   - Inua bendera nyeupe
   - Punguza bendera nyeupe
-  - Usishushe bendera nyekundu
-  - Usipandishe bendera nyekundu
-  - Usishushe bendera nyeupe
-  - Usipandishe bendera nyeupe
   - Levante a bandeira vermelha
   - Abaixe a bandeira vermelha
   - Levante a bandeira branca
   - Abaixe a bandeira branca
-  - "N\xE3o abaixe a bandeira vermelha"
-  - "N\xE3o levante a bandeira vermelha"
-  - "N\xE3o abaixe a bandeira branca"
-  - "N\xE3o levante a bandeira branca"
   - "\uBD89\uC740 \uAE43\uBC1C\uC744 \uC62C\uB824"
   - "\uBD89\uC740 \uAE43\uBC1C\uC744 \uB0B4\uB9AC\uACE0"
   - "\uD770 \uAE43\uBC1C\uC744 \uC62C\uB824"
   - "\uD770 \uAE43\uBC1C\uC744 \uB0B4\uB9AC\uACE0"
-  - "\uBD89\uC740 \uAE43\uBC1C\uC744 \uB0AE\uCD94\uC9C0 \uB9C8\uC2ED\uC2DC\uC624"
-  - "\uBD89\uC740 \uAE43\uBC1C\uC744 \uC62C\uB9AC\uC9C0 \uB9C8\uC2ED\uC2DC\uC624"
-  - "\uBC31\uAE30\uB97C \uB0AE\uCD94\uC9C0 \uB9C8\uC2ED\uC2DC\uC624"
-  - "\uBC31\uAE30\uB97C \uC62C\uB9AC\uC9C0 \uB9C8\uC2ED\uC2DC\uC624"
   strat: {fileID: 838831988}
   mainGame: {fileID: 2000968216}
   flag:
@@ -1713,6 +1680,7 @@ MonoBehaviour:
   score:
   - {fileID: 376264874}
   - {fileID: 1623472986}
+  timeL: {fileID: 2049578332}
 --- !u!1001 &1064058499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2263,13 +2231,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745673892}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2000968217}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -250, y: -50}
@@ -2463,7 +2431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1185950226058929578, guid: 40ba4573ac8933e48a036168a6dcdcdb, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1185950226058929578, guid: 40ba4573ac8933e48a036168a6dcdcdb, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2623,7 +2591,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u8D64\u65D7\u4E0A\u3052\u3066"
+  m_Text: "\u8D64\u4E0A\u3052\u3066"
 --- !u!222 &1914656898
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2780,7 +2748,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2000968217
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2802,6 +2770,7 @@ RectTransform:
   - {fileID: 1623472988}
   - {fileID: 1914656896}
   - {fileID: 2049578331}
+  - {fileID: 556727897}
   m_Father: {fileID: 359448886}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

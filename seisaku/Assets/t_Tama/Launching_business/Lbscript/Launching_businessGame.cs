@@ -16,36 +16,40 @@ public class Launching_businessGame : MonoBehaviour
       白があげられたら check=2
       白が下げられたら check=3
     */
+    int redCheck;
+    int whiteCheck;
     int num;//どの旗を上下するよう指示したか調べる変数
     int i;//drawを実行した数
+    int orderCount;
     int point;//ポイント
     int scene;//シーンを代入。ゲーム画面は1,スタート・結果画面は0。1になるとゲームスタート！
     int count;//ボタンを押した回数(1回の指示で1回までボタンを押せる
 
     float limit;
     float timrLimit;
+    float orderLimit;
 
     [SerializeField]
     string[] order = {"赤あげて","赤下げて","白あげて","白下げて",  //日本語
-                  "赤下げない","赤あげない","白下げない","白あげない",
+                  /*"赤下げない","赤あげない","白下げない","白あげない",*/
                   "Raise red","Lower white","Raise white","Lower white",  //英語
-                  "Don't lower red","Don't raise red","Don't lower white","Don't raise red",
+                  /*"Don't lower red","Don't raise red","Don't lower white","Don't raise red",*/
                   "Lever le drapeau rouge","Abaisser le drapeau rouge","Lever le drapeau blanc","Abaisser le drapeau blanc",  //フランス語
-                  "Ne baissez pas le drapeau rouge","Ne levez pas le drapeau rouge","Ne baissez pas le drapeau blanc","Ne levez pas le drapeau rouge",
+                  /*"Ne baissez pas le drapeau rouge","Ne levez pas le drapeau rouge","Ne baissez pas le drapeau blanc","Ne levez pas le drapeau rouge",*/
                   "舉起紅旗","降下紅旗","高舉白旗","降下白旗",  //中国語
-                  "不要降低紅旗","不要舉起紅旗","不要降白旗","不要舉白旗",
+                  /*"不要降低紅旗","不要舉起紅旗","不要降白旗","不要舉白旗",*/
                   "ارفعوا العلم الأحمر","اخفض العلم الأحمر","ارفع الراية البيضاء","اخفض العلم الأبيض",  //アラビア語
-                  "لا تنزل العلم الأحمر","لا ترفع العلم الأحمر","لا تنزل العلم الأحمر","لا ترفع العلم الأحمر",
+                  /*"لا تنزل العلم الأحمر","لا ترفع العلم الأحمر","لا تنزل العلم الأحمر","لا ترفع العلم الأحمر",*/
                   "Levanta la bandera roja","Baja la bandera roja","Levanta la bandera blanca","Baja la bandera blanca",  //スペイン語
-                  "No bajes la bandera roja","No levantes la bandera roja","No bajes la bandera blanca","No levantes la bandera blanca",
+                  /*"No bajes la bandera roja","No levantes la bandera roja","No bajes la bandera blanca","No levantes la bandera blanca",*/
                   "Hys die rooi vlag","Laat sak die rooi vlag","Hys die wit vlag","Laat sak die wit vlag",  //アフリカーンス語
-                  "Moenie die rooi vlag laat sak nie","Moenie die rooi vlag hys nie","Moenie die wit vlag laat sak nie","Moenie die wit vlag opsteek nie",
+                  /*"Moenie die rooi vlag laat sak nie","Moenie die rooi vlag hys nie","Moenie die wit vlag laat sak nie","Moenie die wit vlag opsteek nie",*/
                   "Inua bendera nyekundu","Usishushe bendera nyekundu","Inua bendera nyeupe","Punguza bendera nyeupe",  //スワヒリ語
-                  "Usishushe bendera nyekundu","Usipandishe bendera nyekundu","Usishushe bendera nyeupe","Usipandishe bendera nyeupe",
+                  /*"Usishushe bendera nyekundu","Usipandishe bendera nyekundu","Usishushe bendera nyeupe","Usipandishe bendera nyeupe",*/
                   "Levante a bandeira vermelha","Abaixe a bandeira vermelha","Levante a bandeira branca","Abaixe a bandeira branca",  //ポルトガル語
-                  "Não abaixe a bandeira vermelha","Não levante a bandeira vermelha","Não abaixe a bandeira branca","Não levante a bandeira branca",
+                  /*"Não abaixe a bandeira vermelha","Não levante a bandeira vermelha","Não abaixe a bandeira branca","Não levante a bandeira branca",*/
                   "붉은 깃발을 올려","붉은 깃발을 내리고","흰 깃발을 올려","흰 깃발을 내리고",  //韓国語
-                  "붉은 깃발을 낮추지 마십시오","붉은 깃발을 올리지 마십시오","백기를 낮추지 마십시오","백기를 올리지 마십시오" };
+                  /*"붉은 깃발을 낮추지 마십시오","붉은 깃발을 올리지 마십시오","백기를 낮추지 마십시오","백기를 올리지 마십시오"*/ };
 
     [SerializeField]
     private GameObject strat;
@@ -60,6 +64,9 @@ public class Launching_businessGame : MonoBehaviour
 
     [SerializeField]
     public Text[] score;
+
+    [SerializeField]
+    private Text timeL;
 
 
     bool isActive = true;
@@ -80,14 +87,26 @@ public class Launching_businessGame : MonoBehaviour
                 seconds();
                 limit = 2;
             }
+            orderLimit -= Time.deltaTime;
+            if(orderLimit < 0)
+            {
+                orderCount += 4;
+                orderLimit = 10;
+            }
             //Invoke("seconds",0);
             if (red == 1)
             {  //赤旗を上げるボタンが押されたら
                 flag[0].SetActive(true);//赤旗を表示
+                //Transfrom target1 = this.transfrom;
+                //target1.position(-250, -50, 0);
             }
             if (red == 0)
             {  //赤旗を下げるボタンが押されたら
                 flag[0].SetActive(false);//赤旗を消す
+
+                //Transfrom terget1 = this.transfrom;
+                //terget1.position(-300, -150, 0);
+                //terget1.Rotate(0, 0, 180);
             }
             if (white == 1)
             {//白旗を上げるボタンが押されたら
@@ -101,11 +120,12 @@ public class Launching_businessGame : MonoBehaviour
 
             mainGame.SetActive(true);
             timrLimit -= Time.deltaTime;
-            Debug.Log(timrLimit);
+            //Debug.Log(timrLimit);
             if (timrLimit < 0)
             {    //iが3659になったら実行(3659は旗の上下の指示30回分)。ゲーム終了時を表す
                 finish();       //finish()へ
             }
+            timeL.text = (int)timrLimit + "秒";
         }
     }
 
@@ -117,10 +137,8 @@ public class Launching_businessGame : MonoBehaviour
 
     void order_text()
     {        //旗の上下の指示するテキストを表示させる
-        rand = Random.Range(0, 80);     //randに乱数を代入
+        rand = Random.Range(0, orderCount);     //randに乱数を代入
         ordText.text = "" + order[rand];
-
-        point_count();
     }
 
     void Active()
@@ -134,7 +152,7 @@ public class Launching_businessGame : MonoBehaviour
         red = 0;                //赤旗の状況リセット
         white = 0;              //白旗の状況リセット
         i = 0;                  //drawに回数リセット
-        timrLimit = 20;
+        timrLimit = 120;
 
         mainGame.SetActive(false);
         strat.SetActive(true);
@@ -180,9 +198,21 @@ public class Launching_businessGame : MonoBehaviour
         if (count == 1)
         {
             num = rand % 4;            //randを4で割ったときの余りを代入(この数が配列orderと対応してい
-            if (num == check)
-            {          //変数checkとnumが同じとき実行(指示と旗の状態が同じとき）
-                point += 10;             //ポイントを+10
+            if(num <= 2)
+            {
+                num -= 1;
+                if (num == red)
+                {          //変数checkとnumが同じとき実行(指示と旗の状態が同じとき）
+                    point += 10;             //ポイントを+10
+                }  
+            }
+            else
+            {
+                num -= 3;
+                if (num == white)
+                {
+                    point += 10;
+                }
             }
             count = 0;                //押せるボタンの数を1回に戻す
         }
@@ -191,15 +221,24 @@ public class Launching_businessGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        orderCount = 4;
+        orderLimit = 20;
+        timrLimit = 120;
+        scene = 0;
         score[0].text = "" + point;
         point = 0;
         limit = 2;
         red = 0;
+
+        GameObject target1 = GameObject.Find("Red_flag");
+        GameObject target2 = GameObject.Find("White_flag");
     }
 
     // Update is called once per frame
     void Update()
     {
         draw();
+
+        point_count();
     }
 }
