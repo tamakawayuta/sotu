@@ -122,8 +122,8 @@ namespace Neurasthenia
 
             foreach (var card in clickCards)
             {
-                card.GetComponent<Image>().sprite = backImage;
                 card.GetComponent<Button>().enabled = true;
+                card.GetComponent<Image>().sprite = backImage;
             }
             this.clickCards.Clear();
             panel.GetComponent<PanelSystems>().switchPanelActive();
@@ -131,16 +131,18 @@ namespace Neurasthenia
 
         private async void ResetCards()
         {
-            await Task.Delay(700);
             soundManager.GetComponent<SoundSystems>().PlaySE(1);
+
+            hpGauge.GetComponent<HpSystems>().HealedHp();
+            hpGauge.GetComponent<HpSystems>().HealedHp();
+
+            await Task.Delay(700);
+
             foreach (var card in cards)
             {
                 card.GetComponent<Image>().sprite = backImage;
                 card.GetComponent<Button>().enabled = true;
             }
-
-            hpGauge.GetComponent<HpSystems>().HealedHp();
-            hpGauge.GetComponent<HpSystems>().HealedHp();
 
             ShuffleCardImages(frontImages);
             SelectCardImages();

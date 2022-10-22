@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Threading.Tasks;
 using PublicUI;
 
 namespace Neurasthenia
@@ -87,6 +88,8 @@ namespace Neurasthenia
 
             var childHp = damagedHps.Pop();
             childHp.gameObject.GetComponent<Image>().sprite = normalHpImage;
+            childHp.GetComponent<Transform>().localScale = new Vector3(1.5f, 1.5f, 1.0f);
+            MinimumHpImage(childHp.gameObject);
             childHps.Push(childHp);
 
             Transform[] children = childHps.ToArray();
@@ -114,5 +117,18 @@ namespace Neurasthenia
             }
         }
 
+        private async void MinimumHpImage(GameObject hp)
+        {
+            var scaleX = hp.GetComponent<Transform>().localScale.x;
+            var scaleY = hp.GetComponent<Transform>().localScale.y;
+
+            while (scaleX > 1.0f)
+            {
+                scaleX -= 0.1f;
+                scaleY -= 0.1f;
+                hp.GetComponent<Transform>().localScale = new Vector3(scaleX, scaleY, 1.0f);
+                await Task.Delay(30);
+            }
+        }
     }
 }
