@@ -119,6 +119,8 @@ public class Launching_businessGame : MonoBehaviour
     {        //旗の上下の指示するテキストを表示させる
         rand = Random.Range(0, 80);     //randに乱数を代入
         ordText.text = "" + order[rand];
+
+        point_count();
     }
 
     void Active()
@@ -149,28 +151,28 @@ public class Launching_businessGame : MonoBehaviour
     {   //白旗を上げるボタン  
             white = 1;
             check = 2;
-            point_count();
+            //point_count();
     }
 
     public void whitDownButton()
     {   //白旗を下げるボタン
             white = 0;
             check = 3;
-            point_count();
+            //point_count();
     }
 
     public void redUpButton()
     {   //赤旗を上げるボタン
             red = 1;
             check = 0;
-            point_count();
+            //point_count();
     }
 
     public void redDownButton()
     {   //赤旗を下げるボタン
             red = 0;
             check = 1;
-            point_count();
+            //point_count();
     }
 
     void point_count()
