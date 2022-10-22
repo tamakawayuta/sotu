@@ -54,6 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fade: {fileID: 0}
   buttonSE: {fileID: 8300000, guid: 435994726752ad64cbb8ed2b56322ef7, type: 3}
+  soundManager: {fileID: 0}
 --- !u!82 &7331775446687500962
 AudioSource:
   m_ObjectHideFlags: 0
@@ -912,7 +913,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Retry
+  m_Text: "\u306F\u3058\u3081\u304B\u3089"
 --- !u!1 &6942279281084558890
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,7 +992,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Retire
+  m_Text: "\u3084\u3081\u308B"
 --- !u!1 &6942279281100701921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,4 +1071,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Restart
+  m_Text: "\u3064\u3065\u3051\u308B"

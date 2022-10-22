@@ -14,6 +14,8 @@ namespace Neurasthenia
         private Sprite normalHpImage;
         [SerializeField]
         private GameObject gameoverUI;
+        [SerializeField]
+        private GameObject counter;
 
         private Stack<Transform> childHps = new Stack<Transform>();
         private Stack<Transform> damagedHps = new Stack<Transform>();
@@ -45,7 +47,7 @@ namespace Neurasthenia
 
             if (childHps.Count == 0)
             {
-                gameoverUI.GetComponent<GameOverSystems>().AppearGameOverUI();
+                gameoverUI.GetComponent<GameOverSystems>().AppearGameOverUI(counter.GetComponent<CounterSystems>().GetAnswerAmount());
                 return;
             }
 

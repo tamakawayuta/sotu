@@ -24,15 +24,20 @@ namespace PublicUI
         private AudioSource source;
         private Scene loadSceneNow;
 
+        private GameObject scoreText;
+
         private void Awake()
         {
             source = this.gameObject.GetComponent<AudioSource>();
+
+            scoreText = this.gameObject.transform.GetChild(2).gameObject;
+            scoreText.GetComponent<Text>().text = "";
 
             this.gameObject.SetActive(false);
             loadSceneNow = SceneManager.GetActiveScene();
         }
 
-        public void AppearGameOverUI()
+        public void AppearGameOverUI(int score)
         {
             Time.timeScale = 0;
             this.gameObject.SetActive(true);
@@ -42,6 +47,7 @@ namespace PublicUI
                 source.PlayOneShot(fanfareSE);
             }
 
+            scoreText.GetComponent<Text>().text = "ÉXÉRÉA: " + score.ToString();
             soundManager.GetComponent<SoundSystems>().StopBGM();
         }
 

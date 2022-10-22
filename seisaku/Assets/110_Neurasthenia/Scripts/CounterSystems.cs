@@ -24,5 +24,10 @@ namespace Neurasthenia
         {
             return answerAmount % 5 == 0 && answerAmount != 0;
         }
+
+        public int GetAnswerAmount()
+        {
+            return this.answerAmount;
+        }
     }
 }
