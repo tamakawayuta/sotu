@@ -24,13 +24,18 @@ namespace HitAndBlow
 
             foreach (var card in cards)
             {
-                card.GetComponent<Image>().sprite = backImage;
+                //card.GetComponent<Image>().sprite = backImage;
                 card.GetComponent<Image>().color = Color.white;
             }
 
             ShuffleCardImages(frontImages);
             SelectCardImages();
             ShuffleCardImages(selectImages);
+
+            for (var i = 0; i < cards.Count; i++)
+            {
+                cards[i].GetComponent<Image>().sprite = selectImages[i];
+            }
         }
 
         private void ShuffleCardImages(Sprite[] images)
@@ -50,7 +55,8 @@ namespace HitAndBlow
 
             for (int i = 0; i < 4; i++)
             {
-                selectImages[i] = frontImages[i];
+                var randomIndex = Random.Range(0, frontImages.Length);
+                selectImages[i] = frontImages[randomIndex];
             }
         }
 
@@ -60,6 +66,56 @@ namespace HitAndBlow
             {
                 cards[i].GetComponent<Image>().sprite = selectImages[i];
             }
+        }
+
+        public int CheckHit(Sprite[] answer)
+        {
+            if (answer.Length != 4)
+            {
+                Debug.LogError("");
+            }
+
+            var hitAmount = 0;
+
+            for (var i = 0; i < 4; i++)
+            {
+                if (cards[i].GetComponent<Image>().sprite == answer[i])
+                {
+                    hitAmount++;
+                }
+            }
+
+            return hitAmount;
+        }
+
+        public int CheckBlow(Sprite[] answer)
+        {
+            if (answer.Length != 4)
+            {
+                Debug.LogError("");
+            }
+
+            var blowAmount = 0;
+            bool[] didAddAmount = { false, false, false, false };
+
+            for (var i = 0; i < 4; i++)
+            {
+                for (var j = 0; j < 4; j++)
+                {
+                    if (didAddAmount[j])
+                    {
+                        continue;
+                    }
+
+                    if (answer[i] == cards[j].GetComponent<Image>().sprite)
+                    {
+                        blowAmount++;
+                        didAddAmount[j] = true;
+                    }
+                }
+            }
+
+            return blowAmount;
         }
     }
 }

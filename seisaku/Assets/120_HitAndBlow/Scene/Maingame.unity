@@ -772,6 +772,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   images: {fileID: 1328900503}
+  texts: {fileID: 1938004003}
+  answerCard: {fileID: 582298284}
 --- !u!1 &230130871
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,10 @@ namespace HitAndBlow
     {
         [SerializeField]
         private GameObject images;
+        [SerializeField]
+        private GameObject texts;
+        [SerializeField]
+        private GameObject answerCard;
 
         private void Awake()
         {
@@ -32,6 +36,16 @@ namespace HitAndBlow
 
         public void OnClickCheck()
         {
+            var hit = 0;
+            var blow = 0;
+
+            hit = answerCard.GetComponent<CardSystemsHB>().CheckHit(images.GetComponent<RecordImageSystemsHB>().GetSelectedSprites());
+            blow = answerCard.GetComponent<CardSystemsHB>().CheckBlow(images.GetComponent<RecordImageSystemsHB>().GetSelectedSprites());
+
+            Debug.Log(hit);
+            Debug.Log(blow);
+
+            texts.GetComponent<RecordTextSystemsHB>().DrawText(hit, blow);
             images.GetComponent<RecordImageSystemsHB>().SetImageNow();
         }
     }

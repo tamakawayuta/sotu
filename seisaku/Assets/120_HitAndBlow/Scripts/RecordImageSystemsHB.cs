@@ -11,6 +11,7 @@ namespace HitAndBlow
         private GameObject selectButton;
 
         private Queue<GameObject> images = new Queue<GameObject>();
+        private Sprite[] selectedSprite = new Sprite[4];
         private GameObject imageNow;
         private bool isImageSetFull = false;
 
@@ -46,12 +47,18 @@ namespace HitAndBlow
         public void OnClickRecord(int index)
         {
             imageNow.transform.GetChild(index).GetComponent<Image>().sprite = selectButton.GetComponent<SelectButtonEventsHB>().GetSelectSpriteNow();
+            selectedSprite[index] = imageNow.transform.GetChild(index).GetComponent<Image>().sprite;
             imageNow.transform.GetChild(index).GetComponent<Image>().color = Color.white;
             SetIsImageSetFull();
         }
 
+        public Sprite[] GetSelectedSprites() {
+            return this.selectedSprite;
+        }
+
         public void SetImageNow()
         {
+            selectedSprite = new Sprite[4];
             SetActiveImageNow(false);
             imageNow = images.Dequeue();
             SetActiveImageNow(true);

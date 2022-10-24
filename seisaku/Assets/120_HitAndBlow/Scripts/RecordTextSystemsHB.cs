@@ -20,9 +20,21 @@ namespace HitAndBlow
             textNow = texts.Dequeue();
         }
 
-        public void DrawText(int hit,int blow)
+        public void DrawText(int hit, int blow)
         {
-            textNow.GetComponent<Text>().text = hit.ToString() + " " + blow.ToString();
+            textNow.GetComponent<Text>().text = hit.ToString() + " ";
+
+            if (blow - hit > 0)
+            {
+                var realBlow = blow - hit;
+
+                textNow.GetComponent<Text>().text += realBlow.ToString();
+            }
+            else
+            {
+                textNow.GetComponent<Text>().text += "0";
+            }
+
             textNow = texts.Dequeue();
         }
     }
