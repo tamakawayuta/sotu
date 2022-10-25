@@ -13,6 +13,8 @@ namespace HitAndBlow
         private GameObject texts;
         [SerializeField]
         private GameObject answerCard;
+        [SerializeField]
+        private GameObject showHintText;
 
         private void Awake()
         {
@@ -42,8 +44,21 @@ namespace HitAndBlow
             hit = answerCard.GetComponent<CardSystemsHB>().CheckHit(images.GetComponent<RecordImageSystemsHB>().GetSelectedSprites());
             blow = answerCard.GetComponent<CardSystemsHB>().CheckBlow(images.GetComponent<RecordImageSystemsHB>().GetSelectedSprites());
 
-            Debug.Log(hit);
-            Debug.Log(blow);
+            if (hit == 4)
+            {
+                answerCard.GetComponent<CardSystemsHB>().AppearAnswer();
+                showHintText.GetComponent<ShowHintSystemHB>().ShowText("4ヒット");
+            }
+            else
+            {
+                var realBlow = blow - hit;
+                if (realBlow < 0)
+                {
+                    realBlow = 0;
+                }
+
+                showHintText.GetComponent<ShowHintSystemHB>().ShowText(hit + "ヒット " + realBlow + "ブロー");
+            }
 
             texts.GetComponent<RecordTextSystemsHB>().DrawText(hit, blow);
             images.GetComponent<RecordImageSystemsHB>().SetImageNow();

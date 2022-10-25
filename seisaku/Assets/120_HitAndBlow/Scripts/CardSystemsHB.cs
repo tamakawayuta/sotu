@@ -24,7 +24,7 @@ namespace HitAndBlow
 
             foreach (var card in cards)
             {
-                //card.GetComponent<Image>().sprite = backImage;
+                card.GetComponent<Image>().sprite = backImage;
                 card.GetComponent<Image>().color = Color.white;
             }
 
@@ -32,10 +32,10 @@ namespace HitAndBlow
             SelectCardImages();
             ShuffleCardImages(selectImages);
 
-            for (var i = 0; i < cards.Count; i++)
+            /*for (var i = 0; i < cards.Count; i++)
             {
                 cards[i].GetComponent<Image>().sprite = selectImages[i];
-            }
+            }*/
         }
 
         private void ShuffleCardImages(Sprite[] images)
@@ -60,12 +60,14 @@ namespace HitAndBlow
             }
         }
 
-        private void AppearAnswer()
+        public void AppearAnswer()
         {
             for (var i = 0; i < selectImages.Length; i++)
             {
                 cards[i].GetComponent<Image>().sprite = selectImages[i];
             }
+
+            Debug.Log("A");
         }
 
         public int CheckHit(Sprite[] answer)
@@ -79,7 +81,7 @@ namespace HitAndBlow
 
             for (var i = 0; i < 4; i++)
             {
-                if (cards[i].GetComponent<Image>().sprite == answer[i])
+                if (selectImages[i] == answer[i])
                 {
                     hitAmount++;
                 }
@@ -107,7 +109,7 @@ namespace HitAndBlow
                         continue;
                     }
 
-                    if (answer[i] == cards[j].GetComponent<Image>().sprite)
+                    if (answer[i] == selectImages[j])
                     {
                         blowAmount++;
                         didAddAmount[j] = true;
