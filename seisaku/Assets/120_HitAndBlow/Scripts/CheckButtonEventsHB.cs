@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using PublicUI;
 
 namespace HitAndBlow
 {
@@ -15,6 +16,10 @@ namespace HitAndBlow
         private GameObject answerCard;
         [SerializeField]
         private GameObject showHintText;
+        [SerializeField]
+        private GameObject endUI;
+
+        private int count = 0;
 
         private void Awake()
         {
@@ -43,11 +48,16 @@ namespace HitAndBlow
 
             hit = answerCard.GetComponent<CardSystemsHB>().CheckHit(images.GetComponent<RecordImageSystemsHB>().GetSelectedSprites());
             blow = answerCard.GetComponent<CardSystemsHB>().CheckBlow(images.GetComponent<RecordImageSystemsHB>().GetSelectedSprites());
+            count++;
 
             if (hit == 4)
             {
                 answerCard.GetComponent<CardSystemsHB>().AppearAnswer();
                 showHintText.GetComponent<ShowHintSystemHB>().ShowText("4ƒqƒbƒg");
+            }
+            else if (count == 8)
+            {
+                endUI.GetComponent<GameOverSystems>().AppearUIOnlyText("‚ª‚ñ‚Î‚Á‚½‚Ë!!");
             }
             else
             {

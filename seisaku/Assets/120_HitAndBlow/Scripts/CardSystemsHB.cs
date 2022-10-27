@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using PublicUI;
 
 namespace HitAndBlow
 {
@@ -11,6 +12,8 @@ namespace HitAndBlow
         private Sprite backImage;
         [SerializeField]
         private Sprite[] frontImages;
+        [SerializeField]
+        private GameObject endUI;
 
         private List<GameObject> cards = new List<GameObject>();
         private Sprite[] selectImages;
@@ -67,7 +70,7 @@ namespace HitAndBlow
                 cards[i].GetComponent<Image>().sprite = selectImages[i];
             }
 
-            Debug.Log("A");
+            endUI.GetComponent<GameOverSystems>().AppearUIOnlyText("‚¨‚ß‚Å‚Æ‚¤!!");
         }
 
         public int CheckHit(Sprite[] answer)

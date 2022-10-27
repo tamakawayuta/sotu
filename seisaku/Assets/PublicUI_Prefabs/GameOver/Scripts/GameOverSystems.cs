@@ -51,6 +51,21 @@ namespace PublicUI
             soundManager.GetComponent<SoundSystems>().StopBGM();
         }
 
+        public void AppearUIOnlyText(string text)
+        {
+            Time.timeScale = 0;
+            this.gameObject.SetActive(true);
+
+            if (isPlatFanfare)
+            {
+                source.PlayOneShot(fanfareSE);
+            }
+
+            this.gameObject.transform.GetChild(1).GetComponent<Text>().text = text;
+            scoreText.GetComponent<Text>().text = "";
+            soundManager.GetComponent<SoundSystems>().StopBGM();
+        }
+
         public async void OnClickRetry()
         {
             Time.timeScale = 1;

@@ -119,9 +119,9 @@ MonoBehaviour:
     width: 1474
     height: 771
   m_MinSize: {x: 678, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MaxSize: {x: 14001, y: 14042}
   vertical: 1
-  controlID: 4462
+  controlID: 3971
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,9 +144,9 @@ MonoBehaviour:
     width: 1474
     height: 771
   m_MinSize: {x: 678, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 4463
+  controlID: 3972
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,10 +168,10 @@ MonoBehaviour:
     y: 0
     width: 1196.8
     height: 771
-  m_MinSize: {x: 402, y: 492}
+  m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 4464
+  controlID: 3973
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -193,10 +193,10 @@ MonoBehaviour:
     y: 0
     width: 1196.8
     height: 499.2
-  m_MinSize: {x: 402, y: 221}
-  m_MaxSize: {x: 8002, y: 4021}
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 4465
+  controlID: 3974
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -421,9 +421,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 42510000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 66fbffff24440000
+      m_ExpandedIDs: 7eecffff6cedfffff2edffff56eeffffcceeffff66fbffff42440000fc850000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -626,22 +626,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/PublicUI_Prefabs/GameOver
+    - Assets/PublicUI_Prefabs/Pause
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/PublicUI_Prefabs/GameOver
+  - Assets/PublicUI_Prefabs/Pause
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "C:\\Users\\g1q2_\\OneDrive\\\u30C7\u30B9\u30AF\u30C8\u30C3\u30D7\\sotuuu\\seisaku"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 45.200012}
-    m_SelectedIDs: 84450000
-    m_LastClickedID: 17796
-    m_ExpandedIDs: 000000006c4500006e4500007e450000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: a4450000
+    m_LastClickedID: 17828
+    m_ExpandedIDs: 000000008a4500008c450000a2450000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -669,7 +669,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006c4500006e450000
+    m_ExpandedIDs: 000000008a450000a2450000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -696,7 +696,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
