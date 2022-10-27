@@ -68,10 +68,13 @@
     <Compile Include="Assets\120_HitAndBlow\Scripts\RecordTextSystemsHB.cs" />
     <Compile Include="Assets\PublicUI_Prefabs\Background\Scripts\BackgroundSystems.cs" />
     <Compile Include="Assets\120_HitAndBlow\Scripts\RecordImageSystemsHB.cs" />
+    <Compile Include="Assets\120_HitAndBlow\Scripts\ShowHintSystemHB.cs" />
     <Compile Include="Assets\PublicUI_Prefabs\Pause\Scripts\PauseSystems.cs" />
     <Compile Include="Assets\110_Neurasthenia\Scripts\HpSystems.cs" />
     <Compile Include="Assets\120_HitAndBlow\Scripts\CheckButtonEventsHB.cs" />
     <Compile Include="Assets\PublicUI_Prefabs\Fade\FadeSystems.cs" />
+    <Compile Include="Assets\t_Tama\Reversible\scripts\OthelloCell.cs" />
+    <Compile Include="Assets\t_Tama\Reversible\scripts\OthelloBoard.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.dll</HintPath>
     </Reference>
