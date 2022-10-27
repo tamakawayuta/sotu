@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/110_Neurasthenia/Scene/Maingame.unity
     guid: 48af69177151e7d43a05889d447b337b
   - enabled: 1
-    path: Assets/120_HitAndBlow/Scene/Maingame.unity
+    path: Assets/120_HitAndBlow/Scene/MaingameHB.unity
     guid: 298092463b18db8418c2da6951f77616
   m_configObjects: {}
