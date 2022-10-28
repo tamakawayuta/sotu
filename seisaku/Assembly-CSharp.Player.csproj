@@ -61,7 +61,9 @@
     <Compile Include="Assets\t_Tama\Launching_business\Lbscript\Launching_businessGame.cs" />
     <Compile Include="Assets\120_HitAndBlow\Scripts\SelectButtonEventsHB.cs" />
     <Compile Include="Assets\SoundManagerPrefab\Scripts\SoundSystems.cs" />
+    <Compile Include="Assets\t_Tama\Reversible\Rscripts\OthelloCell.cs" />
     <Compile Include="Assets\110_Neurasthenia\Scripts\CardEvents.cs" />
+    <Compile Include="Assets\t_Tama\Reversible\Rscripts\OthelloBoard.cs" />
     <Compile Include="Assets\110_Neurasthenia\Scripts\CardSystems.cs" />
     <Compile Include="Assets\110_Neurasthenia\Scripts\CounterSystems.cs" />
     <Compile Include="Assets\PublicUI_Prefabs\GameOver\Scripts\GameOverSystems.cs" />
@@ -73,8 +75,6 @@
     <Compile Include="Assets\110_Neurasthenia\Scripts\HpSystems.cs" />
     <Compile Include="Assets\120_HitAndBlow\Scripts\CheckButtonEventsHB.cs" />
     <Compile Include="Assets\PublicUI_Prefabs\Fade\FadeSystems.cs" />
-    <Compile Include="Assets\t_Tama\Reversible\scripts\OthelloCell.cs" />
-    <Compile Include="Assets\t_Tama\Reversible\scripts\OthelloBoard.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.dll</HintPath>
     </Reference>
