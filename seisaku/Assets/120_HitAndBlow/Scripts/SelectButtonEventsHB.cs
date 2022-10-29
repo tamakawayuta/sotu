@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 namespace HitAndBlow
 {
@@ -11,6 +12,7 @@ namespace HitAndBlow
         private Sprite[] images;
 
         private Sprite selectSpriteNow;
+        GameObject selectNow;
 
         private void Awake()
         {
@@ -21,9 +23,18 @@ namespace HitAndBlow
             }
         }
 
+        private void Update()
+        {
+            if (selectNow != null)
+            {
+                EventSystem.current.SetSelectedGameObject(selectNow);
+            }
+        }
+
         public void OnClickSelect(int cardNum)
         {
             this.selectSpriteNow = this.gameObject.transform.GetChild(cardNum).GetComponent<Image>().sprite;
+            selectNow = this.gameObject.transform.GetChild(cardNum).gameObject;
         }
 
         public Sprite GetSelectSpriteNow()
