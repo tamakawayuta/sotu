@@ -96,25 +96,23 @@ public class Launching_businessGame : MonoBehaviour
             //Invoke("seconds",0);
             if (red == 1)
             {  //赤旗を上げるボタンが押されたら
+                flag[2].SetActive(false);
                 flag[0].SetActive(true);//赤旗を表示
-                //Transfrom target1 = this.transfrom;
-                //target1.position(-250, -50, 0);
             }
             if (red == 0)
             {  //赤旗を下げるボタンが押されたら
                 flag[0].SetActive(false);//赤旗を消す
-
-                //Transfrom terget1 = this.transfrom;
-                //terget1.position(-300, -150, 0);
-                //terget1.Rotate(0, 0, 180);
+                flag[2].SetActive(true);
             }
             if (white == 1)
             {//白旗を上げるボタンが押されたら
+                flag[3].SetActive(false);
                 flag[1].SetActive(true);//白旗を表示
             }
             if (white == 0)
             {//白旗を下げるボタンが押されたら
                 flag[1].SetActive(false);//白旗を消す
+                flag[3].SetActive(true);
             }
             score[1].text = "" + point;
 
@@ -122,7 +120,7 @@ public class Launching_businessGame : MonoBehaviour
             timrLimit -= Time.deltaTime;
             //Debug.Log(timrLimit);
             if (timrLimit < 0)
-            {    //iが3659になったら実行(3659は旗の上下の指示30回分)。ゲーム終了時を表す
+            {    //ゲーム終了時を表す
                 finish();       //finish()へ
             }
             timeL.text = (int)timrLimit + "秒";

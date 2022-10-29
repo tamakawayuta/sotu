@@ -11,20 +11,28 @@ public class OthelloBoard : MonoBehaviour
     public GameObject ScoreBoard;
     public Text ScoreBoardText;
     public GameObject Template;
-    public int BoardSize = 8;
+    public int players;
+    private int BoardSize;
     public List<Color> PlayerChipColors;
     public List<Vector2> DirectionList;
     static OthelloBoard instance;
     public static OthelloBoard Instance { get { return instance; } }
     OthelloCell[,] OthelloCells;
-    public int EnemyID { get { return (CurrentTurn + 1) % 3; } }
+    public int EnemyID { get { return (CurrentTurn + 1) % players; } }
+    private bool isOnce = true;
+    private int scene;
+    public GameObject[] Scene;
 
     public Text[] ScoreText; 
     void Start()
     {
         instance = this;
         OthelloBoardIsSquareSize();
+        scene = 0;
+    }
 
+    public void Initialization()
+    {
         OthelloCells = new OthelloCell[BoardSize, BoardSize];
         float cellAnchorSize = 1.0f / BoardSize;
         for (int y = 0; y < BoardSize; y++)
@@ -38,6 +46,20 @@ public class OthelloBoard : MonoBehaviour
         GameObject.Destroy(Template);
         InitializeGame();
     }
+
+    public void Playernum(int x)
+    {
+        players = x;
+        BoardSize = x + 6;
+        scene = 1;
+    }
+
+    public void BackButton()
+    {
+        Scene[1].SetActive(false);
+        scene = 0;
+    }
+
     private void CreateNewCell(int x, int y, float cellAnchorSize)
     {
         GameObject go = GameObject.Instantiate(Template, this.transform);
@@ -69,17 +91,64 @@ public class OthelloBoard : MonoBehaviour
                 OthelloCells[x, y].OwnerID = -1;
             }
         }
+
+        switch (players)
+        {
+            case 2:
+                TwoInitialPosition();
+                break;
+            case 3:
+                ThreeInitialPosition();
+                break;
+            case 4:
+                FourInitialPosition();
+                break;
+        }
+    }
+
+    //OthelloCells[, ].OwnerID = ;
+
+    public void TwoInitialPosition()
+    {
         OthelloCells[3, 3].OwnerID = 0;
         OthelloCells[4, 4].OwnerID = 0;
-        OthelloCells[5, 3].OwnerID = 0;
-        OthelloCells[5, 4].OwnerID = 1;
+        OthelloCells[3, 4].OwnerID = 1;
+        OthelloCells[4, 3].OwnerID = 1;
+    }
+
+    public void ThreeInitialPosition()
+    {
+        OthelloCells[3, 3].OwnerID = 0;
+        OthelloCells[4, 4].OwnerID = 0;
+        OthelloCells[5, 5].OwnerID = 0;
         OthelloCells[3, 4].OwnerID = 1;
         OthelloCells[4, 5].OwnerID = 1;
+        OthelloCells[5, 3].OwnerID = 1;
         OthelloCells[3, 5].OwnerID = 2;
         OthelloCells[4, 3].OwnerID = 2;
-        OthelloCells[5, 5].OwnerID = 2;
-
+        OthelloCells[5, 4].OwnerID = 2;
     }
+
+    public void FourInitialPosition()
+    {
+        OthelloCells[3, 3].OwnerID = 0;
+        OthelloCells[4, 4].OwnerID = 0;
+        OthelloCells[6, 5].OwnerID = 0;
+        OthelloCells[5, 6].OwnerID = 0;
+        OthelloCells[3, 4].OwnerID = 1;
+        OthelloCells[5, 5].OwnerID = 1;
+        OthelloCells[4, 6].OwnerID = 1;
+        OthelloCells[6, 3].OwnerID = 1;
+        OthelloCells[4, 5].OwnerID = 2;
+        OthelloCells[3, 6].OwnerID = 2;
+        OthelloCells[5, 3].OwnerID = 2;
+        OthelloCells[6, 4].OwnerID = 2;
+        OthelloCells[3, 5].OwnerID = 3;
+        OthelloCells[4, 3].OwnerID = 3;
+        OthelloCells[5, 4].OwnerID = 3;
+        OthelloCells[6, 6].OwnerID = 3;
+    }
+
     internal bool CanPlaceHere(Vector2 location)
     {
         if (OthelloCells[(int)location.x, (int)location.y].OwnerID != -1)
@@ -164,18 +233,65 @@ public class OthelloBoard : MonoBehaviour
                 OthelloCells[x, y].GetComponent<Button>().interactable = false;
             }
         }
+
+        switch (players)
+        {
+            case 2:
+                ScoreTwoPeople();
+                break;
+            case 3:
+                ScoreThreePeople();
+                break;
+            case 4:
+                ScoreFourPeople();
+                break;
+        }
+        ScoreBoard.gameObject.SetActive(true);
+    }
+
+    public void ScoreTwoPeople()
+    {
+        int white = CountScoreFor(0);
+        int black = CountScoreFor(1);
+        if (white > black)
+            ScoreBoardText.text = "しろの勝ち \n" + white + ":" + black ;
+        else if (black > white)
+            ScoreBoardText.text = "くろの勝ち \n" + white + ":" + black ;
+        else
+            ScoreBoardText.text = "引き分け！ \n" + white + ":" + black;
+    }
+
+    public void ScoreThreePeople()
+    {
         int white = CountScoreFor(0);
         int black = CountScoreFor(1);
         int red = CountScoreFor(2);
         if (white > black && white > red)
-            ScoreBoardText.text = "White wins \n" + white + ":" + black + ":" + red;
+            ScoreBoardText.text = "しろの勝ち \n" + white + ":" + black + ":" + red;
         else if (black > white && black > red)
-            ScoreBoardText.text = "Black wins \n" + white + ":" + black + ":" + red;
+            ScoreBoardText.text = "くろの勝ち \n" + white + ":" + black + ":" + red;
         else if (red > black && red > white)
-            ScoreBoardText.text = "Red wins \n" + white + ":" + black + ":" + red;
+            ScoreBoardText.text = "あかの勝ち \n" + white + ":" + black + ":" + red;
         else
-            ScoreBoardText.text = "Draw! \n" + white + ":" + black + ":" + red;
-        ScoreBoard.gameObject.SetActive(true);
+            ScoreBoardText.text = "引き分け！ \n" + white + ":" + black + ":" + red;
+    }
+
+    public void ScoreFourPeople()
+    {
+        int white = CountScoreFor(0);
+        int black = CountScoreFor(1);
+        int red = CountScoreFor(2);
+        int blue = CountScoreFor(3);
+        if (white > black && white > red && white > blue)
+            ScoreBoardText.text = "しろの勝ち \n" + white + ":" + black + ":" + red + ":" + blue;
+        else if (black > white && black > red && black > blue)
+            ScoreBoardText.text = "くろの勝ち \n" + white + ":" + black + ":" + red + ":" + blue;
+        else if (red > black && red > white && red > blue)
+            ScoreBoardText.text = "あかの勝ち \n" + white + ":" + black + ":" + red + ":" + blue;
+        else if (blue > white && blue > black && blue > red)
+            ScoreBoardText.text = "あおの勝ち \n" + white + ":" + black + ":" + red + ":" + blue;
+        else
+            ScoreBoardText.text = "引き分け！ \n" + white + ":" + black + ":" + red + ":" + blue;
     }
     private int CountScoreFor(int owner)
     {
@@ -198,15 +314,48 @@ public class OthelloBoard : MonoBehaviour
         int white = CountScoreFor(0);
         int black = CountScoreFor(1);
         int red = CountScoreFor(2);
+        int blue = CountScoreFor(3);
+
+        if (players > 2)
+        {
+            ScoreText[2].text = "" + red;
+            if (players > 3)
+            {
+                ScoreText[3].text = "" + blue;
+            }
+        }
+        if(players <= 2)
+        {
+            ScoreText[2].text = "";
+            ScoreText[3].text = "";
+        }
+        else if(players <= 3)
+        {
+            ScoreText[3].text = "";
+        }
+
 
         ScoreText[0].text = "" + white;
         ScoreText[1].text = "" + black;
-        ScoreText[2].text = "" + red;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(scene == 0)
+        {
+            Scene[0].SetActive(true);
+        }
+        if(scene == 1) { 
+            Scene[0].SetActive(false);
+            Scene[1].SetActive(true);
+            if (isOnce)
+            {
+                Initialization();
+                //処理内容
+                isOnce = false;
+            }
+        }
         Score();
     }
 }
