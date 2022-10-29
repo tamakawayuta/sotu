@@ -8,7 +8,7 @@ namespace PublicUI
 {
     public class FadeSystems : MonoBehaviour
     {
-        private float speed = 0.01f;
+        private readonly float speed = 0.01f;
 
         private float alfa;
         private float red, green, blue;

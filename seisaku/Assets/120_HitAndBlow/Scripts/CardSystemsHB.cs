@@ -41,6 +41,14 @@ namespace HitAndBlow
             }*/
         }
 
+        /*private void Update()
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                AppearAnswer();
+            }
+        }*/
+
         private void ShuffleCardImages(Sprite[] images)
         {
             for (var i = images.Length - 1; i > 0; --i)
