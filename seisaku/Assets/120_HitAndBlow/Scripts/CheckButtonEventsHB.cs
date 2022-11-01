@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 using PublicUI;
@@ -41,7 +42,7 @@ namespace HitAndBlow
             }
         }
 
-        public void OnClickCheck()
+        public async void OnClickCheck()
         {
             var hit = 0;
             var blow = 0;
@@ -53,6 +54,7 @@ namespace HitAndBlow
             if (hit == 4)
             {
                 answerCard.GetComponent<CardSystemsHB>().AppearAnswer();
+                await Task.Delay(2000);
                 showHintText.GetComponent<ShowHintSystemHB>().ShowText("4ƒqƒbƒg");
             }
             else if (count == 8)

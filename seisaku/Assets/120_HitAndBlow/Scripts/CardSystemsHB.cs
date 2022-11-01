@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 using PublicUI;
@@ -71,14 +72,36 @@ namespace HitAndBlow
             }
         }
 
-        public void AppearAnswer()
+        public async void AppearAnswer()
         {
             for (var i = 0; i < selectImages.Length; i++)
             {
-                cards[i].GetComponent<Image>().sprite = selectImages[i];
+                AppearAnimation(cards[i], i);
             }
 
+            await Task.Delay(3800);
             endUI.GetComponent<GameOverSystems>().AppearUIOnlyText("‚¨‚ß‚Å‚Æ‚¤!!");
+        }
+
+        private async void AppearAnimation(GameObject card,int index)
+        {
+            var scaleX = card.GetComponent<RectTransform>().localScale.x;
+            var scaleY = card.GetComponent<RectTransform>().localScale.y;
+            while (scaleX > 0f)
+            {
+                card.GetComponent<RectTransform>().localScale = new Vector3(scaleX,scaleY,1f);
+                scaleX -= 0.05f;
+                await Task.Delay(30);
+            }
+
+            card.GetComponent<Image>().sprite = selectImages[index];
+
+            while (scaleX < 1f)
+            {
+                card.GetComponent<RectTransform>().localScale = new Vector3(scaleX, scaleY, 1f);
+                scaleX += 0.05f;
+                await Task.Delay(30);
+            }
         }
 
         public int CheckHit(Sprite[] answer)
