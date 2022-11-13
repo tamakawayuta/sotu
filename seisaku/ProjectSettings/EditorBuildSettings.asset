@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/120_HitAndBlow/Scene/MaingameHB.unity
     guid: 298092463b18db8418c2da6951f77616
+  - enabled: 1
+    path: Assets/130_GetBlock/Scenes/MaingameGB.unity
+    guid: c377c52eaa7c0454bb6d0969b102df50
   m_configObjects: {}
