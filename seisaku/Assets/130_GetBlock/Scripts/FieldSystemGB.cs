@@ -11,6 +11,8 @@ namespace GetBlock
         private Sprite[] images;
 
         private List<GameObject> fields = new List<GameObject>();
+        private List<Sprite> canSelectSprites = new List<Sprite>();
+        private List<int> selectedIndex = new List<int>();
         private Queue<Sprite> shuffledImages = new Queue<Sprite>();
 
         private bool[] didSelect = {
@@ -63,6 +65,11 @@ namespace GetBlock
             {
                 field.GetComponent<Image>().sprite = shuffledImages.Dequeue();
             }
+
+            canSelectSprites.Add(this.gameObject.transform.GetChild(0).GetComponent<Image>().sprite);
+            canSelectSprites.Add(this.gameObject.transform.GetChild(4).GetComponent<Image>().sprite);
+            canSelectSprites.Add(this.gameObject.transform.GetChild(20).GetComponent<Image>().sprite);
+            canSelectSprites.Add(this.gameObject.transform.GetChild(24).GetComponent<Image>().sprite);
         }
 
         private void ShuffleImages(Sprite[] images)
@@ -76,10 +83,34 @@ namespace GetBlock
             }
         }
 
-        public void UpdateGameState(int index)
+        public void RemoveCanSelectSprites(Sprite sprite)
         {
-            this.didSelect[index] = true;
+            canSelectSprites.Remove(sprite);
+        }
 
+        public bool CanSelectOnce(Sprite sprite)
+        {
+            return this.canSelectSprites.Contains(sprite);
+        }
+
+        public void AddSelectedIndex(int index)
+        {
+            this.selectedIndex.Add(index);
+            this.didSelect[index] = true;
+        }
+
+        public void UpdateGameState()
+        {
+            foreach (var index in selectedIndex)
+            {
+                UpdateGameState(index);
+            }
+
+            selectedIndex.Clear();
+        }
+
+        private  void UpdateGameState(int index)
+        {
             switch (index)
             {
                 case 0:
@@ -87,11 +118,13 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(1).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(1).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(1).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[5])
                     {
                         this.gameObject.transform.GetChild(5).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(5).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(5).GetComponent<Image>().sprite);
                     }
                     break;
                 case 1:
@@ -99,11 +132,13 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(2).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(2).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(2).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[6] && (didSelect[5] || didSelect[7]))
                     {
                         this.gameObject.transform.GetChild(6).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(6).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(6).GetComponent<Image>().sprite);
                     }
                     break;
                 case 2:
@@ -111,16 +146,19 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(1).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(1).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(1).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[3])
                     {
                         this.gameObject.transform.GetChild(3).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(3).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(3).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[7] && (didSelect[6] || didSelect[8]))
                     {
                         this.gameObject.transform.GetChild(7).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(7).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(7).GetComponent<Image>().sprite);
                     }
                     break;
                 case 3:
@@ -128,11 +166,13 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(2).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(2).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(2).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[8] && (didSelect[9] || didSelect[7]))
                     {
                         this.gameObject.transform.GetChild(8).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(8).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(8).GetComponent<Image>().sprite);
                     }
                     break;
                 case 4:
@@ -140,11 +180,13 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(3).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(3).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(3).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[9])
                     {
                         this.gameObject.transform.GetChild(9).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(9).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(9).GetComponent<Image>().sprite);
                     }
                     break;
                 case 5:
@@ -152,11 +194,13 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(10).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(10).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(10).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[6] && (didSelect[1] || didSelect[11]))
                     {
                         this.gameObject.transform.GetChild(6).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(6).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(6).GetComponent<Image>().sprite);
                     }
                     break;
                 case 6:
@@ -164,21 +208,25 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(1).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(1).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(1).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[5] && didSelect[10])
                     {
                         this.gameObject.transform.GetChild(5).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(5).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(5).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[7] && (didSelect[2] || didSelect[12]))
                     {
                         this.gameObject.transform.GetChild(7).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(7).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(7).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[11] && (didSelect[10] || didSelect[12]))
                     {
                         this.gameObject.transform.GetChild(11).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(11).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(11).GetComponent<Image>().sprite);
                     }
                     break;
                 case 7:
@@ -186,21 +234,25 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(2).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(2).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(2).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[6] && (didSelect[1] || didSelect[11]))
                     {
                         this.gameObject.transform.GetChild(6).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(6).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(6).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[8] && (didSelect[3] || didSelect[13]))
                     {
                         this.gameObject.transform.GetChild(8).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(8).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(8).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[12] && (didSelect[10] || didSelect[11]))
                     {
                         this.gameObject.transform.GetChild(12).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(12).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(12).GetComponent<Image>().sprite);
                     }
                     break;
                 case 8:
@@ -208,21 +260,25 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(3).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(3).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(3).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[9] && didSelect[14])
                     {
                         this.gameObject.transform.GetChild(9).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(9).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(9).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[7] && (didSelect[2] || didSelect[12]))
                     {
                         this.gameObject.transform.GetChild(7).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(7).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(7).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[13] && (didSelect[14] || didSelect[12]))
                     {
                         this.gameObject.transform.GetChild(13).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(13).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(13).GetComponent<Image>().sprite);
                     }
                     break;
                 case 9:
@@ -230,11 +286,13 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(14).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(14).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(14).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[8] && (didSelect[3] || didSelect[13]))
                     {
                         this.gameObject.transform.GetChild(8).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(8).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(8).GetComponent<Image>().sprite);
                     }
                     break;
                 case 10:
@@ -242,16 +300,19 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(5).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(5).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(5).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[15])
                     {
                         this.gameObject.transform.GetChild(15).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(15).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(15).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[11] && (didSelect[6] || didSelect[16]))
                     {
                         this.gameObject.transform.GetChild(11).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(11).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(11).GetComponent<Image>().sprite);
                     }
                     break;
                 case 11:
@@ -259,21 +320,25 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(6).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(6).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(6).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[10] && (didSelect[5] || didSelect[15]))
                     {
                         this.gameObject.transform.GetChild(10).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(10).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(10).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[16] && (didSelect[15] || didSelect[17]))
                     {
                         this.gameObject.transform.GetChild(16).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(16).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(16).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[12] && (didSelect[7] || didSelect[17]))
                     {
                         this.gameObject.transform.GetChild(12).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(12).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(12).GetComponent<Image>().sprite);
                     }
                     break;
                 case 12:
@@ -281,21 +346,25 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(11).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(11).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(11).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[13] && (didSelect[8] || didSelect[18]))
                     {
                         this.gameObject.transform.GetChild(13).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(13).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(13).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[7] && (didSelect[6] || didSelect[8]))
                     {
                         this.gameObject.transform.GetChild(7).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(7).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(7).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[17] && (didSelect[16] || didSelect[18]))
                     {
                         this.gameObject.transform.GetChild(17).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(17).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(17).GetComponent<Image>().sprite);
                     }
                     break;
                 case 13:
@@ -303,21 +372,25 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(14).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(14).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(14).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[8] && (didSelect[9] || didSelect[7]))
                     {
                         this.gameObject.transform.GetChild(8).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(8).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(8).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[18] && (didSelect[19] || didSelect[17]))
                     {
                         this.gameObject.transform.GetChild(18).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(18).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(18).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[12] && (didSelect[7] || didSelect[17]))
                     {
                         this.gameObject.transform.GetChild(12).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(12).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(12).GetComponent<Image>().sprite);
                     }
                     break;
                 case 14:
@@ -325,16 +398,19 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(9).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(9).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(9).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[19])
                     {
                         this.gameObject.transform.GetChild(19).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(19).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(19).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[13] && (didSelect[8] || didSelect[18]))
                     {
                         this.gameObject.transform.GetChild(13).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(13).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(13).GetComponent<Image>().sprite);
                     }
                     break;
                 case 15:
@@ -342,11 +418,13 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(10).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(10).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(10).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[16] && (didSelect[21] || didSelect[11]))
                     {
                         this.gameObject.transform.GetChild(16).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(16).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(16).GetComponent<Image>().sprite);
                     }
                     break;
                 case 16:
@@ -354,21 +432,25 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(15).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(15).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(15).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[21] && didSelect[22])
                     {
                         this.gameObject.transform.GetChild(21).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(21).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(21).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[11] && (didSelect[10] || didSelect[12]))
                     {
                         this.gameObject.transform.GetChild(11).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(11).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(11).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[17] && (didSelect[12] || didSelect[22]))
                     {
                         this.gameObject.transform.GetChild(17).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(17).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(17).GetComponent<Image>().sprite);
                     }
                     break;
                 case 17:
@@ -376,21 +458,25 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(22).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(22).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(22).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[16] && (didSelect[21] || didSelect[11]))
                     {
                         this.gameObject.transform.GetChild(16).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(16).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(16).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[18] && (didSelect[23] || didSelect[13]))
                     {
                         this.gameObject.transform.GetChild(18).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(18).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(18).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[12] && (didSelect[10] || didSelect[11]))
                     {
                         this.gameObject.transform.GetChild(12).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(12).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(12).GetComponent<Image>().sprite);
                     }
                     break;
                 case 18:
@@ -398,21 +484,25 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(19).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(19).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(19).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[23] && didSelect[22])
                     {
                         this.gameObject.transform.GetChild(23).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(23).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(23).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[13] && (didSelect[14] || didSelect[12]))
                     {
                         this.gameObject.transform.GetChild(13).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(13).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(13).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[17] && (didSelect[12] || didSelect[22]))
                     {
                         this.gameObject.transform.GetChild(17).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(17).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(17).GetComponent<Image>().sprite);
                     }
                     break;
                 case 19:
@@ -420,11 +510,13 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(14).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(14).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(14).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[18] && (didSelect[23] || didSelect[13]))
                     {
                         this.gameObject.transform.GetChild(18).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(18).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(18).GetComponent<Image>().sprite);
                     }
                     break;
                 case 20:
@@ -432,11 +524,13 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(15).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(15).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(15).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[21])
                     {
                         this.gameObject.transform.GetChild(21).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(21).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(21).GetComponent<Image>().sprite);
                     }
                     break;
                 case 21:
@@ -444,11 +538,13 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(22).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(22).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(22).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[16] && (didSelect[15] || didSelect[17]))
                     {
                         this.gameObject.transform.GetChild(16).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(16).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(16).GetComponent<Image>().sprite);
                     }
                     break;
                 case 22:
@@ -456,16 +552,19 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(21).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(21).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(21).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[23])
                     {
                         this.gameObject.transform.GetChild(23).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(23).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(23).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[17] && (didSelect[16] || didSelect[18]))
                     {
                         this.gameObject.transform.GetChild(17).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(17).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(17).GetComponent<Image>().sprite);
                     }
                     break;
                 case 23:
@@ -473,11 +572,13 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(22).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(22).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(22).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[18] && (didSelect[19] || didSelect[17]))
                     {
                         this.gameObject.transform.GetChild(18).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(18).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(18).GetComponent<Image>().sprite);
                     }
                     break;
                 case 24:
@@ -485,16 +586,25 @@ namespace GetBlock
                     {
                         this.gameObject.transform.GetChild(19).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(19).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(19).GetComponent<Image>().sprite);
                     }
                     if (!didSelect[23])
                     {
                         this.gameObject.transform.GetChild(23).GetComponent<Image>().color = Color.white;
                         this.gameObject.transform.GetChild(23).GetComponent<Button>().enabled = true;
+                        canSelectSprites.Add(this.gameObject.transform.GetChild(23).GetComponent<Image>().sprite);
                     }
                     break;
                 default:
                     break;
             }
+
+            string str = "";
+            foreach (var i in canSelectSprites)
+            {
+                str += i + " ";
+            }
+            Debug.Log(str);
         }
     }
 }
