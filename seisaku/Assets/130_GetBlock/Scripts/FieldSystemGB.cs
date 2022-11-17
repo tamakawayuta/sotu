@@ -23,6 +23,8 @@ namespace GetBlock
             false, false, false, false, false
         };
 
+        private bool isPlayerTurn = true;
+
         private void Awake()
         {
             for (var i = 0; i < this.gameObject.transform.childCount; i++)
@@ -99,6 +101,11 @@ namespace GetBlock
             this.didSelect[index] = true;
         }
 
+        public void SetIsPlayerTurn(bool value)
+        {
+            this.isPlayerTurn = value;
+        }
+
         public void UpdateGameState()
         {
             foreach (var index in selectedIndex)
@@ -107,6 +114,11 @@ namespace GetBlock
             }
 
             selectedIndex.Clear();
+
+            if (isPlayerTurn)
+            {
+                SetIsPlayerTurn(false);
+            }
         }
 
         private  void UpdateGameState(int index)

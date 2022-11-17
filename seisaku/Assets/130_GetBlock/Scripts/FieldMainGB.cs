@@ -28,13 +28,11 @@ namespace GetBlock
             this.gameObject.GetComponent<Button>().enabled = false;
             field.RemoveCanSelectSprites(selectSpriteNow);
             field.AddSelectedIndex(index);
+        }
 
-            if (!field.CanSelectOnce(selectSpriteNow))
-            {
-                Debug.Log("A");
-                field.UpdateGameState();
-                selectSpriteNow = null;
-            }
+        public void ClearSelectSprite()
+        {
+            selectSpriteNow = null;
         }
     }
 }
