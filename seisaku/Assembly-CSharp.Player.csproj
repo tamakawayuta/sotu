@@ -57,14 +57,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\110_Neurasthenia\Scripts\PanelSystems.cs" />
+    <Compile Include="Assets\130_GetBlock\Scripts\GameMainGB.cs" />
     <Compile Include="Assets\120_HitAndBlow\Scripts\CardSystemsHB.cs" />
     <Compile Include="Assets\t_Tama\Launching_business\Lbscript\Launching_businessGame.cs" />
     <Compile Include="Assets\120_HitAndBlow\Scripts\SelectButtonEventsHB.cs" />
+    <Compile Include="Assets\130_GetBlock\Scripts\CollectSystemGB.cs" />
     <Compile Include="Assets\SoundManagerPrefab\Scripts\SoundSystems.cs" />
     <Compile Include="Assets\t_Tama\Reversible\Rscripts\OthelloCell.cs" />
+    <Compile Include="Assets\60_Home\Scripts\SceneName.cs" />
+    <Compile Include="Assets\130_GetBlock\Scripts\FieldSystemGB.cs" />
+    <Compile Include="Assets\60_Home\Scripts\SceneData.cs" />
+    <Compile Include="Assets\130_GetBlock\Scripts\FieldButtonEventGB.cs" />
     <Compile Include="Assets\110_Neurasthenia\Scripts\CardEvents.cs" />
     <Compile Include="Assets\t_Tama\Reversible\Rscripts\OthelloBoard.cs" />
+    <Compile Include="Assets\70_Description\Scripts\DescriptionMain.cs" />
     <Compile Include="Assets\110_Neurasthenia\Scripts\CardSystems.cs" />
+    <Compile Include="Assets\60_Home\Scripts\SelectButtonEventsHome.cs" />
     <Compile Include="Assets\110_Neurasthenia\Scripts\CounterSystems.cs" />
     <Compile Include="Assets\PublicUI_Prefabs\GameOver\Scripts\GameOverSystems.cs" />
     <Compile Include="Assets\120_HitAndBlow\Scripts\RecordTextSystemsHB.cs" />
@@ -73,8 +81,12 @@
     <Compile Include="Assets\120_HitAndBlow\Scripts\ShowHintSystemHB.cs" />
     <Compile Include="Assets\PublicUI_Prefabs\Pause\Scripts\PauseSystems.cs" />
     <Compile Include="Assets\110_Neurasthenia\Scripts\HpSystems.cs" />
+    <Compile Include="Assets\130_GetBlock\Scripts\TimeSystemGB.cs" />
+    <Compile Include="Assets\50_Title\Scripts\TitleMain.cs" />
     <Compile Include="Assets\120_HitAndBlow\Scripts\CheckButtonEventsHB.cs" />
     <Compile Include="Assets\PublicUI_Prefabs\Fade\FadeSystems.cs" />
+    <Compile Include="Assets\60_Home\Scripts\HomeMain.cs" />
+    <Compile Include="Assets\t_Tama\testScenes\script\test1.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.dll</HintPath>
     </Reference>
@@ -271,61 +283,61 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Editor">
-      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/aa/seisaku/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/a3/seisaku/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/aa/seisaku/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/a3/seisaku/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/aa/seisaku/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/a3/seisaku/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="PsdPlugin">
-      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/aa/seisaku/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/a3/seisaku/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/aa/seisaku/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/a3/seisaku/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.IK.Editor">
-      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/aa/seisaku/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
+      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/a3/seisaku/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/aa/seisaku/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/a3/seisaku/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Psdimporter.Editor">
-      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/aa/seisaku/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/a3/seisaku/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Path.Editor">
-      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/aa/seisaku/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
+      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/a3/seisaku/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/aa/seisaku/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/a3/seisaku/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/aa/seisaku/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/a3/seisaku/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/aa/seisaku/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/a3/seisaku/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/aa/seisaku/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/a3/seisaku/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.PixelPerfect.Editor">
-      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/aa/seisaku/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
+      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/a3/seisaku/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/aa/seisaku/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/a3/seisaku/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/aa/seisaku/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/a3/seisaku/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
-      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/aa/seisaku/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/a3/seisaku/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
-      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/aa/seisaku/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/a3/seisaku/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/aa/seisaku/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/AOT/Newtonsoft.Json.dll</HintPath>
+      <HintPath>C:/Users/yuday/OneDrive/デスクトップ/a3/seisaku/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/AOT/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
