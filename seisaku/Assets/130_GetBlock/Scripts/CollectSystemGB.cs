@@ -10,6 +10,8 @@ namespace GetBlock
     {
         [SerializeField]
         private GameObject clearUI;
+        [SerializeField]
+        private GameObject text;
 
         private GameObject[] collectChildren;
 
@@ -53,22 +55,23 @@ namespace GetBlock
 
             if (isFirstPlayer)
             {
-                y -= 50;
+                y -= 40;
             }
             else
             {
-                y += 50;
+                y += 40;
             }
 
             collectChildren[index].GetComponent<RectTransform>().localPosition = new Vector3(x, y, 0f);
+            this.text.GetComponent<StateTextSystemGB>().UpdateText(collectChildren);
 
-            if (collectChildren[index].GetComponent<RectTransform>().localPosition.y >= 250)
+            if (collectChildren[index].GetComponent<RectTransform>().localPosition.y >= 160)
             {
-                clearUI.GetComponent<GameOverSystems>().AppearUIOnlyText("まけ");
+                clearUI.GetComponent<GameOverSystems>().AppearUIOnlyText("プレイヤー2のかち");
             }
-            else if (collectChildren[index].GetComponent<RectTransform>().localPosition.y <= -250)
+            else if (collectChildren[index].GetComponent<RectTransform>().localPosition.y <= -240)
             {
-                clearUI.GetComponent<GameOverSystems>().AppearUIOnlyText("かち");
+                clearUI.GetComponent<GameOverSystems>().AppearUIOnlyText("プレイヤー1のかち");
             }
         }
 
@@ -91,11 +94,11 @@ namespace GetBlock
 
             if (playerField > enemyField)
             {
-                clearUI.GetComponent<GameOverSystems>().AppearUIOnlyText("かち");
+                clearUI.GetComponent<GameOverSystems>().AppearUIOnlyText("プレイヤー1のかち");
             }
             else if (playerField < enemyField)
             {
-                clearUI.GetComponent<GameOverSystems>().AppearUIOnlyText("まけ");
+                clearUI.GetComponent<GameOverSystems>().AppearUIOnlyText("プレイヤー2のかち");
             }
             else
             {

@@ -14,6 +14,8 @@ namespace GetBlock
         private GameObject collect;
         [SerializeField]
         private GameObject fields;
+        [SerializeField]
+        private GameObject turn;
 
         private bool didCallTime = false;
         private bool isFirstPlayerTurn = true;
@@ -55,6 +57,15 @@ namespace GetBlock
 
 
             UpdateField();
+            
+            if (isFirstPlayerTurn)
+            {
+                turn.GetComponent<TurnDetailGB>().ShowPlayer2();
+            }
+            else
+            {
+                turn.GetComponent<TurnDetailGB>().ShowPlayer1();
+            }
 
             isFirstPlayerTurn = !isFirstPlayerTurn;
             FieldButtonEventGB.selectedSprite = null;
