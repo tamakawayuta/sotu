@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class test1 : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class test1 : MonoBehaviour
     public Slider hpSlider2;
     public Text hpText1;
     public Text hpText2;
+    public Text playerText1;
+    public Text playerText2;
 
     private int divideHp;
 
@@ -43,12 +46,17 @@ public class test1 : MonoBehaviour
     [SerializeField]
     private GameObject[] stageC;
 
+    private int[] orderNum = {32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50
+            ,51,52,53,54,55,56,57,58,59,60,61,62,63,64,91,92,93,94,95,96,97,98,99,100
+            ,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120
+            ,121,122,123,124,125};
     [SerializeField]
     private Text resultText;
 
     // Start is called before the first frame update
     void Start()
     {
+        
 
         strat.SetActive(false);
         mainGame.SetActive(false);
@@ -85,19 +93,42 @@ public class test1 : MonoBehaviour
         hpText2.text = "" + hp2;
 
         game();
+
+        if (Input.GetKeyDown((KeyCode)Enum.ToObject(typeof(KeyCode), 97)))
+        {
+            Shuffle(orderNum);
+            Debug.Log(orderNum[1]);
+        }
+
+        KeyCode x = (KeyCode)Enum.ToObject(typeof(KeyCode), orderNum[0]);
+
+        playerText1.text = /*(KeyCode)Enum.ToObject(typeof(KeyCode), orderNum[0])*/x.ToString() + "で相手が-1\n" + "で自分が+1\n";
+        playerText2.text = "で相手が-1\n" + "で自分が+1\n";
+    }
+
+    public void Shuffle(int[] order)
+    {
+        for(var i = order.Length -1; i > 0; --i)
+        {
+            var j = UnityEngine.Random.Range(0, i + 1);
+
+            var tem = order[i];
+            order[i] = order[j];
+            order[j] = tem;
+        }
     }
 
     void HpSlider1()
     {
         if (nowHp2 > 0)
         {
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKeyDown((KeyCode)Enum.ToObject(typeof(KeyCode), orderNum[0])))
             {
                 nowHp2 -= 1f;
                 hp2 -= 1;
             }
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown((KeyCode)Enum.ToObject(typeof(KeyCode), orderNum[15])))
         {
             nowHp1 += 1f;
             hp1 += 1;
@@ -108,13 +139,13 @@ public class test1 : MonoBehaviour
     {
         if (nowHp1 > 0)
         {
-            if (Input.GetKeyDown(KeyCode.L))
+            if (Input.GetKeyDown((KeyCode)Enum.ToObject(typeof(KeyCode), orderNum[21])))
             {
                 nowHp1 -= 1f;
                 hp1 -= 1;
             }
         }
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown((KeyCode)Enum.ToObject(typeof(KeyCode), orderNum[12])))
         {
             nowHp2 += 1f;
             hp2 += 1;
@@ -131,7 +162,7 @@ public class test1 : MonoBehaviour
         nowHp2 += 1f;
         hp2 += 1;
 
-        Debug.Log(nowHp1 + ":" + nowHp2 + ":" + hp1 + ":" + hp2);
+        //Debug.Log(nowHp1 + ":" + nowHp2 + ":" + hp1 + ":" + hp2);
         yield return new WaitForSeconds(waitTime);
     }
 
@@ -164,7 +195,8 @@ public class test1 : MonoBehaviour
             timrLimit -= Time.deltaTime;
             //Debug.Log(timrLimit);
             if (timrLimit < 0)
-            {    //ゲーム終了時を表す
+            {    //ゲーム終了時を表す\
+                mainGame.SetActive(false);
                 result.SetActive(true);
                 finish();       //finish()へ
             }
@@ -187,6 +219,11 @@ public class test1 : MonoBehaviour
                 resultText.text = "CPUの勝ち！";
                 Debug.Log("CPUの勝ち！");
             }
+
+            if (nowHp2 == nowHp1)
+            {
+                resultText.text = "引き分け！";
+            }
         }
 
         if (divideHp == 1)
@@ -201,6 +238,11 @@ public class test1 : MonoBehaviour
             {
                 resultText.text = "赤の勝ち！";
                 Debug.Log("赤の勝ち！");
+            }
+
+            if (nowHp2 == nowHp1)
+            {
+                resultText.text = "引き分け！";
             }
         }
 
@@ -218,7 +260,6 @@ public class test1 : MonoBehaviour
 
         scene = 0;
         timrLimit = 20;
-        mainGame.SetActive(false);
         result.SetActive(false);
         strat.SetActive(true);
     }
