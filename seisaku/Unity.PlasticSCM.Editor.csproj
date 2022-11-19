@@ -92,9 +92,9 @@
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.7\Editor\PlasticSCM\WebApi\ChangesetFromCollabCommitResponse.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.7\Editor\PlasticSCM\Views\IncomingChanges\Gluon\Errors\ErrorListViewItem.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.7\Editor\PlasticSCM\Configuration\ChannelCertificateUiImpl.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.7\Editor\PlasticSCM\UI\Progress\ProgressControlsForMigration.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.7\Editor\PlasticSCM\Gluon\IncomingChangesNotifier.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.7\Editor\PlasticSCM\CloudProjectDownloader\CloudProjectDownloader.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.7\Editor\PlasticSCM\UI\Progress\ProgressControlsForMigration.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.7\Editor\PlasticSCM\Views\IncomingChanges\Gluon\IncomingChangesTreeView.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.7\Editor\PlasticSCM\Views\IncomingChanges\Developer\IncomingChangesViewMenu.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.7\Editor\PlasticSCM\NewIncomingChanges.cs" />

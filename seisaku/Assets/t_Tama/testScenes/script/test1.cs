@@ -39,6 +39,7 @@ public class test1 : MonoBehaviour
 
     float waitTime;
 
+    float orderLimit;
     float limit;
     float difficultyLimit;
 
@@ -46,10 +47,10 @@ public class test1 : MonoBehaviour
     [SerializeField]
     private GameObject[] stageC;
 
-    private int[] orderNum = {32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50
-            ,51,52,53,54,55,56,57,58,59,60,61,62,63,64,91,92,93,94,95,96,97,98,99,100
+    private int[] orderNum = {/*32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50
+            ,51,52,53,54,55,56,57,58,59,60,61,62,63,64,91,92,93,94,95,96,*/97,98,99,100
             ,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120
-            ,121,122,123,124,125};
+            ,121,122/*,123,124,125*/};
     [SerializeField]
     private Text resultText;
 
@@ -77,7 +78,8 @@ public class test1 : MonoBehaviour
         hpSlider2.maxValue = maxHp2;
 
         scene = 0;
-        timrLimit = 20;
+        orderLimit = 2;
+        timrLimit = 60;
         Difficulty(0);
     }
 
@@ -94,16 +96,14 @@ public class test1 : MonoBehaviour
 
         game();
 
-        if (Input.GetKeyDown((KeyCode)Enum.ToObject(typeof(KeyCode), 97)))
-        {
-            Shuffle(orderNum);
-            Debug.Log(orderNum[1]);
-        }
+        KeyCode PlayerAttack1 = (KeyCode)Enum.ToObject(typeof(KeyCode), orderNum[0]);
+        KeyCode PlayerAttack2 = (KeyCode)Enum.ToObject(typeof(KeyCode), orderNum[21]);
 
-        KeyCode x = (KeyCode)Enum.ToObject(typeof(KeyCode), orderNum[0]);
+        KeyCode Playerrecovery1 = (KeyCode)Enum.ToObject(typeof(KeyCode), orderNum[15]);
+        KeyCode Playerrecovery2 = (KeyCode)Enum.ToObject(typeof(KeyCode), orderNum[12]);
 
-        playerText1.text = /*(KeyCode)Enum.ToObject(typeof(KeyCode), orderNum[0])*/x.ToString() + "で相手が-1\n" + "で自分が+1\n";
-        playerText2.text = "で相手が-1\n" + "で自分が+1\n";
+        playerText1.text = PlayerAttack1.ToString() + "で相手が-1\n" + Playerrecovery1.ToString() + "で自分が+1\n";
+        playerText2.text = PlayerAttack2.ToString() + "で相手が-1\n" + Playerrecovery2.ToString() + "で自分が+1\n";
     }
 
     public void Shuffle(int[] order)
@@ -174,6 +174,14 @@ public class test1 : MonoBehaviour
         }
         if (scene == 1)
         {  //スタートボタンが押されたあとの処理。ゲームスタート！
+
+            orderLimit -= Time.deltaTime;
+            if (orderLimit  < 0)
+            {
+                Shuffle(orderNum);
+                int x = UnityEngine.Random.Range(2, 5);
+                orderLimit = x;
+            }
 
             HpSlider1();
             if (divideHp == 1)
@@ -259,7 +267,8 @@ public class test1 : MonoBehaviour
         hp2 = 50;
 
         scene = 0;
-        timrLimit = 20;
+        orderLimit = 2;
+        timrLimit = 60;
         result.SetActive(false);
         strat.SetActive(true);
     }
@@ -288,13 +297,13 @@ public class test1 : MonoBehaviour
         switch (x)
         {
             case 0:
-                difficultyLimit = 0.4f;
+                difficultyLimit = 0.8f;
                 break;
             case 1:
-                difficultyLimit = 0.2f;
+                difficultyLimit = 0.4f;
                 break;
             case 2:
-                difficultyLimit = 0.01f;
+                difficultyLimit = 0.1f;
                 break;
         }
         //選択時のカラー変更
