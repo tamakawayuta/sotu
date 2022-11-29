@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace JigsawPuzzle
 {
@@ -11,6 +12,8 @@ namespace JigsawPuzzle
 
         private List<Sprite> sprites = new List<Sprite>();
         private List<Sprite> answers;
+
+        private List<GameObject> selected = new List<GameObject>();
 
         private void Awake()
         {
@@ -43,6 +46,27 @@ namespace JigsawPuzzle
                 var tmp = sprites[i];
                 sprites[i] = sprites[j];
                 sprites[j] = tmp;
+            }
+        }
+
+        private void ChangeSprite()
+        {
+            Sprite sprite1 = this.selected[0].GetComponent<Image>().sprite;
+            Sprite sprite2 = this.selected[1].GetComponent<Image>().sprite;
+
+            this.selected[0].GetComponent<Image>().sprite = sprite2;
+            this.selected[1].GetComponent<Image>().sprite = sprite1;
+
+            this.selected.Clear();
+        }
+
+        public void AddSelected(GameObject obj)
+        {
+            this.selected.Add(obj);
+
+            if (this.selected.Count == 2)
+            {
+                ChangeSprite();
             }
         }
     }
