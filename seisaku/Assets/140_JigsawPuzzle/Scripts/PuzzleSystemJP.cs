@@ -58,6 +58,22 @@ namespace JigsawPuzzle
             this.selected[1].GetComponent<Image>().sprite = sprite1;
 
             this.selected.Clear();
+            CheckAnswer();
+        }
+
+        private void CheckAnswer()
+        {
+            List<GameObject> fieldState = fields.GetComponent<FieldSystemJP>().GetFields();
+
+            for (var i = 0; i < 50; i++)
+            {
+                if (fieldState[i].GetComponent<Image>().sprite != this.answers[i])
+                {
+                    return;
+                }
+            }
+
+            Debug.Log("Clear");
         }
 
         public void AddSelected(GameObject obj)

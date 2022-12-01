@@ -11,7 +11,7 @@ namespace JigsawPuzzle
 
         private void Awake()
         {
-            this.field = GameObject.Find("Background").GetComponent<PuzzleSystemJP>();
+            this.field = GameObject.Find("Background_Image").GetComponent<PuzzleSystemJP>();
         }
 
         public void OnClickfield()
