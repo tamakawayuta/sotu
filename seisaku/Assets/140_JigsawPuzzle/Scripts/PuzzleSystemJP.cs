@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using PublicUI;
 
 namespace JigsawPuzzle
 {
@@ -9,6 +10,9 @@ namespace JigsawPuzzle
     {
         [SerializeField]
         private GameObject fields;
+
+        [SerializeField]
+        private GameObject clear;
 
         private List<Sprite> sprites = new List<Sprite>();
         private List<Sprite> answers;
@@ -73,7 +77,7 @@ namespace JigsawPuzzle
                 }
             }
 
-            Debug.Log("Clear");
+            clear.GetComponent<GameOverSystems>().AppearUIOnlyText("‚¨‚ß‚Å‚Æ‚¤!!");
         }
 
         public void AddSelected(GameObject obj)
