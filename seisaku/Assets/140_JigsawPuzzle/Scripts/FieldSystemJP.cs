@@ -15,7 +15,7 @@ namespace JigsawPuzzle
         public void InstantiateFields(int amount)
         {
             var x = -369f;
-            var y = 270f;
+            var y = 269f;
 
             for (var i = 0; i < amount; i++)
             {
@@ -23,13 +23,15 @@ namespace JigsawPuzzle
                 obj.transform.SetParent(this.gameObject.transform);
                 obj.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 0f);
                 obj.GetComponent<RectTransform>().localPosition = new Vector3(x,y,0f);
+                obj.GetComponent<FieldButtonEventsJP>().SetIndex(i);
+
                 fields.Add(obj);
 
                 x += 161f;
 
                 if (x > 275f)
                 {
-                    y -= 59f;
+                    y -= 60f;
                     x = -369f;
                 }
             }

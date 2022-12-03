@@ -10,24 +10,58 @@ namespace JigsawPuzzle
     {
         [SerializeField]
         private GameObject fields;
-
         [SerializeField]
         private GameObject clear;
+        [SerializeField]
+        private GameObject hintButton;
 
         private List<Sprite> sprites = new List<Sprite>();
         private List<Sprite> answers;
 
         private List<GameObject> selected = new List<GameObject>();
 
+        private string fileName;
+
         private void Awake()
         {
-            LoadSprites("puzzleImage");
+            var index = Random.Range(0, 1);
+            SetFileName(index);
+
+            LoadSprites(this.fileName);
+            hintButton.GetComponent<HintButtonEventsJP>().SetHintSprite(this.fileName);
+
             ShuffleSprites(this.sprites);
             fields.GetComponent<FieldSystemJP>().InstantiateFields(this.sprites.Count);
             fields.GetComponent<FieldSystemJP>().DrawSprites(this.sprites);
 
-            Debug.Log(this.sprites.Count);
-            Debug.Log(this.answers.Count);
+            UpdateTrueFieldState();
+        }
+
+        private void SetFileName(int index)
+        {
+            switch (index)
+            {
+                case 0:
+                    this.fileName = "puzzleImage";
+                    break;
+                default:
+                    Debug.LogError("Error: Illegal Index");
+                    break;
+            }
+        }
+
+        private void UpdateTrueFieldState()
+        {
+            List<GameObject> fieldState = fields.GetComponent<FieldSystemJP>().GetFields();
+
+            for (var i = 0; i < fieldState.Count; i++)
+            {
+                if (this.sprites[i] == answers[i])
+                {
+                    fieldState[i].GetComponent<Image>().color = Color.white;
+                    fieldState[i].GetComponent<Button>().enabled = false;
+                }
+            }
         }
 
         private void LoadSprites(string fileName)
@@ -61,8 +95,15 @@ namespace JigsawPuzzle
             this.selected[0].GetComponent<Image>().sprite = sprite2;
             this.selected[1].GetComponent<Image>().sprite = sprite1;
 
-            this.selected.Clear();
+            foreach (var field in selected)
+            {
+                field.GetComponent<Button>().enabled = true;
+            }
+
+            CheckPosition();
             CheckAnswer();
+
+            this.selected.Clear();
         }
 
         private void CheckAnswer()
@@ -78,6 +119,19 @@ namespace JigsawPuzzle
             }
 
             clear.GetComponent<GameOverSystems>().AppearUIOnlyText("‚¨‚ß‚Å‚Æ‚¤!!");
+        }
+
+        private void CheckPosition()
+        {
+            foreach (var field in selected)
+            {
+                var index = field.GetComponent<FieldButtonEventsJP>().GetIndex();
+
+                if (field.GetComponent<Image>().sprite == this.answers[index])
+                {
+                    field.GetComponent<Button>().enabled = false;
+                }
+            }
         }
 
         public void AddSelected(GameObject obj)
