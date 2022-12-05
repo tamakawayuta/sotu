@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/140_JigsawPuzzle/Scenes/MaingameJP.unity
     guid: 9326d49e1ef61044085cbb3980e8347b
+  - enabled: 1
+    path: Assets/150_QuicklyImage/Scenes/MaingameQI.unity
+    guid: d801f65368f95ed408a5661f593ac169
   m_configObjects: {}
