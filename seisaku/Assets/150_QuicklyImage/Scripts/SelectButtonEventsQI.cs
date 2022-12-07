@@ -9,12 +9,14 @@ namespace QuicklyImage
     {
         public void OnClickSelect()
         {
-            Debug.Log("A");
+            var director = GameObject.Find("GameDirector");
+            director.GetComponent<CardSystemsQI>().CheckAnswer(this.gameObject.GetComponent<Image>().sprite);
         }
 
         public void SetSpriteToBlack()
         {
             this.gameObject.GetComponent<Button>().enabled = false;
+            this.gameObject.GetComponent<Image>().sprite = null;
             this.gameObject.GetComponent<Image>().color = Color.black;
         }
 

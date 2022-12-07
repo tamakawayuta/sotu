@@ -12,6 +12,14 @@ namespace QuicklyImage
         private Sprite[] sprites;
         [SerializeField]
         private GameObject select;
+        [SerializeField]
+        private GameObject answerObject;
+        [SerializeField]
+        private GameObject time;
+        [SerializeField]
+        private GameObject guide;
+        [SerializeField]
+        private GameObject score;
 
         private List<GameObject> selectButtons = new List<GameObject>();
         private List<Sprite> useSprites = new List<Sprite>();
@@ -23,10 +31,13 @@ namespace QuicklyImage
                 this.selectButtons.Add(this.select.transform.GetChild(i).gameObject);
             }
 
+
             foreach (var button in selectButtons)
             {
                 button.GetComponent<SelectButtonEventsQI>().SetSpriteToBlack();
             }
+
+            this.answerObject.GetComponent<AnswerEventsQI>().SetSpriteBlack();
 
             foreach (var sprite in sprites)
             {
@@ -41,6 +52,26 @@ namespace QuicklyImage
             {
                 selectButtons[i].GetComponent<SelectButtonEventsQI>().SetSprite(useSprites[i]);
             }
+
+            SetAnswer();
+
+            this.time.GetComponent<TimeSystemsQI>().StartCountdown(100);
+        }
+
+        private async void ReShuffle()
+        {
+            ShuffleSprites(useSprites);
+            await Task.Delay(1000);
+            this.guide.GetComponent<GuideSystemQI>().SetText("ÇπÅ[ÇÃ..!");
+            await Task.Delay(1000);
+
+            for (var i = 0; i < selectButtons.Count; i++)
+            {
+                selectButtons[i].GetComponent<SelectButtonEventsQI>().SetSprite(useSprites[i]);
+            }
+
+            SetAnswer();
+            this.time.GetComponent<TimeSystemsQI>().StartCountdown(50);
         }
 
         private void ShuffleSprites(List<Sprite> sprites)
@@ -52,6 +83,37 @@ namespace QuicklyImage
                 sprites[i] = sprites[j];
                 sprites[j] = tmp;
             }
+        }
+
+        private void SetAnswer()
+        {
+            var index = Random.Range(0, 4);
+            this.answerObject.GetComponent<AnswerEventsQI>().SetAnswerSprite(this.useSprites[index]);
+
+            this.guide.GetComponent<GuideSystemQI>().SetText("Ç±ÇÍÇÇ¶ÇÁÇ◊ÅI");
+        }
+
+        public void CheckAnswer(Sprite sprite)
+        {
+            this.time.GetComponent<Image>().enabled = false;
+
+            if (sprite == this.answerObject.GetComponent<Image>().sprite)
+            {
+                this.guide.GetComponent<GuideSystemQI>().SetText("Ç¢Ç¢ÇÀÅI");
+                this.score.GetComponent<ScoreSystemsQI>().AddScore(50);
+            }
+            else
+            {
+                Debug.Log("False");
+            }
+
+            foreach (var button in selectButtons)
+            {
+                button.GetComponent<SelectButtonEventsQI>().SetSpriteToBlack();
+            }
+            this.answerObject.GetComponent<AnswerEventsQI>().SetSpriteBlack();
+
+            ReShuffle();
         }
     }
 }
