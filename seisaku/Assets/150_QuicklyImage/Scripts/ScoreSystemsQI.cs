@@ -11,13 +11,13 @@ namespace QuicklyImage
 
         private void Awake()
         {
-            this.gameObject.transform.GetChild(0).GetComponent<Text>().text = "0";
+            this.gameObject.transform.GetChild(2).GetComponent<Text>().text = "0";
         }
 
         public void AddScore(int addValue)
         {
             this.score += addValue;
-            this.gameObject.transform.GetChild(0).GetComponent<Text>().text = this.score.ToString();
+            this.gameObject.transform.GetChild(2).GetComponent<Text>().text = this.score.ToString();
         }
     }
 }

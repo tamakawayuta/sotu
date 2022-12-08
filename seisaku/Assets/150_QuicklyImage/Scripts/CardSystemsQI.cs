@@ -23,6 +23,7 @@ namespace QuicklyImage
 
         private List<GameObject> selectButtons = new List<GameObject>();
         private List<Sprite> useSprites = new List<Sprite>();
+        private int delayTime = 100;
 
         private async void Awake()
         {
@@ -55,7 +56,7 @@ namespace QuicklyImage
 
             SetAnswer();
 
-            this.time.GetComponent<TimeSystemsQI>().StartCountdown(100);
+            this.time.GetComponent<TimeSystemsQI>().StartCountdown(delayTime);
         }
 
         private async void ReShuffle()
@@ -71,7 +72,7 @@ namespace QuicklyImage
             }
 
             SetAnswer();
-            this.time.GetComponent<TimeSystemsQI>().StartCountdown(50);
+            this.time.GetComponent<TimeSystemsQI>().StartCountdown(delayTime);
         }
 
         private void ShuffleSprites(List<Sprite> sprites)
@@ -93,6 +94,16 @@ namespace QuicklyImage
             this.guide.GetComponent<GuideSystemQI>().SetText("Ç±ÇÍÇÇ¶ÇÁÇ◊ÅI");
         }
 
+        private void UpdateDelayTime()
+        {
+            if (this.delayTime < 10)
+            {
+                return;
+            }
+
+            this.delayTime -= 3;
+        }
+
         public void CheckAnswer(Sprite sprite)
         {
             this.time.GetComponent<Image>().enabled = false;
@@ -100,7 +111,14 @@ namespace QuicklyImage
             if (sprite == this.answerObject.GetComponent<Image>().sprite)
             {
                 this.guide.GetComponent<GuideSystemQI>().SetText("Ç¢Ç¢ÇÀÅI");
-                this.score.GetComponent<ScoreSystemsQI>().AddScore(50);
+                UpdateDelayTime();
+
+                float bonusValue = this.time.GetComponent<Image>().fillAmount;
+                bonusValue *= 100;
+                int newScore = (int)bonusValue;
+                Debug.Log(newScore);
+
+                this.score.GetComponent<ScoreSystemsQI>().AddScore(newScore);
             }
             else
             {
