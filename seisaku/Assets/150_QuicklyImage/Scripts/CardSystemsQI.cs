@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
+using PublicUI;
 
 namespace QuicklyImage
 {
@@ -20,6 +21,8 @@ namespace QuicklyImage
         private GameObject guide;
         [SerializeField]
         private GameObject score;
+        [SerializeField]
+        private GameObject clearUI;
 
         private List<GameObject> selectButtons = new List<GameObject>();
         private List<Sprite> useSprites = new List<Sprite>();
@@ -49,6 +52,11 @@ namespace QuicklyImage
 
             await Task.Delay(2000);
 
+            while (Time.timeScale == 0)
+            {
+                await Task.Delay(1000);
+            }
+
             for (var i = 0; i < selectButtons.Count; i++)
             {
                 selectButtons[i].GetComponent<SelectButtonEventsQI>().SetSprite(useSprites[i]);
@@ -63,6 +71,12 @@ namespace QuicklyImage
         {
             ShuffleSprites(useSprites);
             await Task.Delay(1000);
+
+            while (Time.timeScale == 0)
+            {
+                await Task.Delay(1000);
+            }
+
             this.guide.GetComponent<GuideSystemQI>().SetText("ÇπÅ[ÇÃ..!");
             await Task.Delay(1000);
 
@@ -122,7 +136,7 @@ namespace QuicklyImage
             }
             else
             {
-                Debug.Log("False");
+                AppearClearUI();
             }
 
             foreach (var button in selectButtons)
@@ -132,6 +146,11 @@ namespace QuicklyImage
             this.answerObject.GetComponent<AnswerEventsQI>().SetSpriteBlack();
 
             ReShuffle();
+        }
+
+        public void AppearClearUI()
+        {
+            this.clearUI.GetComponent<GameOverSystems>().AppearGameOverUI(this.score.GetComponent<ScoreSystemsQI>().GetScore());
         }
     }
 }

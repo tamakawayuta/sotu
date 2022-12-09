@@ -20,6 +20,11 @@ namespace QuicklyImage
 
             while (this.gameObject.GetComponent<Image>().fillAmount > 0f)
             {
+                while (Time.timeScale == 0)
+                {
+                    await Task.Delay(1000);
+                }
+
                 this.gameObject.GetComponent<Image>().fillAmount -= 0.05f;
 
                 await Task.Delay(delayTime);
@@ -27,7 +32,7 @@ namespace QuicklyImage
 
             if (this.gameObject.GetComponent<Image>().enabled)
             {
-                Debug.Log("timeout");
+                GameObject.Find("GameDirector").GetComponent<CardSystemsQI>().AppearClearUI();
             }
         }
     }

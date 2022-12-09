@@ -19,5 +19,10 @@ namespace QuicklyImage
             this.score += addValue;
             this.gameObject.transform.GetChild(2).GetComponent<Text>().text = this.score.ToString();
         }
+
+        public int GetScore()
+        {
+            return this.score;
+        }
     }
 }
