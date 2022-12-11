@@ -58,9 +58,15 @@
   <ItemGroup>
     <Compile Include="Assets\110_Neurasthenia\Scripts\PanelSystems.cs" />
     <Compile Include="Assets\130_GetBlock\Scripts\TurnDetailGB.cs" />
+    <Compile Include="Assets\t_Tama\MusicGame\Scripts\EffectManager.cs" />
+    <Compile Include="Assets\150_QuicklyImage\Scripts\CardSystemsQI.cs" />
+    <Compile Include="Assets\150_QuicklyImage\Scripts\ScoreSystemsQI.cs" />
+    <Compile Include="Assets\150_QuicklyImage\Scripts\AnswerEventsQI.cs" />
     <Compile Include="Assets\130_GetBlock\Scripts\GameMainGB.cs" />
+    <Compile Include="Assets\t_Tama\MusicGame\Scripts\NotesScript.cs" />
     <Compile Include="Assets\120_HitAndBlow\Scripts\CardSystemsHB.cs" />
     <Compile Include="Assets\t_Tama\Launching_business\Lbscript\Launching_businessGame.cs" />
+    <Compile Include="Assets\t_Tama\MusicGame\Scripts\TouchEffectManager.cs" />
     <Compile Include="Assets\120_HitAndBlow\Scripts\SelectButtonEventsHB.cs" />
     <Compile Include="Assets\130_GetBlock\Scripts\CollectSystemGB.cs" />
     <Compile Include="Assets\SoundManagerPrefab\Scripts\SoundSystems.cs" />
@@ -71,13 +77,16 @@
     <Compile Include="Assets\130_GetBlock\Scripts\FieldButtonEventGB.cs" />
     <Compile Include="Assets\110_Neurasthenia\Scripts\CardEvents.cs" />
     <Compile Include="Assets\t_Tama\Reversible\Rscripts\OthelloBoard.cs" />
+    <Compile Include="Assets\140_JigsawPuzzle\Scripts\HintButtonEventsJP.cs" />
     <Compile Include="Assets\70_Description\Scripts\DescriptionMain.cs" />
     <Compile Include="Assets\110_Neurasthenia\Scripts\CardSystems.cs" />
     <Compile Include="Assets\60_Home\Scripts\SelectButtonEventsHome.cs" />
     <Compile Include="Assets\110_Neurasthenia\Scripts\CounterSystems.cs" />
     <Compile Include="Assets\PublicUI_Prefabs\GameOver\Scripts\GameOverSystems.cs" />
     <Compile Include="Assets\120_HitAndBlow\Scripts\RecordTextSystemsHB.cs" />
+    <Compile Include="Assets\140_JigsawPuzzle\Scripts\PuzzleSystemJP.cs" />
     <Compile Include="Assets\PublicUI_Prefabs\Background\Scripts\BackgroundSystems.cs" />
+    <Compile Include="Assets\140_JigsawPuzzle\Scripts\FieldButtonEventsJP.cs" />
     <Compile Include="Assets\120_HitAndBlow\Scripts\RecordImageSystemsHB.cs" />
     <Compile Include="Assets\120_HitAndBlow\Scripts\ShowHintSystemHB.cs" />
     <Compile Include="Assets\PublicUI_Prefabs\Pause\Scripts\PauseSystems.cs" />
@@ -86,9 +95,17 @@
     <Compile Include="Assets\50_Title\Scripts\TitleMain.cs" />
     <Compile Include="Assets\120_HitAndBlow\Scripts\CheckButtonEventsHB.cs" />
     <Compile Include="Assets\130_GetBlock\Scripts\StateTextSystemGB.cs" />
+    <Compile Include="Assets\150_QuicklyImage\Scripts\TimeSystemsQI.cs" />
+    <Compile Include="Assets\t_Tama\MusicGame\Scripts\GameUtil.cs" />
+    <Compile Include="Assets\150_QuicklyImage\Scripts\GuideSystemQI.cs" />
     <Compile Include="Assets\PublicUI_Prefabs\Fade\FadeSystems.cs" />
     <Compile Include="Assets\60_Home\Scripts\HomeMain.cs" />
+    <Compile Include="Assets\t_Tama\MusicGame\Scripts\SingletonMonoBehaviour.cs" />
+    <Compile Include="Assets\150_QuicklyImage\Scripts\SelectButtonEventsQI.cs" />
     <Compile Include="Assets\t_Tama\testScenes\script\test1.cs" />
+    <Compile Include="Assets\t_Tama\MusicGame\Scripts\GameController.cs" />
+    <Compile Include="Assets\140_JigsawPuzzle\Scripts\FieldSystemJP.cs" />
+    <Compile Include="Assets\140_JigsawPuzzle\Scripts\BackButtonEventsJP.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.dll</HintPath>
     </Reference>
