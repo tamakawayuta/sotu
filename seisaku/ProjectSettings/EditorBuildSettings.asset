@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/150_QuicklyImage/Scenes/MaingameQI.unity
     guid: d801f65368f95ed408a5661f593ac169
+  - enabled: 1
+    path: Assets/160_Flash/Scenes/MaingameFL.unity
+    guid: 06c1872714d3a584f822d56224638f89
   m_configObjects: {}
