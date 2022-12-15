@@ -1150,6 +1150,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f98761cf08a4e54488f263d1722af7d9, type: 3}
   - {fileID: 21300000, guid: 77a5c56b93831674b8e16b5649afbe81, type: 3}
   - {fileID: 21300000, guid: bb7b00888b9e245459cdd68258e60745, type: 3}
+  - {fileID: 21300000, guid: d0e590f3592664e47b6aacbc143f322b, type: 3}
+  - {fileID: 21300000, guid: 79225e609d26b3347b65f1fbfa9e7996, type: 3}
   answer: {fileID: 618708322}
   button: {fileID: 607810127}
 --- !u!4 &1091950897

@@ -8,7 +8,7 @@ namespace Flash
 {
     public class AnswerSystemFL : MonoBehaviour
     {
-        public async void SetSprites(List<Sprite> sprites, int delayTime)
+        public async Task SetSprites(List<Sprite> sprites, int delayTime)
         {
             this.gameObject.SetActive(true);
 

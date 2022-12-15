@@ -9,7 +9,8 @@ namespace Flash
     {
         public void OnClickSelect()
         {
-            GameObject.Find("GameDirector").GetComponent<CardSystemsFL>().SetSelectedObject(this.gameObject.GetComponent<Image>().sprite);
+            GameObject.Find("GameDirector").GetComponent<CardSystemsFL>().CheckAnswer(this.gameObject.GetComponent<Image>().sprite);
+            this.gameObject.GetComponent<Button>().enabled = false;
         }
     }
 }
