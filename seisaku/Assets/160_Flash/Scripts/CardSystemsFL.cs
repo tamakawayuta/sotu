@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using PublicUI;
 
 namespace Flash
 {
@@ -13,17 +14,24 @@ namespace Flash
         private GameObject answer;
         [SerializeField]
         private GameObject button;
+        [SerializeField]
+        private GameObject count;
+        [SerializeField]
+        private GameObject clearUI;
 
         private List<Sprite> useSprites;
-
         private List<Sprite> answers;
+
+        private int answerAmount = 0;
+        private int selectSpriteAmount = 2;
+        private int delayTime = 2000;
 
         private async void Awake()
         {
             button.SetActive(false);
 
             ShuffleSprites(this.sprites);
-            SelectSprites(3);
+            SelectSprites(selectSpriteAmount);
 
             await this.answer.GetComponent<AnswerSystemFL>().SetSprites(this.useSprites,2000);
             this.answers = new List<Sprite>(useSprites);
@@ -56,8 +64,11 @@ namespace Flash
 
         private async void ResetSprites()
         {
+            this.answerAmount++;
+
             ShuffleSprites(this.sprites);
-            SelectSprites(3);
+            UpdateSelectSpriteAmount();
+            SelectSprites(selectSpriteAmount);
 
             await this.answer.GetComponent<AnswerSystemFL>().SetSprites(this.useSprites, 2000);
             this.answers = new List<Sprite>(useSprites);
@@ -67,12 +78,36 @@ namespace Flash
             this.button.GetComponent<SelectSystemFL>().SetButtonSprites(this.sprites);
         }
 
+        private void UpdateSelectSpriteAmount()
+        {
+            if (this.selectSpriteAmount > this.sprites.Length - 1)
+            {
+                UpdateDelayTime();
+                return;
+            }
+
+            if (this.answerAmount % 3 == 0)
+            {
+                this.selectSpriteAmount++;
+            }
+        }
+
+        private void UpdateDelayTime()
+        {
+            if (this.delayTime < 0)
+            {
+                return;
+            }
+
+            this.delayTime -= 20;
+        }
+
         public void CheckAnswer(Sprite sprite)
         {
             if (this.answers.Contains(sprite))
             {
                 this.answers.Remove(sprite);
-                Debug.Log("true");
+                this.count.GetComponent<CountSystemFL>().AddCount();
 
                 if (this.answers.Count == 0)
                 {
@@ -82,7 +117,7 @@ namespace Flash
             }
             else
             {
-                Debug.Log("false");
+                this.clearUI.GetComponent<GameOverSystems>().AppearGameOverUI(this.count.GetComponent<CountSystemFL>().GetCount());
             }
         }
     }
