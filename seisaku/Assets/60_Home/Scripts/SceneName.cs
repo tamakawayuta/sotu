@@ -8,5 +8,13 @@ namespace SceneNames
     {
         Neurasthenia,
         HitAndBlow,
+        GetBlock,
+        JigsawPuzzle,
+        Launchingbusiness,
+        Reversible, 
+        Flash,
+        QuicklyImage,
+        RepeatedlyHitting,
+        MusicGame,
     }
 }

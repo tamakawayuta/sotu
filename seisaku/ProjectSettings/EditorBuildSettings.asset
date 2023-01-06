@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/t_Tama/testScenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/50_Title/Scenes/TitleScene.unity
     guid: 88b1a6eb7b41f924c8edafd04784cfef
@@ -35,4 +32,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/160_Flash/Scenes/MaingameFL.unity
     guid: 06c1872714d3a584f822d56224638f89
+  - enabled: 1
+    path: Assets/210_Launching_business/Launching_business.unity
+    guid: 78b52de5a13be6f428ac8b38f55f0b19
+  - enabled: 1
+    path: Assets/220_MusicGame/Scenes/MusicGame.unity
+    guid: 68aa1c111aa13584bb4ef9d7506614bd
+  - enabled: 1
+    path: Assets/230_RepeatedlyHitting/RepeatedlyHitting.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/240_Reversible/Reversible.unity
+    guid: 9d2b2c330bb157e4db38d32495337154
   m_configObjects: {}

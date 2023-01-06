@@ -12,6 +12,7 @@ namespace Home
         [SerializeField]
         private Sprite[] gameImages;
 
+
         private void Awake()
         {
             for (var i = 0; i < gameImages.Length; i++)
