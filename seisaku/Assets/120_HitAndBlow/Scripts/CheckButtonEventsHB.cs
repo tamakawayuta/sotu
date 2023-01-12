@@ -1,14 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
+
+// 必要
 using PublicUI;
+
+/// <summary>
+/// 答えの確認をするボタンのOnClick
+/// </summary>
 
 namespace HitAndBlow
 {
     public class CheckButtonEventsHB : MonoBehaviour
     {
+        // 必要なものの取得
         [SerializeField]
         private GameObject images;
         [SerializeField]
@@ -20,16 +25,19 @@ namespace HitAndBlow
         [SerializeField]
         private GameObject endUI;
 
+        // 回答した数の管理
         private int count = 0;
 
         private void Awake()
         {
+            // 押せないようにする初期化
             this.gameObject.GetComponent<Image>().color = Color.gray;
             this.gameObject.GetComponent<Button>().enabled = false;
         }
 
         private void Update()
         {
+            // 答えを全て入力したら押せるようにする
             if (images.GetComponent<RecordImageSystemsHB>().GetIsImageSetFull())
             {
                 this.gameObject.GetComponent<Image>().color = Color.white;
@@ -42,37 +50,46 @@ namespace HitAndBlow
             }
         }
 
+        // ボタンを押したときの定義
         public async void OnClickCheck()
         {
-            var hit = 0;
-            var blow = 0;
+            // 判定した結果を受け取る一時的な配列
+            int[] amounts = new int[2];
 
-            hit = answerCard.GetComponent<CardSystemsHB>().CheckHit(images.GetComponent<RecordImageSystemsHB>().GetSelectedSprites());
-            blow = answerCard.GetComponent<CardSystemsHB>().CheckBlow(images.GetComponent<RecordImageSystemsHB>().GetSelectedSprites());
+            // 判定
+            amounts = answerCard.GetComponent<CardSystemsHB>().CheckAnswer(images.GetComponent<RecordImageSystemsHB>().GetSelectedSprites());
+
+            // 使いやすいように変数に格納
+            var hit = amounts[0];
+            var blow = amounts[1];
+
+            // 回答数をカウント
             count++;
 
+            // 4ヒットならクリア
             if (hit == 4)
             {
+                // 答えを表示
                 answerCard.GetComponent<CardSystemsHB>().AppearAnswer();
                 await Task.Delay(2000);
+                // クリア画面を表示
                 showHintText.GetComponent<ShowHintSystemHB>().ShowText("4ヒット");
             }
+            // 回答が8まで行ったらゲームオーバー
             else if (count == 8)
             {
                 endUI.GetComponent<GameOverSystems>().AppearUIOnlyText("がんばったね!!");
             }
+            // それら以外はヒットとブローの数を表示する
             else
             {
-                var realBlow = blow - hit;
-                if (realBlow < 0)
-                {
-                    realBlow = 0;
-                }
-
-                showHintText.GetComponent<ShowHintSystemHB>().ShowText(hit + "ヒット " + realBlow + "ブロー");
+                showHintText.GetComponent<ShowHintSystemHB>().ShowText(hit + "ヒット " + blow + "ブロー");
             }
 
+            // ヒットとブローの数を記録する
             texts.GetComponent<RecordTextSystemsHB>().DrawText(hit, blow);
+
+            // 配列のリセット
             images.GetComponent<RecordImageSystemsHB>().SetImageNow();
         }
     }

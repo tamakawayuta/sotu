@@ -1,8 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using System.Threading.Tasks;
+using UnityEngine;
 using UnityEngine.UI;
+
+/// <summary>
+/// ヒットとブローの数を強調する
+/// </summary>
 
 namespace HitAndBlow
 {
@@ -10,9 +12,11 @@ namespace HitAndBlow
     {
         private void Awake()
         {
+            // 初期化
             this.gameObject.SetActive(false);
         }
 
+        // ヒットとブローの数を示す
         public async void ShowText(string text)
         {
             this.gameObject.SetActive(true);
