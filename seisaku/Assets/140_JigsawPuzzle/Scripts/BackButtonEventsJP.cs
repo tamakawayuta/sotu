@@ -1,6 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
+/// <summary>
+/// ヒント画像をクローズする関数の定義
+/// </summary>
 
 namespace JigsawPuzzle
 {

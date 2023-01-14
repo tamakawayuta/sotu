@@ -1,22 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
+/// <summary>
+/// ヒントの管理
+/// </summary>
 
 namespace JigsawPuzzle
 {
     public class HintButtonEventsJP : MonoBehaviour
     {
+        // 画像を格納するオブジェクトの管理
         [SerializeField]
         private GameObject hint;
 
+        // ゲームで使われる画像の管理
         [SerializeField]
         private Sprite[] sprites;
 
+        // 実際に使われている画像の管理
         private Sprite puzzleImage;
 
+        // ヒント画像のセット
         public void SetHintSprite(string fileName)
         {
+            // 対応する画像を取得する
             switch (fileName)
             {
                 case "puzzleImage":
@@ -27,10 +34,14 @@ namespace JigsawPuzzle
                     break;
             }
 
+            // 画像をセット
             this.hint.transform.GetChild(0).GetComponent<Image>().sprite = this.puzzleImage;
+
+            // 通常は非アクティブ化
             this.hint.SetActive(false);
         }
 
+        // OnClick定義
         public void OnClickHint()
         {
             this.hint.SetActive(true);

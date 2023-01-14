@@ -1,13 +1,17 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// ゲームの定義
+/// </summary>
+
 namespace GetBlock
 {
     public class GameMainGB : MonoBehaviour
     {
+        // 必要なものの取得
         [SerializeField]
         private GameObject time;
         [SerializeField]
@@ -17,8 +21,13 @@ namespace GetBlock
         [SerializeField]
         private GameObject turn;
 
+        // 何かのフィールドオブジェクトが選択されているかどうかの管理
         private bool didCallTime = false;
+
+        // 手番の管理
         private bool isFirstPlayerTurn = true;
+
+        // 選ばれたフィールドオブジェクトの管理
         private bool[] didSelect =
         {
             false,false,false,false,false,
@@ -28,36 +37,49 @@ namespace GetBlock
             false,false,false,false,false,
         };
 
+        // 選択された駒の数管理
         private static int finishCount;
 
         private void Awake()
         {
+            // 初期化
             finishCount = 0;
         }
 
-
+        // 選択可能なフィールドオブジェクトの更新
         public async void UpdateGameState(int index,Sprite sprite)
         {
+            // 状況オブジェクトの更新
             CallCollectSystem(sprite);
+
+            // 選択されたフィールドオブジェクトに対応するフラグを更新
             didSelect[index] = true;
+
+            // カウントする
             finishCount++;
 
+            // 全ての駒が選択されたら勝敗判定をする
             if (finishCount == 25)
             {
                 collect.GetComponent<CollectSystemGB>().Judge();
             }
 
+            // この関数が2度以上呼ばれている場合はここで処理を終える
             if (didCallTime)
             {
                 return;
             }
 
+            // 1度目ならフラグを立てる
             didCallTime = true;
+
+            // 制限時間が過ぎるまで待機する
             await time.GetComponent<TimeSystemGB>().StartCountdown();
 
-
+            // 選択できる駒を更新する
             UpdateField();
             
+            // 次の手番にする
             if (isFirstPlayerTurn)
             {
                 turn.GetComponent<TurnDetailGB>().ShowPlayer2();
@@ -67,16 +89,22 @@ namespace GetBlock
                 turn.GetComponent<TurnDetailGB>().ShowPlayer1();
             }
 
+            // フラグを更新する
             isFirstPlayerTurn = !isFirstPlayerTurn;
+
+            // 変数のリセット
             FieldButtonEventGB.selectedSprite = null;
             didCallTime = false;
         }
 
+        // 状況オブジェクト更新のラッパー
         private void CallCollectSystem(Sprite sprite)
         {
             collect.GetComponent<CollectSystemGB>().UpdateCollectState(sprite,isFirstPlayerTurn);
         }
 
+        // hack: 適切なアルゴリズムがあるはず
+        // 選択できる駒を更新する
         private void UpdateField()
         {
             List<GameObject> shouldUpdateGameObject = new List<GameObject>();
