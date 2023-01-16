@@ -132,12 +132,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4154806371733529116, guid: 3471fe12523daac4187f263659346b7c, type: 3}
       propertyPath: backgroundImages.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4154806371733529116, guid: 3471fe12523daac4187f263659346b7c, type: 3}
       propertyPath: backgroundImages.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 1c0e8d71f7146b140a8819939344671e, type: 3}
+      objectReference: {fileID: 21300000, guid: d876853d70dd9f84e8b85084f3ec9f4c, type: 3}
+    - target: {fileID: 4154806371733529116, guid: 3471fe12523daac4187f263659346b7c, type: 3}
+      propertyPath: backgroundImages.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: f6de60f7e7cc3a94d98bdd1be7a1fbc7, type: 3}
+    - target: {fileID: 4154806371733529116, guid: 3471fe12523daac4187f263659346b7c, type: 3}
+      propertyPath: backgroundImages.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc84292d94244fc45a16157bb339eccd, type: 3}
     - target: {fileID: 4816819282359281218, guid: 3471fe12523daac4187f263659346b7c, type: 3}
       propertyPath: m_Name
       value: Background
