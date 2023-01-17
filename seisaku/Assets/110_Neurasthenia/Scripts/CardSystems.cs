@@ -142,20 +142,23 @@ namespace Neurasthenia
             hpGauge.GetComponent<HpSystems>().HealedHp();
             hpGauge.GetComponent<HpSystems>().HealedHp();
 
-            // 再配置された感を出すために少しディレイ
-            await Task.Delay(700);
-
             foreach (var card in cards)
             {
                 // 場のカードを裏面にする
-                card.GetComponent<Image>().sprite = backImage;
-
-                // 場のカードを選択できるようにする
-                card.GetComponent<Button>().enabled = true;
+                card.GetComponent<CardEvents>().TurnBack(this.backImage);
             }
+
+            // 再配置された感を出すために少しディレイ
+            await Task.Delay(700);
 
             // 使用する表面の画像を再選択する
             SelectCards();
+
+            foreach (var card in cards)
+            {
+                // 場のカードを選択できるようにする
+                card.GetComponent<Button>().enabled = true;
+            }
         }
 
         // 選択された画像が同じか判定する

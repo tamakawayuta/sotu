@@ -690,6 +690,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FadeUI
       objectReference: {fileID: 0}
+    - target: {fileID: 1185950226058929579, guid: 40ba4573ac8933e48a036168a6dcdcdb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40ba4573ac8933e48a036168a6dcdcdb, type: 3}
 --- !u!1 &479050319 stripped
@@ -2079,12 +2083,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backImage: {fileID: 21300000, guid: 0cf4d442621dbd144a55fab7898e32ee, type: 3}
   frontImages:
-  - {fileID: 21300000, guid: 009481a8a6a2a924f92b79a4e5db3850, type: 3}
-  - {fileID: 21300000, guid: 8a7ea6512aa30d6479906e4e5738fc28, type: 3}
-  - {fileID: 21300000, guid: 2765f23a5a09a5e4ca21b8b55f0d64e6, type: 3}
-  - {fileID: 21300000, guid: f98761cf08a4e54488f263d1722af7d9, type: 3}
-  - {fileID: 21300000, guid: 77a5c56b93831674b8e16b5649afbe81, type: 3}
-  - {fileID: 21300000, guid: bb7b00888b9e245459cdd68258e60745, type: 3}
+  - {fileID: 21300000, guid: 43a55b3093b84b64d8fc870f924e4575, type: 3}
+  - {fileID: 21300000, guid: f6e02229ceebec8488e1318bea5b732e, type: 3}
+  - {fileID: 21300000, guid: 5357f9dd11693bc4c8f3079cd28a31d0, type: 3}
+  - {fileID: 21300000, guid: a5a53e4fd608d594bbdaf27342262d68, type: 3}
+  - {fileID: 21300000, guid: 2d224d35192d40f449a8dd080129c1be, type: 3}
+  - {fileID: 21300000, guid: 1cdcfd95490f1cc4589221118dcae130, type: 3}
+  - {fileID: 21300000, guid: d81ea00af08a7f04e84c9ff457c51555, type: 3}
+  - {fileID: 21300000, guid: eeba7648d6eeff247bd7e0322abfa8e9, type: 3}
+  - {fileID: 21300000, guid: 7e7b5e2585c663b4195531ab11c32bb1, type: 3}
+  - {fileID: 21300000, guid: 21f380227cd23334bacf376063eacd8c, type: 3}
+  - {fileID: 21300000, guid: 2ef1c94e1409c8b41ae43a80576ad642, type: 3}
+  - {fileID: 21300000, guid: 806718580e896fe46b82cff469d378b0, type: 3}
+  - {fileID: 21300000, guid: b05b9112ac0337340b871963f3861d65, type: 3}
+  - {fileID: 21300000, guid: f8f746bfc05989246962c072e84a24d9, type: 3}
+  - {fileID: 21300000, guid: 15f32c4a1a30aef4886b6eeecc433992, type: 3}
+  - {fileID: 21300000, guid: 443821ffa73227b43b5c5ea13bafb9aa, type: 3}
+  - {fileID: 21300000, guid: d2b89f3793ea1af4a9554b9128701a2f, type: 3}
+  - {fileID: 21300000, guid: a6ecd2a03c3784143a74a22387753d7e, type: 3}
+  - {fileID: 21300000, guid: bad7fe3421e7f894c8417f72e8478aec, type: 3}
+  - {fileID: 21300000, guid: 9d05962e3a2ed0c4f8608a9b0c32f5ad, type: 3}
+  - {fileID: 21300000, guid: 484e7973080185b4293fcc8802961230, type: 3}
+  - {fileID: 21300000, guid: 8067d67306e524948b60eedecde2986c, type: 3}
+  - {fileID: 21300000, guid: 757a2c6181485b04c9d7a088e7db724e, type: 3}
+  - {fileID: 21300000, guid: 5c8c0a7446a380546a7bf6cecd76a69c, type: 3}
+  - {fileID: 21300000, guid: a70c8348886ec644c9c62e906e907452, type: 3}
+  - {fileID: 21300000, guid: e8bedfd1126c1f94d898366c98eced8f, type: 3}
+  - {fileID: 21300000, guid: 4ed06566e788c2744ac9da8a4dd0c96d, type: 3}
   hpGauge: {fileID: 881673779}
   counter: {fileID: 11712172}
   panel: {fileID: 1552535103}
@@ -2762,20 +2787,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4154806371733529116, guid: 3471fe12523daac4187f263659346b7c, type: 3}
       propertyPath: backgroundImages.Array.size
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4154806371733529116, guid: 3471fe12523daac4187f263659346b7c, type: 3}
       propertyPath: backgroundImages.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 230a4058019002c45b9c560f2b07a067, type: 3}
+      objectReference: {fileID: 21300000, guid: f6de60f7e7cc3a94d98bdd1be7a1fbc7, type: 3}
     - target: {fileID: 4154806371733529116, guid: 3471fe12523daac4187f263659346b7c, type: 3}
       propertyPath: backgroundImages.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 1c0e8d71f7146b140a8819939344671e, type: 3}
+      objectReference: {fileID: 21300000, guid: d876853d70dd9f84e8b85084f3ec9f4c, type: 3}
     - target: {fileID: 4154806371733529116, guid: 3471fe12523daac4187f263659346b7c, type: 3}
       propertyPath: backgroundImages.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: bf7e91145027d9a48befc1b088818e1c, type: 3}
+      objectReference: {fileID: 21300000, guid: cc84292d94244fc45a16157bb339eccd, type: 3}
     - target: {fileID: 4154806371733529116, guid: 3471fe12523daac4187f263659346b7c, type: 3}
       propertyPath: backgroundImages.Array.data[3]
       value: 

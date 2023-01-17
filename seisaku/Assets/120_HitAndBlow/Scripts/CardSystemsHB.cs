@@ -55,11 +55,6 @@ namespace HitAndBlow
 
             // 選択した画像をさらにシャッフル
             ShuffleCardImages(selectImages);
-
-            for (var i = 0; i < 4; i++)
-            {
-                this.cards[i].GetComponent<Image>().sprite = selectImages[i];
-            }
         }
 
         // 受け取った配列をシャッフルする
