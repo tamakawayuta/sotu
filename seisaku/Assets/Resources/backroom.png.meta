@@ -1,0 +1,1308 @@
+fileFormatVersion: 2
+guid: 436965bf560c8e148a1f914247fa10e7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6747079299248310322
+    second: backroom_0
+  - first:
+      213: -4104138409442272290
+    second: backroom_1
+  - first:
+      213: 75503155853455373
+    second: backroom_2
+  - first:
+      213: -7381279935530699731
+    second: backroom_3
+  - first:
+      213: -3410548347064649419
+    second: backroom_4
+  - first:
+      213: 1330698708931308838
+    second: backroom_5
+  - first:
+      213: -4898087016874478504
+    second: backroom_6
+  - first:
+      213: -2514108188391935289
+    second: backroom_7
+  - first:
+      213: -88677983778358299
+    second: backroom_8
+  - first:
+      213: -2623968477133228138
+    second: backroom_9
+  - first:
+      213: -4889988312169149113
+    second: backroom_10
+  - first:
+      213: 7117535344077417622
+    second: backroom_11
+  - first:
+      213: 1095757144107222017
+    second: backroom_12
+  - first:
+      213: -6283309403293925196
+    second: backroom_13
+  - first:
+      213: 8291407244262262083
+    second: backroom_14
+  - first:
+      213: 9069674087465424715
+    second: backroom_15
+  - first:
+      213: 1339982934597239287
+    second: backroom_16
+  - first:
+      213: -6605165990673450011
+    second: backroom_17
+  - first:
+      213: -5849328452698798180
+    second: backroom_18
+  - first:
+      213: -570982824012384821
+    second: backroom_19
+  - first:
+      213: -1628866750599623925
+    second: backroom_20
+  - first:
+      213: -8276899508212337611
+    second: backroom_21
+  - first:
+      213: -5882340290391854403
+    second: backroom_22
+  - first:
+      213: 2048234696658930241
+    second: backroom_23
+  - first:
+      213: -2537483310960565473
+    second: backroom_24
+  - first:
+      213: -6857014782213798827
+    second: backroom_25
+  - first:
+      213: 240798666184426862
+    second: backroom_26
+  - first:
+      213: 914876357705369815
+    second: backroom_27
+  - first:
+      213: 3433265498022520222
+    second: backroom_28
+  - first:
+      213: -8903359523154342124
+    second: backroom_29
+  - first:
+      213: -1287444419143171166
+    second: backroom_30
+  - first:
+      213: -8490522101406396235
+    second: backroom_31
+  - first:
+      213: 8474674955617143659
+    second: backroom_32
+  - first:
+      213: -1972423526980915138
+    second: backroom_33
+  - first:
+      213: 8325122060417408863
+    second: backroom_34
+  - first:
+      213: -2627512099798183363
+    second: backroom_35
+  - first:
+      213: 512580779451694054
+    second: backroom_36
+  - first:
+      213: 7276322808053863008
+    second: backroom_37
+  - first:
+      213: -1331867633303026045
+    second: backroom_38
+  - first:
+      213: 4311539646410166355
+    second: backroom_39
+  - first:
+      213: -6667481925687197765
+    second: backroom_40
+  - first:
+      213: 3533689580151350689
+    second: backroom_41
+  - first:
+      213: 1894269999127614673
+    second: backroom_42
+  - first:
+      213: -1089450710434544020
+    second: backroom_43
+  - first:
+      213: -7924489097440062692
+    second: backroom_44
+  - first:
+      213: -1129945690161372684
+    second: backroom_45
+  - first:
+      213: -507675632731854067
+    second: backroom_46
+  - first:
+      213: 9127974148989193582
+    second: backroom_47
+  - first:
+      213: -6045468280607246677
+    second: backroom_48
+  - first:
+      213: 1738231961264323992
+    second: backroom_49
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: backroom_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 921.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec7b9e8ff1f8d52a0800000000000000
+      internalID: -6747079299248310322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_1
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 921.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb182c7cdb2b07c0800000000000000
+      internalID: -4104138409442272290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_2
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 921.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d00f01068bd3c0100800000000000000
+      internalID: 75503155853455373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_3
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 921.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2479fe910d609990800000000000000
+      internalID: -7381279935530699731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_4
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 921.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5397ae3295c4ba0d0800000000000000
+      internalID: -3410548347064649419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 819.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62debe8ec67977210800000000000000
+      internalID: 1330698708931308838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_6
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 819.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8547e303fcf760cb0800000000000000
+      internalID: -4898087016874478504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_7
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 819.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c27ff74ce71c1dd0800000000000000
+      internalID: -2514108188391935289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_8
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 819.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb3e75f7d3f4cef0800000000000000
+      internalID: -88677983778358299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_9
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 819.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 697b6aa829ac59bd0800000000000000
+      internalID: -2623968477133228138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 717.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d8851d985432cb0800000000000000
+      internalID: -4889988312169149113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_11
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 717.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69ca5046fa096c260800000000000000
+      internalID: 7117535344077417622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_12
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 717.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1048b962159e43f00800000000000000
+      internalID: 1095757144107222017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_13
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 717.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b04bca53633dc8a0800000000000000
+      internalID: -6283309403293925196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_14
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 717.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3454a5a75fef01370800000000000000
+      internalID: 8291407244262262083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 615.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4711f38784fddd70800000000000000
+      internalID: 9069674087465424715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_16
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 615.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f101c52163989210800000000000000
+      internalID: 1339982934597239287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_17
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 615.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ebfa63f68cb554a0800000000000000
+      internalID: -6605165990673450011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_18
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 615.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c978d4a63c203dea0800000000000000
+      internalID: -5849328452698798180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_19
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 615.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc574e195267318f0800000000000000
+      internalID: -570982824012384821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 513.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b8018025a1569e0800000000000000
+      internalID: -1628866750599623925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_21
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 513.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 534f56b00cb822d80800000000000000
+      internalID: -8276899508212337611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_22
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 513.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2b93ffbaabd5ea0800000000000000
+      internalID: -5882340290391854403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_23
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 513.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a4cf6ca9acc6c10800000000000000
+      internalID: 2048234696658930241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_24
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 513.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13a6b27f5c09ccd0800000000000000
+      internalID: -2537483310960565473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 411.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5544b86b26df6d0a0800000000000000
+      internalID: -6857014782213798827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_26
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 411.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e658f407c1d775300800000000000000
+      internalID: 240798666184426862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_27
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 411.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d88e6a333b42bc00800000000000000
+      internalID: 914876357705369815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_28
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 411.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e95ac3db7c865af20800000000000000
+      internalID: 3433265498022520222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_29
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 411.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f4bca8fa9e07480800000000000000
+      internalID: -8903359523154342124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 309.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a389e83f14122ee0800000000000000
+      internalID: -1287444419143171166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_31
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 309.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b0911c222b9b2a80800000000000000
+      internalID: -8490522101406396235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_32
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 309.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6b857ca8f71c9570800000000000000
+      internalID: 8474674955617143659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_33
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 309.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e30fda7a04b80a4e0800000000000000
+      internalID: -1972423526980915138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_34
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 309.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f92f2d766c88370800000000000000
+      internalID: 8325122060417408863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 207.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d321d789aa3398bd0800000000000000
+      internalID: -2627512099798183363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_36
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 207.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb39edc08d0d1700800000000000000
+      internalID: 512580779451694054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_37
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 207.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0629f15da01baf460800000000000000
+      internalID: 7276322808053863008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_38
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 207.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 386022da171448de0800000000000000
+      internalID: -1331867633303026045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_39
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 207.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3509a43077aa5db30800000000000000
+      internalID: 4311539646410166355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 105.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbfb311b3885873a0800000000000000
+      internalID: -6667481925687197765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_41
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 105.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a5ab6b63ff2a0130800000000000000
+      internalID: 3533689580151350689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_42
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 105.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d45ea6278cc94a10800000000000000
+      internalID: 1894269999127614673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_43
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 105.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c66804cd95e71e0f0800000000000000
+      internalID: -1089450710434544020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_44
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 105.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1311a0d62f860290800000000000000
+      internalID: -7924489097440062692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3.5999985
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f1a27aa160a150f0800000000000000
+      internalID: -1129945690161372684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_46
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 3.5999985
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b65e9a3bf54f8f0800000000000000
+      internalID: -507675632731854067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_47
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 3.5999985
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d037d50241dae70800000000000000
+      internalID: 9127974148989193582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_48
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 3.5999985
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba6738901ae2a1ca0800000000000000
+      internalID: -6045468280607246677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backroom_49
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 3.5999985
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89df36c52c07f1810800000000000000
+      internalID: 1738231961264323992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

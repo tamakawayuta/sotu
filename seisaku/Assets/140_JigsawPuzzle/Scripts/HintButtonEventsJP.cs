@@ -29,6 +29,18 @@ namespace JigsawPuzzle
                 case "puzzleImage":
                     this.puzzleImage = this.sprites[0];
                     break;
+                case "ship":
+                    this.puzzleImage = this.sprites[1];
+                    break;
+                case "KisaragiStation":
+                    this.puzzleImage = this.sprites[2];
+                    break;
+                case "bigBang":
+                    this.puzzleImage = this.sprites[3];
+                    break;
+                case "backroom":
+                    this.puzzleImage = this.sprites[4];
+                    break;
                 default:
                     Debug.LogWarning("Error: Do not Loaded sprite to hintObject");
                     break;

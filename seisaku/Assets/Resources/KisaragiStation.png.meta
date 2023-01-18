@@ -1,0 +1,1308 @@
+fileFormatVersion: 2
+guid: 725c5821ad0467049b5ba5399766e784
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3041144198896600491
+    second: KisaragiStation_0
+  - first:
+      213: -3120027089253471436
+    second: KisaragiStation_1
+  - first:
+      213: 7495200997363594745
+    second: KisaragiStation_2
+  - first:
+      213: -5278819443581666488
+    second: KisaragiStation_3
+  - first:
+      213: -5575479782607089048
+    second: KisaragiStation_4
+  - first:
+      213: -8638810575023431145
+    second: KisaragiStation_5
+  - first:
+      213: -275511091475096410
+    second: KisaragiStation_6
+  - first:
+      213: -5040907493381406959
+    second: KisaragiStation_7
+  - first:
+      213: 3510218206568638231
+    second: KisaragiStation_8
+  - first:
+      213: -7559815702220760601
+    second: KisaragiStation_9
+  - first:
+      213: 9216523116999426050
+    second: KisaragiStation_10
+  - first:
+      213: -434403745174216702
+    second: KisaragiStation_11
+  - first:
+      213: 5401066867600386037
+    second: KisaragiStation_12
+  - first:
+      213: -1062721020088556312
+    second: KisaragiStation_13
+  - first:
+      213: 8612643919252500790
+    second: KisaragiStation_14
+  - first:
+      213: 5687964168072232023
+    second: KisaragiStation_15
+  - first:
+      213: 896015237725853205
+    second: KisaragiStation_16
+  - first:
+      213: -1994383351234434227
+    second: KisaragiStation_17
+  - first:
+      213: 4379521301822013365
+    second: KisaragiStation_18
+  - first:
+      213: 5786418522974188711
+    second: KisaragiStation_19
+  - first:
+      213: 8767154873509484453
+    second: KisaragiStation_20
+  - first:
+      213: -6879216265897930957
+    second: KisaragiStation_21
+  - first:
+      213: -6010239008757476075
+    second: KisaragiStation_22
+  - first:
+      213: -5131196238233590686
+    second: KisaragiStation_23
+  - first:
+      213: 5848047764619134765
+    second: KisaragiStation_24
+  - first:
+      213: 2530377470470816422
+    second: KisaragiStation_25
+  - first:
+      213: -8782287170993962302
+    second: KisaragiStation_26
+  - first:
+      213: -3263182617086019102
+    second: KisaragiStation_27
+  - first:
+      213: -2358461418011179729
+    second: KisaragiStation_28
+  - first:
+      213: 6991679345739176369
+    second: KisaragiStation_29
+  - first:
+      213: -6117877347076876263
+    second: KisaragiStation_30
+  - first:
+      213: 3115264679157694373
+    second: KisaragiStation_31
+  - first:
+      213: 8859161566642912851
+    second: KisaragiStation_32
+  - first:
+      213: -3351616096392067758
+    second: KisaragiStation_33
+  - first:
+      213: -1755772031865366261
+    second: KisaragiStation_34
+  - first:
+      213: 4376244924775589733
+    second: KisaragiStation_35
+  - first:
+      213: 3261424528656117600
+    second: KisaragiStation_36
+  - first:
+      213: 590474764484046375
+    second: KisaragiStation_37
+  - first:
+      213: -7793615139230096592
+    second: KisaragiStation_38
+  - first:
+      213: 8928273207488648902
+    second: KisaragiStation_39
+  - first:
+      213: 294808091250692624
+    second: KisaragiStation_40
+  - first:
+      213: 8793302296638192669
+    second: KisaragiStation_41
+  - first:
+      213: -7158501154372753928
+    second: KisaragiStation_42
+  - first:
+      213: -4481321333194431846
+    second: KisaragiStation_43
+  - first:
+      213: -2031969649341920442
+    second: KisaragiStation_44
+  - first:
+      213: -6252975358654369705
+    second: KisaragiStation_45
+  - first:
+      213: 5170556250046403277
+    second: KisaragiStation_46
+  - first:
+      213: 3344521955002932131
+    second: KisaragiStation_47
+  - first:
+      213: 1059391798878559419
+    second: KisaragiStation_48
+  - first:
+      213: 3309759703474541219
+    second: KisaragiStation_49
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: KisaragiStation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 921.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba5c8f54980543a20800000000000000
+      internalID: 3041144198896600491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_1
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 921.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b637794ef63b4d0800000000000000
+      internalID: -3120027089253471436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_2
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 921.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f5b208889d440860800000000000000
+      internalID: 7495200997363594745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_3
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 921.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84bb3e73fadddb6b0800000000000000
+      internalID: -5278819443581666488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_4
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 921.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86215598daaef92b0800000000000000
+      internalID: -5575479782607089048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 819.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71227d96d87cc1880800000000000000
+      internalID: -8638810575023431145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_6
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 819.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ac52fc3f103d2cf0800000000000000
+      internalID: -275511091475096410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_7
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 819.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f7567b7591b0ab0800000000000000
+      internalID: -5040907493381406959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_8
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 819.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 717e1a66cdcc6b030800000000000000
+      internalID: 3510218206568638231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_9
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 819.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e916b52ca3261790800000000000000
+      internalID: -7559815702220760601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 717.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2004de491faa7ef70800000000000000
+      internalID: 9216523116999426050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_11
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 717.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 200aac76810b8f9f0800000000000000
+      internalID: -434403745174216702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_12
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 717.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7e37333b174fa40800000000000000
+      internalID: 5401066867600386037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_13
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 717.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e4e74edcd47041f0800000000000000
+      internalID: -1062721020088556312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_14
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 717.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63139f74302468770800000000000000
+      internalID: 8612643919252500790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 615.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c78155645bfee40800000000000000
+      internalID: 5687964168072232023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_16
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 615.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5169cf58c194f6c00800000000000000
+      internalID: 896015237725853205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_17
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 615.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4be7b3a8e68254e0800000000000000
+      internalID: -1994383351234434227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_18
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 615.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf7b599b6f27cc30800000000000000
+      internalID: 4379521301822013365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_19
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 615.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a4fd972dfc7d4050800000000000000
+      internalID: 5786418522974188711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 513.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a71e5638e03ba970800000000000000
+      internalID: 8767154873509484453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_21
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 513.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f801af04d1880a0800000000000000
+      internalID: -6879216265897930957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_22
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 513.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51590d31777579ca0800000000000000
+      internalID: -6010239008757476075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_23
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 513.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 264244325345ac8b0800000000000000
+      internalID: -5131196238233590686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_24
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 513.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2704a72570782150800000000000000
+      internalID: 5848047764619134765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 411.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2801327e4bd1320800000000000000
+      internalID: 2530377470470816422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_26
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 411.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c24f69395c0f1680800000000000000
+      internalID: -8782287170993962302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_27
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 411.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9bb57e2b8d6b2d0800000000000000
+      internalID: -3263182617086019102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_28
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 411.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f25caf206df054fd0800000000000000
+      internalID: -2358461418011179729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_29
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 411.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b9183a425f670160800000000000000
+      internalID: 6991679345739176369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 309.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 918d21c77fee81ba0800000000000000
+      internalID: -6117877347076876263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_31
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 309.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aff38668b4ab3b20800000000000000
+      internalID: 3115264679157694373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_32
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 309.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e3b8bc18012fa70800000000000000
+      internalID: 8859161566642912851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_33
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 309.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 255c11ffaeaac71d0800000000000000
+      internalID: -3351616096392067758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_34
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 309.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b095916b3ae32a7e0800000000000000
+      internalID: -1755772031865366261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 207.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 567ea5f929b8bbc30800000000000000
+      internalID: 4376244924775589733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_36
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 207.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f2b4c3458e24d20800000000000000
+      internalID: 3261424528656117600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_37
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 207.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72e67e97ba9c13800800000000000000
+      internalID: 590474764484046375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_38
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 207.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033651eb25487d390800000000000000
+      internalID: -7793615139230096592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_39
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 207.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c69ffd9d2997eb70800000000000000
+      internalID: 8928273207488648902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 105.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01298e3a56e571400800000000000000
+      internalID: 294808091250692624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_41
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 105.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1cfeb199d5180a70800000000000000
+      internalID: 8793302296638192669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_42
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 105.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f56361a025e7ac90800000000000000
+      internalID: -7158501154372753928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_43
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 105.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92e0929df52fc1c0800000000000000
+      internalID: -4481321333194431846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_44
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 105.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64b8998ae5efcc3e0800000000000000
+      internalID: -2031969649341920442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3.5999985
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750b22e7a08f839a0800000000000000
+      internalID: -6252975358654369705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_46
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 3.5999985
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc2113fb38181c740800000000000000
+      internalID: 5170556250046403277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_47
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 3.5999985
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3abd17f7ff02a6e20800000000000000
+      internalID: 3344521955002932131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_48
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 3.5999985
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbc5e1a6a37b3be00800000000000000
+      internalID: 1059391798878559419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KisaragiStation_49
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 3.5999985
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a290891ae0aeed20800000000000000
+      internalID: 3309759703474541219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

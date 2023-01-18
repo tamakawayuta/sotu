@@ -1,0 +1,1308 @@
+fileFormatVersion: 2
+guid: 6928d6a73508da9479c7bce97197b2f2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7782768553279037217
+    second: bigBang_0
+  - first:
+      213: 234096909522625097
+    second: bigBang_1
+  - first:
+      213: -3904561091445917896
+    second: bigBang_2
+  - first:
+      213: 6470656659998006662
+    second: bigBang_3
+  - first:
+      213: 4635161773515399196
+    second: bigBang_4
+  - first:
+      213: 2473239374676689936
+    second: bigBang_5
+  - first:
+      213: -8803092829140339829
+    second: bigBang_6
+  - first:
+      213: 4924258224372617129
+    second: bigBang_7
+  - first:
+      213: 431140089517445584
+    second: bigBang_8
+  - first:
+      213: -7844663128186559136
+    second: bigBang_9
+  - first:
+      213: -6022349860878018530
+    second: bigBang_10
+  - first:
+      213: 3505771882133783397
+    second: bigBang_11
+  - first:
+      213: 3128859372696724949
+    second: bigBang_12
+  - first:
+      213: 9080706233714464573
+    second: bigBang_13
+  - first:
+      213: -7065275593250673065
+    second: bigBang_14
+  - first:
+      213: 6296911649572958589
+    second: bigBang_15
+  - first:
+      213: 1195100276844203025
+    second: bigBang_16
+  - first:
+      213: -272675038395317251
+    second: bigBang_17
+  - first:
+      213: -3565807349800826097
+    second: bigBang_18
+  - first:
+      213: 8640188662269171780
+    second: bigBang_19
+  - first:
+      213: 3478713889981071986
+    second: bigBang_20
+  - first:
+      213: -1905561995502846868
+    second: bigBang_21
+  - first:
+      213: 6816629208503723003
+    second: bigBang_22
+  - first:
+      213: -1076122043838142939
+    second: bigBang_23
+  - first:
+      213: 1215618453330620726
+    second: bigBang_24
+  - first:
+      213: 6464012586920836342
+    second: bigBang_25
+  - first:
+      213: -4964510930698887669
+    second: bigBang_26
+  - first:
+      213: -487005026908987550
+    second: bigBang_27
+  - first:
+      213: 4237079195503346876
+    second: bigBang_28
+  - first:
+      213: 3439123739393625943
+    second: bigBang_29
+  - first:
+      213: -3450555183094454748
+    second: bigBang_30
+  - first:
+      213: 4702656898925462901
+    second: bigBang_31
+  - first:
+      213: 2584090774764459827
+    second: bigBang_32
+  - first:
+      213: 4495930412577121112
+    second: bigBang_33
+  - first:
+      213: 3807131902598741000
+    second: bigBang_34
+  - first:
+      213: 8117131440125849530
+    second: bigBang_35
+  - first:
+      213: -7684147626731511769
+    second: bigBang_36
+  - first:
+      213: -6288424663980662935
+    second: bigBang_37
+  - first:
+      213: 7933247036268752545
+    second: bigBang_38
+  - first:
+      213: 2347351560852557943
+    second: bigBang_39
+  - first:
+      213: -5125036444565156111
+    second: bigBang_40
+  - first:
+      213: 5130692223496802992
+    second: bigBang_41
+  - first:
+      213: -1910105470636008966
+    second: bigBang_42
+  - first:
+      213: -1446810554352369034
+    second: bigBang_43
+  - first:
+      213: -2878944078086683318
+    second: bigBang_44
+  - first:
+      213: 5009432686247143042
+    second: bigBang_45
+  - first:
+      213: -8145238484292021128
+    second: bigBang_46
+  - first:
+      213: 3184173537751553270
+    second: bigBang_47
+  - first:
+      213: -2384785175513909562
+    second: bigBang_48
+  - first:
+      213: 355964001305371832
+    second: bigBang_49
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bigBang_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 921.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd0e8b45c3d0ef390800000000000000
+      internalID: -7782768553279037217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_1
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 921.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 942ec1f16edaf3300800000000000000
+      internalID: 234096909522625097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_2
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 921.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837fd84ef5630d9c0800000000000000
+      internalID: -3904561091445917896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_3
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 921.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d52b203f36cc950800000000000000
+      internalID: 6470656659998006662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_4
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 921.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10eada2317635040800000000000000
+      internalID: 4635161773515399196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 819.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0140d148b16b25220800000000000000
+      internalID: 2473239374676689936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_6
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 819.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b833d4276b125d580800000000000000
+      internalID: -8803092829140339829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_7
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 819.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af8606e3ca765440800000000000000
+      internalID: 4924258224372617129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_8
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 819.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d11e1c80a7bbf500800000000000000
+      internalID: 431140089517445584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_9
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 819.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065e5dd9278222390800000000000000
+      internalID: -7844663128186559136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 717.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e181e3595b05c6ca0800000000000000
+      internalID: -6022349860878018530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_11
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 717.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5630322d3f007a030800000000000000
+      internalID: 3505771882133783397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_12
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 717.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d56db5a501fb6b20800000000000000
+      internalID: 3128859372696724949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_13
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 717.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37d93a3536250e70800000000000000
+      internalID: 9080706233714464573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_14
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 717.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75e6e08084913fd90800000000000000
+      internalID: -7065275593250673065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 615.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71b0d668cf136750800000000000000
+      internalID: 6296911649572958589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_16
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 615.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c0540be59d59010800000000000000
+      internalID: 1195100276844203025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_17
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 615.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df3c45d4f73473cf0800000000000000
+      internalID: -272675038395317251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_18
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 615.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b05a99b15b38ec0800000000000000
+      internalID: -3565807349800826097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_19
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 615.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44859e68fcd18e770800000000000000
+      internalID: 8640188662269171780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 513.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2720a871adfd64030800000000000000
+      internalID: 3478713889981071986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_21
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 513.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c719016751e85e0800000000000000
+      internalID: -1905561995502846868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_22
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 513.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf3aa6a2628899e50800000000000000
+      internalID: 6816629208503723003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_23
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 513.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5266f02e3b8d011f0800000000000000
+      internalID: -1076122043838142939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_24
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 513.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6317e2dea8ebed010800000000000000
+      internalID: 1215618453330620726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 411.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fcf1133339c4b950800000000000000
+      internalID: 6464012586920836342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_26
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 411.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0e16249c938a1bb0800000000000000
+      internalID: -4964510930698887669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_27
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 411.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f924f128fcd39f0800000000000000
+      internalID: -487005026908987550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_28
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 411.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb4cc2d44112dca30800000000000000
+      internalID: 4237079195503346876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_29
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 411.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f8b29d1d83abf20800000000000000
+      internalID: 3439123739393625943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 309.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426a5c1c75a2d10d0800000000000000
+      internalID: -3450555183094454748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_31
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 309.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5750ef8a881334140800000000000000
+      internalID: 4702656898925462901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_32
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 309.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33713395ed88cd320800000000000000
+      internalID: 2584090774764459827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_33
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 309.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 853e888c3e0c46e30800000000000000
+      internalID: 4495930412577121112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_34
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 309.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c747b5b46a5d430800000000000000
+      internalID: 3807131902598741000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 207.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abf2bd3d908d5a070800000000000000
+      internalID: 8117131440125849530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_36
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 207.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 720e103227c6c5590800000000000000
+      internalID: -7684147626731511769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_37
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 207.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96f90aae5170bb8a0800000000000000
+      internalID: -6288424663980662935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_38
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 207.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae2838b52e881e60800000000000000
+      internalID: 7933247036268752545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_39
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 207.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 770539bcec7739020800000000000000
+      internalID: 2347351560852557943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 105.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe43ccd18630e8b0800000000000000
+      internalID: -5125036444565156111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_41
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 105.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2d269c461e33740800000000000000
+      internalID: 5130692223496802992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_42
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 105.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af9d533d131fd75e0800000000000000
+      internalID: -1910105470636008966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_43
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 105.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6728a826775ebebe0800000000000000
+      internalID: -1446810554352369034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_44
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 105.6
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45cd614d9feb08d0800000000000000
+      internalID: -2878944078086683318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3.5999985
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286edfdac74158540800000000000000
+      internalID: 5009432686247143042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_46
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 3.5999985
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 874deecf0cc46fe80800000000000000
+      internalID: -8145238484292021128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_47
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 3.5999985
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f451ec46f4703c20800000000000000
+      internalID: 3184173537751553270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_48
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 3.5999985
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c630eb948a87eed0800000000000000
+      internalID: -2384785175513909562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bigBang_49
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 3.5999985
+        width: 307.2
+        height: 102.4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b422aa8f53a0f400800000000000000
+      internalID: 355964001305371832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

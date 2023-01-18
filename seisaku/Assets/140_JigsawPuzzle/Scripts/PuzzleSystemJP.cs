@@ -36,7 +36,7 @@ namespace JigsawPuzzle
         private void Awake()
         {
             // ‰æ‘œ‚ğƒ‰ƒ“ƒ_ƒ€‚É‘I‚Ô
-            var index = Random.Range(0, 1);
+            var index = Random.Range(0, 5);
             SetFileName(index);
 
             // ‘Î‰‚·‚é‰æ‘œ‚ğ“Ç‚İ‚Ş
@@ -61,6 +61,18 @@ namespace JigsawPuzzle
             {
                 case 0:
                     this.fileName = "puzzleImage";
+                    break;
+                case 1:
+                    this.fileName = "ship";
+                    break;
+                case 2:
+                    this.fileName = "KisaragiStation";
+                    break;
+                case 3:
+                    this.fileName = "bigBang";
+                    break;
+                case 4:
+                    this.fileName = "backroom";
                     break;
                 default:
                     Debug.LogError("Error: Illegal Index");
