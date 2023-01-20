@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,7 +25,7 @@ namespace Flash
         }
 
         // ‘I‘ğˆ‚Ì‰æ‘œ‚ğİ’è‚·‚é
-        public void SetButtonSprites(Sprite[] sprites)
+        public void SetButtonSprites(List<Sprite> sprites)
         {
             this.gameObject.SetActive(true);
 

@@ -32,13 +32,13 @@ namespace Flash
         private List<Sprite> useSprites;
 
         // 答えの管理
-        private List<Sprite> answers;
+        private Queue<Sprite> answers;
 
         // 正解数の管理
         private int answerAmount = 0;
 
         // 答えとなる画像の枚数の管理
-        private int selectSpriteAmount = 2;
+        private int selectSpriteAmount = 1;
 
         // 答えを表示する間隔の管理
         private int delayTime = 2000;
@@ -59,22 +59,50 @@ namespace Flash
 
             // 選択した画像を答えとして表示
             await this.answer.GetComponent<AnswerSystemFL>().SetSprites(this.useSprites,2000);
-            this.answers = new List<Sprite>(useSprites);
+            this.answers = new Queue<Sprite>(useSprites);
 
             // 全てのスプライトをシャッフル
             ShuffleSprites(this.sprites);
+
+            while (true)
+            {
+                if (this.useSprites.Count == 8)
+                {
+                    break;
+                }
+
+                var index = Random.Range(0, this.sprites.Length);
+
+                if (!this.useSprites.Contains(this.sprites[index]))
+                {
+                    this.useSprites.Add(this.sprites[index]);
+                }
+            }
+
+            ShuffleSprites(this.useSprites);
 
             // 答えを示すオブジェクトを非アクティブ化
             this.answer.SetActive(false);
 
             // 選択肢を表示
-            this.button.GetComponent<SelectSystemFL>().SetButtonSprites(this.sprites);
+            this.button.GetComponent<SelectSystemFL>().SetButtonSprites(this.useSprites);
         }
 
         // フィッシャ―イェーツのシャッフル
         private void ShuffleSprites(Sprite[] sprites)
         {
             for (var i = sprites.Length - 1; i > 0; --i)
+            {
+                var j = Random.Range(0, i + 1);
+                var tmp = sprites[i];
+                sprites[i] = sprites[j];
+                sprites[j] = tmp;
+            }
+        }
+
+        private void ShuffleSprites(List<Sprite> sprites)
+        {
+            for (var i = sprites.Count - 1; i > 0; --i)
             {
                 var j = Random.Range(0, i + 1);
                 var tmp = sprites[i];
@@ -111,19 +139,36 @@ namespace Flash
 
             // 答えを示す
             await this.answer.GetComponent<AnswerSystemFL>().SetSprites(this.useSprites, 2000);
-            this.answers = new List<Sprite>(useSprites);
+            this.answers = new Queue<Sprite>(useSprites);
 
             // 選択肢を設定する
             ShuffleSprites(this.sprites);
+
+            while (true)
+            {
+                if (this.useSprites.Count == 8)
+                {
+                    break;
+                }
+
+                var index = Random.Range(0, this.sprites.Length);
+
+                if (!this.useSprites.Contains(this.sprites[index]))
+                {
+                    this.useSprites.Add(this.sprites[index]);
+                }
+            }
+
+            ShuffleSprites(this.useSprites);
             this.answer.SetActive(false);
-            this.button.GetComponent<SelectSystemFL>().SetButtonSprites(this.sprites);
+            this.button.GetComponent<SelectSystemFL>().SetButtonSprites(this.useSprites);
         }
 
         // 正解となる画像の枚数を増やすか判定
         private void UpdateSelectSpriteAmount()
         {
             // 用意した画像よりも答えとなる画像の枚数が多い場合は、答えを表示する間隔を減らす
-            if (this.selectSpriteAmount > this.sprites.Length - 1)
+            if (this.selectSpriteAmount > 7)
             {
                 UpdateDelayTime();
                 return;
@@ -151,12 +196,11 @@ namespace Flash
         // 答えの判定
         public void CheckAnswer(Sprite sprite)
         {
-            // 正解の処理
-            if (this.answers.Contains(sprite))
-            {
-                // 答えから除去
-                this.answers.Remove(sprite);
+            var answer = this.answers.Dequeue();
 
+            // 正解の処理
+            if (answer == sprite)
+            {
                 // スコアを加算
                 this.count.GetComponent<CountSystemFL>().AddCount();
 
