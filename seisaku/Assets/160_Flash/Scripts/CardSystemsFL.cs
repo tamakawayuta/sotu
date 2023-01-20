@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -46,12 +47,15 @@ namespace Flash
         {
             // 選択肢を非表示
             button.SetActive(false);
+            answer.SetActive(false);
 
             // 画像をシャッフル
             ShuffleSprites(this.sprites);
 
             // 画像を選択する
             SelectSprites(selectSpriteAmount);
+
+            await Task.Delay(2000);
 
             // 選択した画像を答えとして表示
             await this.answer.GetComponent<AnswerSystemFL>().SetSprites(this.useSprites,2000);

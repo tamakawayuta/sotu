@@ -17,14 +17,6 @@ namespace QuicklyImage
             director.GetComponent<CardSystemsQI>().CheckAnswer(this.gameObject.GetComponent<Image>().sprite);
         }
 
-        // カードを裏返す処理
-        public void SetSpriteToBlack()
-        {
-            this.gameObject.GetComponent<Button>().enabled = false;
-            this.gameObject.GetComponent<Image>().sprite = null;
-            this.gameObject.GetComponent<Image>().color = Color.black;
-        }
-
         // 選択肢となる画像を設定する
         public void SetSprite(Sprite sprite)
         {

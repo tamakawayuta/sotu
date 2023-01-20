@@ -41,6 +41,9 @@ namespace QuicklyImage
         // 制限時間
         private int delayTime = 100;
 
+        // シャッフルアニメーションのフラグ
+        private bool isShuffleTime = true;
+
         private async void Awake()
         {
             // 選択肢となるオブジェクトを取得
@@ -49,19 +52,13 @@ namespace QuicklyImage
                 this.selectButtons.Add(this.select.transform.GetChild(i).gameObject);
             }
 
-            // 初期化
-            foreach (var button in selectButtons)
-            {
-                button.GetComponent<SelectButtonEventsQI>().SetSpriteToBlack();
-            }
-
-            this.answerObject.GetComponent<AnswerEventsQI>().SetSpriteBlack();
-
             // 使用する画像をリストで管理
             foreach (var sprite in sprites)
             {
                 this.useSprites.Add(sprite);
             }
+
+            ShuffleAnimation();
 
             // 画像をシャッフル
             ShuffleSprites(useSprites);
@@ -74,6 +71,8 @@ namespace QuicklyImage
             {
                 await Task.Delay(1000);
             }
+
+            this.isShuffleTime = false;
 
             // 選択肢をセット
             for (var i = 0; i < selectButtons.Count; i++)
@@ -103,9 +102,13 @@ namespace QuicklyImage
                 await Task.Delay(1000);
             }
 
+            ShuffleAnimation();
+
             // 問題を出すことを伝える
             this.guide.GetComponent<GuideSystemQI>().SetText("せーの..!");
             await Task.Delay(1000);
+
+            this.isShuffleTime = false;
 
             // 選択肢をセット
             for (var i = 0; i < selectButtons.Count; i++)
@@ -140,6 +143,26 @@ namespace QuicklyImage
             this.answerObject.GetComponent<AnswerEventsQI>().SetAnswerSprite(this.useSprites[index]);
 
             this.guide.GetComponent<GuideSystemQI>().SetText("これをえらべ！");
+        }
+
+        //  シャッフルのアニメーション
+        private async void ShuffleAnimation()
+        {
+            this.isShuffleTime = true;
+
+            while (this.isShuffleTime)
+            {
+                foreach (var button in selectButtons)
+                {
+                    var index = Random.Range(0, this.sprites.Length);
+                    button.GetComponent<Image>().sprite = this.sprites[index];
+                }
+
+                var answerIndex = Random.Range(0, this.sprites.Length);
+                this.answerObject.GetComponent<Image>().sprite = this.sprites[answerIndex];
+
+                await Task.Delay(20);
+            }
         }
 
         // レベルデザイン
@@ -180,13 +203,6 @@ namespace QuicklyImage
             {
                 AppearClearUI();
             }
-
-            // カードを裏面にする
-            foreach (var button in selectButtons)
-            {
-                button.GetComponent<SelectButtonEventsQI>().SetSpriteToBlack();
-            }
-            this.answerObject.GetComponent<AnswerEventsQI>().SetSpriteBlack();
 
             // 再シャッフル
             ReShuffle();
