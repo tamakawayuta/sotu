@@ -90,8 +90,8 @@ public class Launching_businessGame : MonoBehaviour
             orderLimit -= Time.deltaTime;
             if(orderLimit < 0)
             {
-                orderCount += 4;
-                orderLimit = 10;
+                orderCount += 8;
+                orderLimit = 15;
             }
             //Invoke("seconds",0);
             if (red == 1)
@@ -153,6 +153,8 @@ public class Launching_businessGame : MonoBehaviour
         red = 0;                //赤旗の状況リセット
         white = 0;              //白旗の状況リセット
         i = 0;                  //drawに回数リセット
+        orderCount = 4;
+        orderLimit = 15;
         timrLimit = 60;
 
         mainGame.SetActive(false);
@@ -168,28 +170,28 @@ public class Launching_businessGame : MonoBehaviour
 
     public void whiteUpButton()
     {   //白旗を上げるボタン  
-            white = 1;
+            white = 0;
             check = 2;
             point_count();
     }
 
     public void whitDownButton()
     {   //白旗を下げるボタン
-            white = 0;
+            white = 1;
             check = 3;
             point_count();
     }
 
     public void redUpButton()
     {   //赤旗を上げるボタン
-            red = 1;
+            red = 0;
             check = 0;
             point_count();
     }
 
     public void redDownButton()
     {   //赤旗を下げるボタン
-            red = 0;
+            red = 1;
             check = 1;
             point_count();
     }
@@ -200,10 +202,10 @@ public class Launching_businessGame : MonoBehaviour
         {
             num = rand % 4;            //randを4で割ったときの余りを代入(この数が配列orderと対応してい]
             Debug.Log(num);
-            if(num < 3)
+            if(num <= 1)
             {
                 //num -= 1;
-                Debug.Log(red);
+                Debug.Log("red:" + red);
                 if (num == red)
                 {          //変数checkとnumが同じとき実行(指示と旗の状態が同じとき）
                     point += 10;             //ポイントを+10
@@ -211,7 +213,8 @@ public class Launching_businessGame : MonoBehaviour
             }
             else
             {
-                num -= 3;
+                num -= 2;
+                Debug.Log("white:" + white) ;
                 if (num == white)
                 {
                     point += 10;
@@ -225,7 +228,7 @@ public class Launching_businessGame : MonoBehaviour
     void Start()
     {
         orderCount = 4;
-        orderLimit = 20;
+        orderLimit = 15;
         timrLimit = 60;
         scene = 0;
         score[0].text = "" + point;
