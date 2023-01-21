@@ -153,7 +153,7 @@ public class Launching_businessGame : MonoBehaviour
         red = 0;                //赤旗の状況リセット
         white = 0;              //白旗の状況リセット
         i = 0;                  //drawに回数リセット
-        timrLimit = 120;
+        timrLimit = 60;
 
         mainGame.SetActive(false);
         strat.SetActive(true);
@@ -198,10 +198,12 @@ public class Launching_businessGame : MonoBehaviour
     {  //旗上下ボタン押した後の正誤判定
         if (count == 1)
         {
-            num = rand % 4;            //randを4で割ったときの余りを代入(この数が配列orderと対応してい
-            if(num <= 2)
+            num = rand % 4;            //randを4で割ったときの余りを代入(この数が配列orderと対応してい]
+            Debug.Log(num);
+            if(num < 3)
             {
-                num -= 1;
+                //num -= 1;
+                Debug.Log(red);
                 if (num == red)
                 {          //変数checkとnumが同じとき実行(指示と旗の状態が同じとき）
                     point += 10;             //ポイントを+10
@@ -224,7 +226,7 @@ public class Launching_businessGame : MonoBehaviour
     {
         orderCount = 4;
         orderLimit = 20;
-        timrLimit = 120;
+        timrLimit = 60;
         scene = 0;
         score[0].text = "" + point;
         point = 0;

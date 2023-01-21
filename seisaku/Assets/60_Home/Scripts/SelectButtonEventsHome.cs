@@ -46,31 +46,31 @@ namespace Home
             {
                 case 0:
                     SceneData.sceneNames = SceneName.Neurasthenia;
-                    gameName = "(仮)真剣衰弱";
+                    gameName = "真剣衰弱";
                     break;
                 case 1:
                     SceneData.sceneNames = SceneName.HitAndBlow;
-                    gameName = "(仮)ヒット＆ブロー";
+                    gameName = "ヒット＆ブロー";
                     break;
                 case 2:
                     SceneData.sceneNames = SceneName.GetBlock;
-                    gameName = "(仮)ブロック取り";
+                    gameName = "ブロック取り";
                     break;
                 case 3:
                     SceneData.sceneNames = SceneName.JigsawPuzzle;
-                    gameName = "(仮)ジグソーパズル";
+                    gameName = "ジグソーパズル";
                     break;
                 case 4:
                     SceneData.sceneNames = SceneName.Flash;
-                    gameName = "(仮)フラッシュ";
+                    gameName = "フラッシュ";
                     break;
                 case 5:
                     SceneData.sceneNames = SceneName.QuicklyImage;
-                    gameName = "(仮)瞬間画像当て";
+                    gameName = "瞬間画像当て";
                     break;
                 case 6:
                     SceneData.sceneNames = SceneName.Launchingbusiness;
-                    gameName = "旗揚げゲーム";
+                    gameName = "旗揚げ";
                     break;
                 case 7:
                     SceneData.sceneNames = SceneName.Reversible;
@@ -78,11 +78,11 @@ namespace Home
                     break;
                 case 8:
                     SceneData.sceneNames = SceneName.RepeatedlyHitting;
-                    gameName = "(仮)連打ゲーム";
+                    gameName = "連打";
                     break;
                 case 9:
                     SceneData.sceneNames = SceneName.MusicGame;
-                    gameName = "(仮)音ゲー";
+                    gameName = "リズム";
                     break;
                 default:
                     Debug.LogError("IllegalValue");
