@@ -23,6 +23,8 @@ namespace HitAndBlow
         [SerializeField]
         private GameObject showHintText;
         [SerializeField]
+        private GameObject detail;
+        [SerializeField]
         private GameObject endUI;
 
         // 回答した数の管理
@@ -69,6 +71,7 @@ namespace HitAndBlow
             // 4ヒットならクリア
             if (hit == 4)
             {
+                detail.GetComponent<DetailSystemHB>().DisappearDetail();
                 // 答えを表示
                 answerCard.GetComponent<CardSystemsHB>().AppearAnswer();
                 await Task.Delay(2000);
@@ -83,6 +86,7 @@ namespace HitAndBlow
             // 回答が8まで行ったらゲームオーバー
             else if (count == 8)
             {
+                detail.GetComponent<DetailSystemHB>().DisappearDetail();
                 answerCard.GetComponent<CardSystemsHB>().AppearAnswer();
                 await Task.Delay(2000);
                 // クリア画面を表示
@@ -100,6 +104,7 @@ namespace HitAndBlow
                 texts.GetComponent<RecordTextSystemsHB>().DrawText(hit, blow);
                 // 配列のリセット
                 images.GetComponent<RecordImageSystemsHB>().SetImageNow();
+                detail.GetComponent<DetailSystemHB>().MoveDetail();
             }
         }
     }

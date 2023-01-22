@@ -13,6 +13,8 @@ namespace HitAndBlow
         // Œó•â‚Æ‚È‚é‰æ‘œ‚½‚¿
         [SerializeField]
         private Sprite[] images;
+        [SerializeField]
+        private GameObject detail;
 
         // ¡‘I‘ğ‚³‚ê‚Ä‚¢‚é‰æ‘œ
         private Sprite selectSpriteNow;
@@ -36,6 +38,8 @@ namespace HitAndBlow
             if (selectNow != null)
             {
                 EventSystem.current.SetSelectedGameObject(selectNow);
+                this.gameObject.GetComponent<Image>().enabled = false;
+                detail.GetComponent<DetailSystemHB>().ApeearDetail();
             }
         }
 
