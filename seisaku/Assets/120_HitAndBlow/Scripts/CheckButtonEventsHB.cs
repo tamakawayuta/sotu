@@ -98,10 +98,9 @@ namespace HitAndBlow
                 showHintText.GetComponent<ShowHintSystemHB>().ShowText(hit + "ヒット " + blow + "ブロー");
                 // ヒットとブローの数を記録する
                 texts.GetComponent<RecordTextSystemsHB>().DrawText(hit, blow);
+                // 配列のリセット
+                images.GetComponent<RecordImageSystemsHB>().SetImageNow();
             }
-
-            // 配列のリセット
-            images.GetComponent<RecordImageSystemsHB>().SetImageNow();
         }
     }
 }

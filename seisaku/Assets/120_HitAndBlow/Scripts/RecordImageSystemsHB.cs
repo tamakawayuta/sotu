@@ -45,6 +45,11 @@ namespace HitAndBlow
 
             // 使用する入力オブジェクトを取り出す
             imageNow = images.Dequeue();
+
+            for (var i = 0; i < 4; i++)
+            {
+                this.imageNow.transform.GetChild(i).GetComponent<Image>().color = Color.white;
+            }
         }
 
         private void Update()
@@ -89,6 +94,11 @@ namespace HitAndBlow
 
             // 新しい入力オブジェクトの入力を有効化
             SetActiveImageNow(true);
+
+            for (var i = 0; i < 4; i++)
+            {
+                this.imageNow.transform.GetChild(i).GetComponent<Image>().color = Color.white;
+            }
 
             // フラグをリセット
             this.isImageSetFull = false;
