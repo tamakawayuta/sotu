@@ -34,8 +34,12 @@ namespace HitAndBlow
         {
             textNow.GetComponent<Text>().text = hit.ToString() + " " + blow.ToString();
 
-            // 次の記録オブジェクトを取り出す
-            textNow = texts.Dequeue();
+
+            if (this.texts.Count != 0)
+            {
+                // 次の記録オブジェクトを取り出す
+                textNow = texts.Dequeue();
+            }
         }
     }
 }

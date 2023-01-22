@@ -74,20 +74,31 @@ namespace HitAndBlow
                 await Task.Delay(2000);
                 // クリア画面を表示
                 showHintText.GetComponent<ShowHintSystemHB>().ShowText("4ヒット");
+                // ヒットとブローの数を記録する
+                texts.GetComponent<RecordTextSystemsHB>().DrawText(hit, blow);
+                await Task.Delay(2000);
+                // ゲームクリアUIを表示
+                endUI.GetComponent<GameOverSystems>().AppearUIOnlyText("おめでとう!!");
             }
             // 回答が8まで行ったらゲームオーバー
             else if (count == 8)
             {
+                answerCard.GetComponent<CardSystemsHB>().AppearAnswer();
+                await Task.Delay(2000);
+                // クリア画面を表示
+                showHintText.GetComponent<ShowHintSystemHB>().ShowText("おしい...");
+                // ヒットとブローの数を記録する
+                texts.GetComponent<RecordTextSystemsHB>().DrawText(hit, blow);
+                await Task.Delay(2000);
                 endUI.GetComponent<GameOverSystems>().AppearUIOnlyText("がんばったね!!");
             }
             // それら以外はヒットとブローの数を表示する
             else
             {
                 showHintText.GetComponent<ShowHintSystemHB>().ShowText(hit + "ヒット " + blow + "ブロー");
+                // ヒットとブローの数を記録する
+                texts.GetComponent<RecordTextSystemsHB>().DrawText(hit, blow);
             }
-
-            // ヒットとブローの数を記録する
-            texts.GetComponent<RecordTextSystemsHB>().DrawText(hit, blow);
 
             // 配列のリセット
             images.GetComponent<RecordImageSystemsHB>().SetImageNow();

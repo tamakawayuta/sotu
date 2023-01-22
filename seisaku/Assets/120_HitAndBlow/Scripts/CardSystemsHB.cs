@@ -55,6 +55,13 @@ namespace HitAndBlow
 
             // 選択した画像をさらにシャッフル
             ShuffleCardImages(selectImages);
+
+            /*var index = 0;
+            foreach (var card in cards)
+            {
+                card.GetComponent<Image>().sprite = this.selectImages[index];
+                index++;
+            }*/
         }
 
         // 受け取った配列をシャッフルする
@@ -95,9 +102,6 @@ namespace HitAndBlow
             }
 
             await Task.Delay(3800);
-
-            // ゲームクリアUIを表示
-            endUI.GetComponent<GameOverSystems>().AppearUIOnlyText("おめでとう!!");
         }
 
         // カードを表にするアニメーション
