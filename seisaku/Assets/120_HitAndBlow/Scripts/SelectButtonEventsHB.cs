@@ -39,13 +39,15 @@ namespace HitAndBlow
             {
                 EventSystem.current.SetSelectedGameObject(selectNow);
                 this.gameObject.GetComponent<Image>().enabled = false;
-                detail.GetComponent<DetailSystemHB>().ApeearDetail();
             }
         }
 
         // OnClick関数
         public void OnClickSelect(int cardNum)
         {
+
+            detail.GetComponent<DetailSystemHB>().ApeearDetail();
+
             // 選択された候補オブジェクトのスプライトを記録する
             this.selectSpriteNow = this.gameObject.transform.GetChild(cardNum).GetComponent<Image>().sprite;
 

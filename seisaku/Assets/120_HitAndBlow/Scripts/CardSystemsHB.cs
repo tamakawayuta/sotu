@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -56,7 +57,12 @@ namespace HitAndBlow
             // 選択した画像をさらにシャッフル
             ShuffleCardImages(selectImages);
 
-            /*var index = 0;
+            /*this.selectImages[0] = this.frontImages[1];
+            this.selectImages[1] = this.frontImages[0];
+            this.selectImages[2] = this.frontImages[2];
+            this.selectImages[3] = this.frontImages[0];
+
+            var index = 0;
             foreach (var card in cards)
             {
                 card.GetComponent<Image>().sprite = this.selectImages[index];
@@ -70,7 +76,7 @@ namespace HitAndBlow
         {
             for (var i = images.Length - 1; i > 0; --i)
             {
-                var j = Random.Range(0, i + 1);
+                var j = UnityEngine.Random.Range(0, i + 1);
                 var tmp = images[i];
                 images[i] = images[j];
                 images[j] = tmp;
@@ -87,7 +93,7 @@ namespace HitAndBlow
             {
                 // ランダムなインデックスを選ぶ
                 // 同じ画像が選ばれることもある
-                var randomIndex = Random.Range(0, frontImages.Length);
+                var randomIndex = UnityEngine.Random.Range(0, frontImages.Length);
                 selectImages[i] = frontImages[randomIndex];
             }
         }
@@ -149,7 +155,8 @@ namespace HitAndBlow
             var blowAmount = 0;
 
             // 既にヒットと判定されたところはブローの判定をしない
-            bool[] didAddAmount = { false, false, false, false };
+            bool[] didAddHitAmount = { false, false, false, false };
+            bool[] didAddBlowAmount = { false, false, false, false };
 
             // ヒットの判定
             for (var i = 0; i < 4; i++)
@@ -158,23 +165,33 @@ namespace HitAndBlow
                 if (selectImages[i] == answers[i])
                 {
                     hitAmount++;
-                    didAddAmount[i] = true;
+                    didAddHitAmount[i] = true;
+                    didAddBlowAmount[i] = true;
                 }
             }
 
             // ブローの判定
             for (var i = 0; i < 4; i++)
             {
+                if (didAddHitAmount[i])
+                {
+                    continue;
+                }
+
                 for (var j = 0; j < 4; j++)
                 {
                     // 違うインデックスに同じ画像があり
                     // かつそれがヒット判定された画像でないならブロー
                     if (answers[i] == selectImages[j] && 
                         i != j &&
-                        !didAddAmount[j])
+                        !didAddBlowAmount[j]
+                        )
                     {
+                        /*Debug.Log(i);
+                        Debug.Log(j);*/
                         blowAmount++;
-                        didAddAmount[j] = true;
+                        didAddBlowAmount[j] = true;
+                        break;
                     }
                 }
             }
