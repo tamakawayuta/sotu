@@ -9,9 +9,18 @@ namespace QuicklyImage
 {
     public class SelectButtonEventsQI : MonoBehaviour
     {
+        private static bool didClick = false;
+
         // OnClick処理
         public void OnClickSelect()
         {
+            if (didClick)
+            {
+                return;
+            }
+
+            didClick = true;
+
             // クリックしたオブジェクトが持つ画像を通知
             var director = GameObject.Find("GameDirector");
             director.GetComponent<CardSystemsQI>().CheckAnswer(this.gameObject.GetComponent<Image>().sprite);
@@ -20,6 +29,8 @@ namespace QuicklyImage
         // 選択肢となる画像を設定する
         public void SetSprite(Sprite sprite)
         {
+            didClick = false;
+
             this.gameObject.GetComponent<Image>().color = Color.white;
             this.gameObject.GetComponent<Image>().sprite = sprite;
             this.gameObject.GetComponent<Button>().enabled = true;

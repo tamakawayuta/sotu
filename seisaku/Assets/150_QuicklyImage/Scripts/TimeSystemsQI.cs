@@ -10,6 +10,8 @@ namespace QuicklyImage
 {
     public class TimeSystemsQI : MonoBehaviour
     {
+        private bool isTimeUp = true;
+
         private void Awake()
         {
             // 初期化
@@ -19,8 +21,8 @@ namespace QuicklyImage
         // カウントダウンの処理
         public async void StartCountdown(int delayTime)
         {
-            this.gameObject.GetComponent<Image>().enabled = true;
             this.gameObject.GetComponent<Image>().fillAmount = 1f;
+            this.isTimeUp = true;
 
             while (this.gameObject.GetComponent<Image>().fillAmount > 0f)
             {
@@ -35,12 +37,16 @@ namespace QuicklyImage
                 await Task.Delay(delayTime);
             }
 
-            // このオブジェクトの画像がアクティブならゲーム終了時のウィンドウを表示
-            // つまり、制限時間ないに選択肢を選ばなかったとき
-            if (this.gameObject.GetComponent<Image>().enabled)
+            // つまり、制限時間ないに選択肢を選ばなかったときゲーム終了時のウィンドウを表示
+            if (this.isTimeUp)
             {
                 GameObject.Find("GameDirector").GetComponent<CardSystemsQI>().AppearClearUI();
             }
+        }
+
+        public void SetIsTimeUp()
+        {
+            this.isTimeUp = false;
         }
     }
 }

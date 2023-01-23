@@ -18,6 +18,7 @@ namespace Flash
 
             // Ä‘I‘ğ‚Å‚«‚È‚¢‚æ‚¤‚É‚·‚é
             this.gameObject.GetComponent<Button>().enabled = false;
+            this.gameObject.GetComponent<Image>().color = Color.gray;
         }
     }
 }

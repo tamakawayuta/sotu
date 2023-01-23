@@ -178,15 +178,14 @@ namespace QuicklyImage
         }
 
         // 答えの判定
-        public void CheckAnswer(Sprite sprite)
+        public async void CheckAnswer(Sprite sprite)
         {
-            // カウントダウンオブジェクトを非表示
-            this.time.GetComponent<Image>().enabled = false;
-
             // 正解の処理
             if (sprite == this.answerObject.GetComponent<Image>().sprite)
             {
                 this.guide.GetComponent<GuideSystemQI>().SetText("いいね！");
+                this.time.GetComponent<TimeSystemsQI>().SetIsTimeUp();
+
                 // 制限時間を減らす
                 UpdateDelayTime();
 
@@ -194,9 +193,12 @@ namespace QuicklyImage
                 float bonusValue = this.time.GetComponent<Image>().fillAmount;
                 bonusValue *= 100;
                 int newScore = (int)bonusValue;
-                Debug.Log(newScore);
 
-                this.score.GetComponent<ScoreSystemsQI>().AddScore(newScore);
+                for (var i=1;i < newScore + 1; i++)
+                {
+                    this.score.GetComponent<ScoreSystemsQI>().AddScore(i);
+                    await Task.Delay(20);
+                }
             }
             // 不正解ならゲームオーバー
             else

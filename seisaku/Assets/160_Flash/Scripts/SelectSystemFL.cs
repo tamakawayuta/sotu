@@ -39,6 +39,11 @@ namespace Flash
             {
                 this.buttons[i].GetComponent<Image>().sprite = sprites[i];
             }
+
+            foreach (var button in buttons)
+            {
+                button.GetComponent<Image>().color = Color.white;
+            }
         }
     }
 }

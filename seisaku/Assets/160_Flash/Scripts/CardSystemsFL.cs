@@ -27,6 +27,8 @@ namespace Flash
         private GameObject count;
         [SerializeField]
         private GameObject clearUI;
+        [SerializeField]
+        private GameObject praise;
 
         // 実際に使用する画像群
         private List<Sprite> useSprites;
@@ -194,7 +196,7 @@ namespace Flash
         }
 
         // 答えの判定
-        public void CheckAnswer(Sprite sprite)
+        public async void CheckAnswer(Sprite sprite)
         {
             var answer = this.answers.Dequeue();
 
@@ -207,6 +209,9 @@ namespace Flash
                 // 全て回答されたら次の問題を出す
                 if (this.answers.Count == 0)
                 {
+
+                    await this.praise.GetComponent<PraiseSystemFL>().AppearText();
+
                     this.button.SetActive(false);
                     ResetSprites();
                 }
