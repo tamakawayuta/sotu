@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,6 +21,8 @@ namespace JigsawPuzzle
         private GameObject clear;
         [SerializeField]
         private GameObject hintButton;
+        [SerializeField]
+        private GameObject answerImage;
 
         // パズルピースに格納するバラバラの画像の管理
         private List<Sprite> sprites = new List<Sprite>();
@@ -33,7 +36,7 @@ namespace JigsawPuzzle
         // 使用する画像の名前
         private string fileName;
 
-        private void Awake()
+        private async void Awake()
         {
             // 画像をランダムに選ぶ
             var index = Random.Range(0, 5);
@@ -42,16 +45,46 @@ namespace JigsawPuzzle
             // 対応する画像を読み込む
             LoadSprites(this.fileName);
             hintButton.GetComponent<HintButtonEventsJP>().SetHintSprite(this.fileName);
+            this.answerImage.GetComponent<AnswerSystemJP>().SetAnswerImage(this.fileName);
+
+            fields.GetComponent<FieldSystemJP>().InstantiateFields(this.sprites.Count);
+            fields.GetComponent<FieldSystemJP>().DrawSprites(this.sprites);
+
+            List<GameObject> fieldState = fields.GetComponent<FieldSystemJP>().GetFields();
+
+            foreach (var field in fieldState)
+            {
+                field.GetComponent<Image>().color = Color.white;
+                field.GetComponent<Button>().enabled = false;
+            }
+
+            hintButton.SetActive(false);
+
+            await Task.Delay(5000);
+
+            for (var i = 0; i < 5; i++)
+            {
+                ShuffleSprites(this.sprites);
+                fields.GetComponent<FieldSystemJP>().DrawSprites(this.sprites);
+                await Task.Delay(20);
+            }
 
             // バラバラ画像をシャッフル
             ShuffleSprites(this.sprites);
 
             // 画像をピースにセット
-            fields.GetComponent<FieldSystemJP>().InstantiateFields(this.sprites.Count);
             fields.GetComponent<FieldSystemJP>().DrawSprites(this.sprites);
+
+            foreach (var field in fieldState)
+            {
+                field.GetComponent<Image>().color = new Color(53f, 53f, 53f);
+                field.GetComponent<Button>().enabled = true;
+            }
 
             // 既に正しい場所にある画像についての処理
             UpdateTrueFieldState();
+
+            hintButton.SetActive(true);
         }
 
         // 対応する画像名のセット
@@ -148,7 +181,7 @@ namespace JigsawPuzzle
         }
 
         // 答えとフィールドが一致するか判定する
-        private void CheckAnswer()
+        private async void CheckAnswer()
         {
             List<GameObject> fieldState = fields.GetComponent<FieldSystemJP>().GetFields();
 
@@ -160,6 +193,10 @@ namespace JigsawPuzzle
                     return;
                 }
             }
+
+            this.answerImage.SetActive(true);
+
+            await Task.Delay(3000);
 
             // 正解のときはクリア画面を呼び出す
             clear.GetComponent<GameOverSystems>().AppearUIOnlyText("おめでとう!!");
