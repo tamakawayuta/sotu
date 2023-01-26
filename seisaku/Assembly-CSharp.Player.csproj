@@ -57,6 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\110_Neurasthenia\Scripts\PanelSystems.cs" />
+    <Compile Include="Assets\140_JigsawPuzzle\Scripts\AnswerSystemJP.cs" />
+    <Compile Include="Assets\t_Tama\InfiniteScroll\Common\Item.cs" />
+    <Compile Include="Assets\t_Tama\RingCommand\Script\RingCommand.cs" />
     <Compile Include="Assets\130_GetBlock\Scripts\TurnDetailGB.cs" />
     <Compile Include="Assets\220_MusicGame\Scripts\EffectManager.cs" />
     <Compile Include="Assets\150_QuicklyImage\Scripts\CardSystemsQI.cs" />
@@ -65,6 +68,7 @@
     <Compile Include="Assets\130_GetBlock\Scripts\GameMainGB.cs" />
     <Compile Include="Assets\220_MusicGame\Scripts\NotesScript.cs" />
     <Compile Include="Assets\120_HitAndBlow\Scripts\CardSystemsHB.cs" />
+    <Compile Include="Assets\t_Tama\Animation\Script\ActiveDeactiveObject.cs" />
     <Compile Include="Assets\210_Launching_business\Lbscript\Launching_businessGame.cs" />
     <Compile Include="Assets\220_MusicGame\Scripts\TouchEffectManager.cs" />
     <Compile Include="Assets\120_HitAndBlow\Scripts\SelectButtonEventsHB.cs" />
@@ -73,14 +77,19 @@
     <Compile Include="Assets\160_Flash\Scripts\CardSystemsFL.cs" />
     <Compile Include="Assets\240_Reversible\Rscripts\OthelloCell.cs" />
     <Compile Include="Assets\160_Flash\Scripts\SelectSystemFL.cs" />
+    <Compile Include="Assets\t_Tama\InfiniteScroll\IInfiniteScrollSetup.cs" />
     <Compile Include="Assets\60_Home\Scripts\SceneName.cs" />
     <Compile Include="Assets\130_GetBlock\Scripts\FieldSystemGB.cs" />
+    <Compile Include="Assets\t_Tama\Animation\Script\ResumeAnimator.cs" />
     <Compile Include="Assets\160_Flash\Scripts\SelectButtonEventsFL.cs" />
+    <Compile Include="Assets\t_Tama\InfiniteScroll\Loop\ItemControllerLoop.cs" />
     <Compile Include="Assets\60_Home\Scripts\SceneData.cs" />
+    <Compile Include="Assets\t_Tama\InfiniteScroll\Limited\ItemControllerLimited.cs" />
     <Compile Include="Assets\130_GetBlock\Scripts\FieldButtonEventGB.cs" />
     <Compile Include="Assets\110_Neurasthenia\Scripts\CardEvents.cs" />
     <Compile Include="Assets\240_Reversible\Rscripts\OthelloBoard.cs" />
     <Compile Include="Assets\140_JigsawPuzzle\Scripts\HintButtonEventsJP.cs" />
+    <Compile Include="Assets\160_Flash\Scripts\PraiseSystemFL.cs" />
     <Compile Include="Assets\70_Description\Scripts\DescriptionMain.cs" />
     <Compile Include="Assets\160_Flash\Scripts\AnswerSystemFL.cs" />
     <Compile Include="Assets\70_Description\Scripts\DescriptionObject.cs" />
@@ -97,14 +106,18 @@
     <Compile Include="Assets\PublicUI_Prefabs\Pause\Scripts\PauseSystems.cs" />
     <Compile Include="Assets\110_Neurasthenia\Scripts\HpSystems.cs" />
     <Compile Include="Assets\130_GetBlock\Scripts\TimeSystemGB.cs" />
+    <Compile Include="Assets\t_Tama\InfiniteScroll\InfiniteScroll.cs" />
+    <Compile Include="Assets\t_Tama\Animation\Script\AnimatorParameter.cs" />
     <Compile Include="Assets\50_Title\Scripts\TitleMain.cs" />
     <Compile Include="Assets\160_Flash\Scripts\CountSystemFL.cs" />
     <Compile Include="Assets\120_HitAndBlow\Scripts\CheckButtonEventsHB.cs" />
+    <Compile Include="Assets\t_Tama\InfiniteScroll\Infinite\ItemControllerInfinite.cs" />
     <Compile Include="Assets\130_GetBlock\Scripts\StateTextSystemGB.cs" />
     <Compile Include="Assets\150_QuicklyImage\Scripts\TimeSystemsQI.cs" />
     <Compile Include="Assets\220_MusicGame\Scripts\GameUtil.cs" />
     <Compile Include="Assets\150_QuicklyImage\Scripts\GuideSystemQI.cs" />
     <Compile Include="Assets\PublicUI_Prefabs\Fade\FadeSystems.cs" />
+    <Compile Include="Assets\120_HitAndBlow\Scripts\DetailSystemHB.cs" />
     <Compile Include="Assets\60_Home\Scripts\HomeMain.cs" />
     <Compile Include="Assets\220_MusicGame\Scripts\SingletonMonoBehaviour.cs" />
     <Compile Include="Assets\150_QuicklyImage\Scripts\SelectButtonEventsQI.cs" />
@@ -112,6 +125,7 @@
     <Compile Include="Assets\220_MusicGame\Scripts\GameController.cs" />
     <Compile Include="Assets\140_JigsawPuzzle\Scripts\FieldSystemJP.cs" />
     <Compile Include="Assets\140_JigsawPuzzle\Scripts\BackButtonEventsJP.cs" />
+    <Compile Include="Assets\t_Tama\RingCommand\Script\PlayAnimationClip.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.26f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.dll</HintPath>
     </Reference>
