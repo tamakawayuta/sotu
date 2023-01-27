@@ -20,6 +20,8 @@ namespace GetBlock
         private GameObject fields;
         [SerializeField]
         private GameObject turn;
+        [SerializeField]
+        private GameObject showTurn;
 
         // 何かのフィールドオブジェクトが選択されているかどうかの管理
         private bool didCallTime = false;
@@ -88,6 +90,8 @@ namespace GetBlock
             {
                 turn.GetComponent<TurnDetailGB>().ShowPlayer1();
             }
+
+            showTurn.GetComponent<ShowTurnUIEvents>().SetTurnSprite();
 
             // フラグを更新する
             isFirstPlayerTurn = !isFirstPlayerTurn;
