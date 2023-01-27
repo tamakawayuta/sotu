@@ -14,6 +14,8 @@ namespace Home
         public Text name;
         private string gameName;
         private int buttonIndex;
+        [SerializeField]
+        Image uiIcon;
 
         private void Start()
         {
@@ -32,6 +34,7 @@ namespace Home
         public void SetButtonIndex(int value)
         {
             this.buttonIndex = value;
+            uiIcon.sprite = Resources.Load<Sprite>((Mathf.Abs(value) % 30 + 1).ToString("icon000"));
         }
 
         // Update is called once per frame
@@ -41,12 +44,12 @@ namespace Home
 
         public void GameSelect()
         {
-            
+
             switch (buttonIndex)
             {
                 case 0:
                     SceneData.sceneNames = SceneName.Neurasthenia;
-                    gameName = "ê^åïêäé„";
+                    gameName = "ê^åïêäé„";                 
                     break;
                 case 1:
                     SceneData.sceneNames = SceneName.HitAndBlow;

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Home;
 
 [RequireComponent(typeof(InfiniteScroll))]
 public class ItemControllerLoop : UIBehaviour, IInfiniteScrollSetup
@@ -17,7 +18,10 @@ public class ItemControllerLoop : UIBehaviour, IInfiniteScrollSetup
 	{
 		if(isSetuped == true) return;
 
-		var item = obj.GetComponentInChildren<Item>();
+		/*var item = obj.GetComponentInChildren<Item>();
 		item.UpdateItem(itemCount);
+		*/
+		var item = obj.GetComponentInChildren<SelectButtonEventsHome>();
+		item.SetButtonIndex(itemCount);
 	}
 }
