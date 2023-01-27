@@ -3722,6 +3722,7 @@ MonoBehaviour:
   fields: {fileID: 183017528}
   turn: {fileID: 635541235}
   showTurn: {fileID: 1169726067}
+  sound: {fileID: 1206050559}
 --- !u!1 &541032093
 GameObject:
   m_ObjectHideFlags: 0
@@ -10269,6 +10270,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7858896138629534020, guid: 1e8dae069ecc6e847a33da568e3c7647, type: 3}
+      propertyPath: se.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7858896138629534020, guid: 1e8dae069ecc6e847a33da568e3c7647, type: 3}
+      propertyPath: se.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 37f5c4c38d14bfb4ca0a917d1ab6487c, type: 3}
+    - target: {fileID: 7858896138629534020, guid: 1e8dae069ecc6e847a33da568e3c7647, type: 3}
+      propertyPath: se.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 38d6067057998e3499bcbfe9599b71df, type: 3}
+    - target: {fileID: 7858896138629534020, guid: 1e8dae069ecc6e847a33da568e3c7647, type: 3}
+      propertyPath: bgm.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ef195d141edf7943a6b049d4ab2b0d7, type: 3}
     - target: {fileID: 7858896138629534023, guid: 1e8dae069ecc6e847a33da568e3c7647, type: 3}
       propertyPath: m_Name
       value: SoundManager

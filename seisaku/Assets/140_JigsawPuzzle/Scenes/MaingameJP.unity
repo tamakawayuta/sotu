@@ -289,7 +289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6942279279460739241, guid: 65e283e9074a95d409da6974f4e167fe, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6942279279460739241, guid: 65e283e9074a95d409da6974f4e167fe, type: 3}
       propertyPath: m_AnchorMax.x
@@ -663,6 +663,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7858896138629534020, guid: 1e8dae069ecc6e847a33da568e3c7647, type: 3}
+      propertyPath: se.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7858896138629534020, guid: 1e8dae069ecc6e847a33da568e3c7647, type: 3}
+      propertyPath: se.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 37f5c4c38d14bfb4ca0a917d1ab6487c, type: 3}
+    - target: {fileID: 7858896138629534020, guid: 1e8dae069ecc6e847a33da568e3c7647, type: 3}
+      propertyPath: se.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 38d6067057998e3499bcbfe9599b71df, type: 3}
+    - target: {fileID: 7858896138629534020, guid: 1e8dae069ecc6e847a33da568e3c7647, type: 3}
+      propertyPath: se.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2c6182a129039c44fa77ed350a81cfd9, type: 3}
+    - target: {fileID: 7858896138629534020, guid: 1e8dae069ecc6e847a33da568e3c7647, type: 3}
+      propertyPath: se.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: edddec79ec39faa419bc8138a7fc3dee, type: 3}
+    - target: {fileID: 7858896138629534020, guid: 1e8dae069ecc6e847a33da568e3c7647, type: 3}
+      propertyPath: se.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e2cb5b4b71a99a4ea137602a199b56b, type: 3}
+    - target: {fileID: 7858896138629534020, guid: 1e8dae069ecc6e847a33da568e3c7647, type: 3}
+      propertyPath: se.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 52af1e995a9f5034eb71aec1f375dc75, type: 3}
+    - target: {fileID: 7858896138629534020, guid: 1e8dae069ecc6e847a33da568e3c7647, type: 3}
+      propertyPath: bgm.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ef195d141edf7943a6b049d4ab2b0d7, type: 3}
     - target: {fileID: 7858896138629534023, guid: 1e8dae069ecc6e847a33da568e3c7647, type: 3}
       propertyPath: m_Name
       value: SoundManager
@@ -703,7 +735,7 @@ RectTransform:
   - {fileID: 1002820806}
   - {fileID: 83992690}
   m_Father: {fileID: 2005063614}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -729,6 +761,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ead530f49895b8d4fa64746c8b03e095, type: 3}
   - {fileID: 21300000, guid: 0df315203cbf4384d9b32ece7e7f7786, type: 3}
   - {fileID: 21300000, guid: aa866077bc98ea349b7fe714408efba3, type: 3}
+  sound: {fileID: 235855263}
 --- !u!114 &371707866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1265,7 +1298,7 @@ RectTransform:
   - {fileID: 862401602}
   - {fileID: 267497278}
   m_Father: {fileID: 2005063614}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1284,6 +1317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0978c129ef22595408f0ec3cbda1c64a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: {fileID: 235855263}
 --- !u!114 &899503061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1687,9 +1721,9 @@ RectTransform:
   - {fileID: 823758707}
   - {fileID: 2072813458}
   - {fileID: 1334435217}
+  - {fileID: 821424892}
   - {fileID: 371707864}
   - {fileID: 899503059}
-  - {fileID: 821424892}
   - {fileID: 700927265}
   - {fileID: 1134477857}
   - {fileID: 1632002517}
@@ -1793,6 +1827,7 @@ MonoBehaviour:
   clear: {fileID: 1134477856}
   hintButton: {fileID: 371707863}
   answerImage: {fileID: 700927264}
+  sound: {fileID: 235855263}
 --- !u!1 &2121987957
 GameObject:
   m_ObjectHideFlags: 0

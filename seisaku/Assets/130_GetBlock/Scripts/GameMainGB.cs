@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
+using SoundManager;
 
 /// <summary>
 /// ゲームの定義
@@ -22,6 +23,8 @@ namespace GetBlock
         private GameObject turn;
         [SerializeField]
         private GameObject showTurn;
+        [SerializeField]
+        private GameObject sound;
 
         // 何かのフィールドオブジェクトが選択されているかどうかの管理
         private bool didCallTime = false;
@@ -78,8 +81,19 @@ namespace GetBlock
             // 制限時間が過ぎるまで待機する
             await time.GetComponent<TimeSystemGB>().StartCountdown();
 
+            while (true)
+            {
+                if (Time.timeScale == 1)
+                {
+                    break;
+                }
+                await Task.Delay(2000);
+            }
+
             // 選択できる駒を更新する
             UpdateField();
+
+            sound.GetComponent<SoundSystems>().PlaySE(1);
             
             // 次の手番にする
             if (isFirstPlayerTurn)

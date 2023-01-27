@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using SoundManager;
 
 /// <summary>
 /// ‰ñ“š‚Ì‘I‘ğˆ‚ğŠÇ—‚·‚é
@@ -15,6 +16,8 @@ namespace HitAndBlow
         private Sprite[] images;
         [SerializeField]
         private GameObject detail;
+        [SerializeField]
+        private GameObject sound;
 
         // ¡‘I‘ğ‚³‚ê‚Ä‚¢‚é‰æ‘œ
         private Sprite selectSpriteNow;
@@ -45,6 +48,7 @@ namespace HitAndBlow
         // OnClickŠÖ”
         public void OnClickSelect(int cardNum)
         {
+            sound.GetComponent<SoundSystems>().PlaySE(0);
 
             detail.GetComponent<DetailSystemHB>().ApeearDetail();
 

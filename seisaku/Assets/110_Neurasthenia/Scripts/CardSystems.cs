@@ -135,6 +135,8 @@ namespace Neurasthenia
         // カードを再配置する非同期関数
         private async void ResetCards()
         {
+            soundManager.GetComponent<SoundSystems>().PlaySE(4);
+
             // 再配置するようなSEを流す
             soundManager.GetComponent<SoundSystems>().PlaySE(1);
 

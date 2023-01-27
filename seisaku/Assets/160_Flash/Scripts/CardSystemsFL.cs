@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 //必要
 using PublicUI;
+using SoundManager;
 
 /// <summary>
 /// ゲームの定義
@@ -29,6 +30,8 @@ namespace Flash
         private GameObject clearUI;
         [SerializeField]
         private GameObject praise;
+        [SerializeField]
+        private GameObject sound;
 
         // 実際に使用する画像群
         private List<Sprite> useSprites;
@@ -83,10 +86,20 @@ namespace Flash
 
             ShuffleSprites(this.useSprites);
 
+            while (true)
+            {
+                if (Time.timeScale == 1)
+                {
+                    break;
+                }
+                await Task.Delay(2000);
+            }
+
             // 答えを示すオブジェクトを非アクティブ化
             this.answer.SetActive(false);
 
             // 選択肢を表示
+            sound.GetComponent<SoundSystems>().PlaySE(2);
             this.button.GetComponent<SelectSystemFL>().SetButtonSprites(this.useSprites);
         }
 
@@ -162,7 +175,19 @@ namespace Flash
             }
 
             ShuffleSprites(this.useSprites);
+
+            while (true)
+            {
+                if (Time.timeScale == 1)
+                {
+                    break;
+                }
+                await Task.Delay(2000);
+            }
+
             this.answer.SetActive(false);
+
+            sound.GetComponent<SoundSystems>().PlaySE(2);
             this.button.GetComponent<SelectSystemFL>().SetButtonSprites(this.useSprites);
         }
 
@@ -203,6 +228,7 @@ namespace Flash
             // 正解の処理
             if (answer == sprite)
             {
+                sound.GetComponent<SoundSystems>().PlaySE(1);
                 // スコアを加算
                 this.count.GetComponent<CountSystemFL>().AddCount();
 

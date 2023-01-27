@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using SoundManager;
 
 /// <summary>
 /// パズルピースのOnClick
@@ -39,6 +40,8 @@ namespace JigsawPuzzle
             // このピースを再選択できないようにする
             this.gameObject.GetComponent<Button>().enabled = false;
             this.gameObject.GetComponent<Image>().color = Color.white;
+
+            GameObject.Find("SoundManager").GetComponent<SoundSystems>().PlaySE(0);
 
             // 選択されたことを通知する
             field.AddSelected(this.gameObject);

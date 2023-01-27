@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 // 必要
 using PublicUI;
+using SoundManager;
 
 /// <summary>
 /// ゲームの定義
@@ -31,6 +32,8 @@ namespace QuicklyImage
         private GameObject score;
         [SerializeField]
         private GameObject clearUI;
+        [SerializeField]
+        private GameObject sound;
 
         // 選択肢となるオブジェクトたち
         private List<GameObject> selectButtons = new List<GameObject>();
@@ -58,6 +61,7 @@ namespace QuicklyImage
                 this.useSprites.Add(sprite);
             }
 
+            sound.GetComponent<SoundSystems>().PlaySE(0);
             ShuffleAnimation();
 
             // 画像をシャッフル
@@ -102,7 +106,10 @@ namespace QuicklyImage
                 await Task.Delay(1000);
             }
 
+            sound.GetComponent<SoundSystems>().PlaySE(0);
             ShuffleAnimation();
+
+            await Task.Delay(700);
 
             // 問題を出すことを伝える
             this.guide.GetComponent<GuideSystemQI>().SetText("せーの..!");
@@ -183,6 +190,7 @@ namespace QuicklyImage
             // 正解の処理
             if (sprite == this.answerObject.GetComponent<Image>().sprite)
             {
+                sound.GetComponent<SoundSystems>().PlaySE(1);
                 this.guide.GetComponent<GuideSystemQI>().SetText("いいね！");
                 this.time.GetComponent<TimeSystemsQI>().SetIsTimeUp();
 

@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fade: {fileID: 0}
-  buttonSE: {fileID: 8300000, guid: 435994726752ad64cbb8ed2b56322ef7, type: 3}
+  buttonSE: {fileID: 8300000, guid: 582cc00f2956f9b4d902ca958bd30672, type: 3}
   soundManager: {fileID: 0}
 --- !u!82 &7331775446687500962
 AudioSource:

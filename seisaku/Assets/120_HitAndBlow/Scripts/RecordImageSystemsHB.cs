@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using SoundManager;
 
 /// <summary>
 /// ユーザーが入力した画像を管理する
@@ -13,6 +14,8 @@ namespace HitAndBlow
         // 必要なものの取得
         [SerializeField]
         private GameObject selectButton;
+        [SerializeField]
+        private GameObject sound;
 
         // 今使われている入力オブジェクト
         private GameObject imageNow;
@@ -67,6 +70,8 @@ namespace HitAndBlow
         // 入力オブジェクトのOnClick関数
         public void OnClickRecord(int index)
         {
+            sound.GetComponent<SoundSystems>().PlaySE(1);
+
             // 対応する入力オブジェクトのスプライトに選択されたスプライトを入れる
             imageNow.transform.GetChild(index).GetComponent<Image>().sprite = selectButton.GetComponent<SelectButtonEventsHB>().GetSelectSpriteNow();
             

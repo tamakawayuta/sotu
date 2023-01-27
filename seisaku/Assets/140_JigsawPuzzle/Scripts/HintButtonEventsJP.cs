@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using SoundManager;
 
 /// <summary>
 /// ヒントの管理
@@ -16,6 +17,9 @@ namespace JigsawPuzzle
         // ゲームで使われる画像の管理
         [SerializeField]
         private Sprite[] sprites;
+
+        [SerializeField]
+        private GameObject sound;
 
         // 実際に使われている画像の管理
         private Sprite puzzleImage;
@@ -56,6 +60,7 @@ namespace JigsawPuzzle
         // OnClick定義
         public void OnClickHint()
         {
+            sound.GetComponent<SoundSystems>().PlaySE(2);
             this.hint.SetActive(true);
         }
     }

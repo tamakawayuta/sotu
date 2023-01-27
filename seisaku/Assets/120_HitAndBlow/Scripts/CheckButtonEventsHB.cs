@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 // 必要
 using PublicUI;
+using SoundManager;
 
 /// <summary>
 /// 答えの確認をするボタンのOnClick
@@ -26,6 +27,8 @@ namespace HitAndBlow
         private GameObject detail;
         [SerializeField]
         private GameObject endUI;
+        [SerializeField]
+        private GameObject sound;
 
         // 回答した数の管理
         private int count = 0;
@@ -72,6 +75,7 @@ namespace HitAndBlow
             if (hit == 4)
             {
                 detail.GetComponent<DetailSystemHB>().DisappearDetail();
+                sound.GetComponent<SoundSystems>().PlaySE(3);
                 // 答えを表示
                 answerCard.GetComponent<CardSystemsHB>().AppearAnswer();
                 await Task.Delay(2000);
@@ -87,6 +91,7 @@ namespace HitAndBlow
             else if (count == 8)
             {
                 detail.GetComponent<DetailSystemHB>().DisappearDetail();
+                sound.GetComponent<SoundSystems>().PlaySE(3);
                 answerCard.GetComponent<CardSystemsHB>().AppearAnswer();
                 await Task.Delay(2000);
                 // クリア画面を表示
@@ -99,6 +104,7 @@ namespace HitAndBlow
             // それら以外はヒットとブローの数を表示する
             else
             {
+                sound.GetComponent<SoundSystems>().PlaySE(2);
                 showHintText.GetComponent<ShowHintSystemHB>().ShowText(hit + "ヒット " + blow + "ブロー");
                 // ヒットとブローの数を記録する
                 texts.GetComponent<RecordTextSystemsHB>().DrawText(hit, blow);

@@ -500,8 +500,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fade: {fileID: 0}
-  buttonSE: {fileID: 8300000, guid: 435994726752ad64cbb8ed2b56322ef7, type: 3}
-  fanfareSE: {fileID: 8300000, guid: b10d7e85a64efa643aa5b6d0b8d79317, type: 3}
+  buttonSE: {fileID: 8300000, guid: 582cc00f2956f9b4d902ca958bd30672, type: 3}
+  fanfareSE: {fileID: 8300000, guid: 9e1708d1543eefe49a0408e91208471f, type: 3}
   isPlatFanfare: 1
   soundManager: {fileID: 0}
 --- !u!82 &2051874312750476373

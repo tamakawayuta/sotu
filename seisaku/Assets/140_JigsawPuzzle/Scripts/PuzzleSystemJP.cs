@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 // 必要
 using PublicUI;
+using SoundManager;
 
 /// <summary>
 /// ゲームの定義
@@ -23,6 +24,8 @@ namespace JigsawPuzzle
         private GameObject hintButton;
         [SerializeField]
         private GameObject answerImage;
+        [SerializeField]
+        private GameObject sound;
 
         // パズルピースに格納するバラバラの画像の管理
         private List<Sprite> sprites = new List<Sprite>();
@@ -61,6 +64,8 @@ namespace JigsawPuzzle
             hintButton.SetActive(false);
 
             await Task.Delay(5000);
+
+            sound.GetComponent<SoundSystems>().PlaySE(4);
 
             for (var i = 0; i < 5; i++)
             {
@@ -194,6 +199,8 @@ namespace JigsawPuzzle
                 }
             }
 
+            sound.GetComponent<SoundSystems>().PlaySE(5);
+
             this.answerImage.SetActive(true);
 
             await Task.Delay(3000);
@@ -213,6 +220,7 @@ namespace JigsawPuzzle
                 // 画像が一致するなら再選択できないようにする
                 if (field.GetComponent<Image>().sprite == this.answers[index])
                 {
+                    sound.GetComponent<SoundSystems>().PlaySE(1);
                     field.GetComponent<Button>().enabled = false;
                 }
             }

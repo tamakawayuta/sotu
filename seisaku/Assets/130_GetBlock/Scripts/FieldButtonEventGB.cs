@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
+using SoundManager;
 
 /// <summary>
 /// フィールドの駒のOnClickの定義
@@ -27,6 +28,8 @@ namespace GetBlock
             {
                 return;
             }
+
+            GameObject.Find("SoundManager").GetComponent<SoundSystems>().PlaySE(0);
 
             // 選択された駒は再選択できないようにする
             this.gameObject.GetComponent<Button>().enabled = false;
