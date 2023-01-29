@@ -3,9 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using SoundManager;
 
 public class OthelloBoard : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject sound;
     // Start is called before the first frame update
     public int CurrentTurn = 0;
     public GameObject ScoreBoard;
@@ -49,6 +52,7 @@ public class OthelloBoard : MonoBehaviour
 
     public void Playernum(int x)
     {
+        sound.GetComponent<SoundSystems>().PlaySE(0);
         players = x;
         BoardSize = x + 6;
         scene = 1;

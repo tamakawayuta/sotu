@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using SoundManager;
 
 public class Launching_businessGame : MonoBehaviour
 {
@@ -70,6 +71,9 @@ public class Launching_businessGame : MonoBehaviour
 
 
     bool isActive = true;
+
+    [SerializeField]
+    private GameObject sound;
 
 
     void draw()
@@ -164,6 +168,7 @@ public class Launching_businessGame : MonoBehaviour
 
     public void sButton()
     {
+        sound.GetComponent<SoundSystems>().PlaySE(0);
         strat.SetActive(false);          //スタートボタンを消す
         scene = 1;                          //変数startに1を代入。ゲームをスタートさせる
     }

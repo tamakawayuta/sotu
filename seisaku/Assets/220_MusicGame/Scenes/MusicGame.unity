@@ -1333,6 +1333,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7858896138629534020, guid: 1e8dae069ecc6e847a33da568e3c7647, type: 3}
+      propertyPath: se.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7858896138629534020, guid: 1e8dae069ecc6e847a33da568e3c7647, type: 3}
+      propertyPath: se.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9e1708d1543eefe49a0408e91208471f, type: 3}
+    - target: {fileID: 7858896138629534020, guid: 1e8dae069ecc6e847a33da568e3c7647, type: 3}
+      propertyPath: bgm.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7858896138629534023, guid: 1e8dae069ecc6e847a33da568e3c7647, type: 3}
       propertyPath: m_Name
       value: SoundManager
@@ -1368,6 +1380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 630413e0d375940f8a6c0214c9d93a85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: {fileID: 1506487445}
   notes:
   - {fileID: 1000010516422980, guid: baa2846b5e8ee46fdac2f0b22ab24049, type: 3}
   - {fileID: 1000013535309010, guid: f41efc4f923504758ae0fa470c4e19a3, type: 3}

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Threading.Tasks;
+using SoundManager;
 
 namespace Title
 {
@@ -11,6 +12,8 @@ namespace Title
     {
         [SerializeField]
         private GameObject fade;
+        [SerializeField]
+        private GameObject sound;
 
         private float red,green,blue,alfa;
 
@@ -35,6 +38,7 @@ namespace Title
 
         private async void LoadHome()
         {
+            sound.GetComponent<SoundSystems>().PlaySE(0);
             while (alfa < 1.0f)
             {
                 fade.GetComponent<Image>().color = new Color(red,green,blue,alfa);

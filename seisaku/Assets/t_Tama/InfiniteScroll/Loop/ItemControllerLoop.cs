@@ -23,5 +23,5 @@ public class ItemControllerLoop : UIBehaviour, IInfiniteScrollSetup
 		*/
 		var item = obj.GetComponentInChildren<SelectButtonEventsHome>();
 		item.SetButtonIndex(itemCount);
-	}
+    }
 }

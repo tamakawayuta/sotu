@@ -18,6 +18,9 @@ namespace Neurasthenia
         [SerializeField]
         private Sprite damagedHpImage;
 
+        [SerializeField]
+        private Sprite middleHpImage;
+
         // 通常時の画像
         [SerializeField]
         private Sprite normalHpImage;
@@ -54,8 +57,6 @@ namespace Neurasthenia
                 // 通常時の画像を使用する
                 child.gameObject.GetComponent<Image>().sprite = normalHpImage;
 
-                // 色を緑にする
-                child.gameObject.GetComponent<Image>().color = Color.green;
             }
         }
 
@@ -122,21 +123,21 @@ namespace Neurasthenia
             Transform[] children = childHps.ToArray();
 
             // 変化させる色を管理する
-            var hpColor = Color.clear;
+            Sprite hpColor = null;
 
             // 変化させる色を決定する
             switch (childHps.Count)
             {
                 case 5: // 5または4なら緑
                 case 4:
-                    hpColor = Color.green;
+                    hpColor = normalHpImage;
                     break;
                 case 3: // 3または2なら黄色
                 case 2:
-                    hpColor = Color.yellow;
+                    hpColor = middleHpImage;
                     break;
                 case 1: // 1なら赤
-                    hpColor = Color.red;
+                    hpColor = damagedHpImage;
                     break;
                 default:
                     Debug.LogError("Illegal Value");
@@ -146,7 +147,7 @@ namespace Neurasthenia
             // 通常オブジェクトの色を更新する
             foreach (var child in children)
             {
-                child.gameObject.GetComponent<Image>().color = hpColor;
+                child.gameObject.GetComponent<Image>().sprite = hpColor;
             }
         }
 

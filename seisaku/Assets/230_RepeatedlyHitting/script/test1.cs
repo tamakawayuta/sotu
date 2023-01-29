@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using SoundManager;
 
 public class test1 : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject sound;
     public Slider hpSlider1;
     public Slider hpSlider2;
     public Text hpText1;
@@ -281,12 +284,14 @@ public class test1 : MonoBehaviour
 
     public void OnePersonStratButton()
     {
+        sound.GetComponent<SoundSystems>().PlaySE(0);
         strat.SetActive(false);          //スタートボタンを消す
         scene = 1;                          //変数startに1を代入。ゲームをスタートさせる
         divideHp = 0;
     }
     public void TwoPersonStratButton()
     {
+        sound.GetComponent<SoundSystems>().PlaySE(0);
         strat.SetActive(false);          //スタートボタンを消す
         scene = 1;                          //変数startに1を代入。ゲームをスタートさせる
         divideHp = 1;
@@ -294,6 +299,8 @@ public class test1 : MonoBehaviour
 
     public void Difficulty(int x)
     {
+
+        sound.GetComponent<SoundSystems>().PlaySE(1);
         switch (x)
         {
             case 0:

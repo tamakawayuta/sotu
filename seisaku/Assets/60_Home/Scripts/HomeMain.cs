@@ -20,7 +20,6 @@ namespace Home
                 GameObject obj = Instantiate(button);
                 obj.GetComponent<SelectButtonEventsHome>().SetButtonIndex(i);
                 obj.GetComponent<Image>().sprite = gameImages[i];
-                obj.transform.SetParent(this.gameObject.transform);
             }
         }
     }

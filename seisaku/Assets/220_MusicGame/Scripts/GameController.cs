@@ -3,9 +3,12 @@ using System.Collections;
 using System.IO;
 using System;
 using UnityEngine.UI;
+using SoundManager;
 
 public class GameController : MonoBehaviour {
 
+	[SerializeField]
+	private GameObject sound;
 	public GameObject[] notes;
 	private float[] _timing;
 	private int[] _lineNum;
@@ -40,6 +43,8 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void StartGame(){
+
+		sound.GetComponent<SoundSystems>().PlaySE(0);
 		startButton.SetActive (false);
 		_startTime = Time.time;
 		_audioSource.Play ();

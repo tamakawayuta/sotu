@@ -174,6 +174,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7858896138629534020, guid: 1e8dae069ecc6e847a33da568e3c7647, type: 3}
+      propertyPath: se.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7858896138629534020, guid: 1e8dae069ecc6e847a33da568e3c7647, type: 3}
+      propertyPath: se.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9e1708d1543eefe49a0408e91208471f, type: 3}
+    - target: {fileID: 7858896138629534020, guid: 1e8dae069ecc6e847a33da568e3c7647, type: 3}
+      propertyPath: bgm.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ef195d141edf7943a6b049d4ab2b0d7, type: 3}
     - target: {fileID: 7858896138629534023, guid: 1e8dae069ecc6e847a33da568e3c7647, type: 3}
       propertyPath: m_Name
       value: SoundManager
@@ -1647,16 +1659,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4154806371733529116, guid: 3471fe12523daac4187f263659346b7c, type: 3}
       propertyPath: backgroundImages.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4154806371733529116, guid: 3471fe12523daac4187f263659346b7c, type: 3}
       propertyPath: backgroundImages.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 441806c342cf9b5478afda0004e30e8a, type: 3}
+      objectReference: {fileID: 21300000, guid: d876853d70dd9f84e8b85084f3ec9f4c, type: 3}
     - target: {fileID: 4154806371733529116, guid: 3471fe12523daac4187f263659346b7c, type: 3}
       propertyPath: backgroundImages.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: b69f13d421503a443aa992eb6b3b4557, type: 3}
+      objectReference: {fileID: 21300000, guid: f6de60f7e7cc3a94d98bdd1be7a1fbc7, type: 3}
+    - target: {fileID: 4154806371733529116, guid: 3471fe12523daac4187f263659346b7c, type: 3}
+      propertyPath: backgroundImages.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc84292d94244fc45a16157bb339eccd, type: 3}
     - target: {fileID: 4816819282359281218, guid: 3471fe12523daac4187f263659346b7c, type: 3}
       propertyPath: m_Name
       value: Background
@@ -2065,6 +2081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0064bc6c0137d434299049e25dc31fbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: {fileID: 1721761751}
   CurrentTurn: 0
   ScoreBoard: {fileID: 344381376}
   ScoreBoardText: {fileID: 1703157590}
